@@ -11,17 +11,17 @@
 
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet" />               
     </head>
-    <body class="{{ isset($noFlex) ? 'no-flex' : '' }}">
+    <body class="{{ isset($noFlex) && $noFlex === true ? 'no-flex' : '' }}">
         <main class="main">
             <div class="content">
-                <a href="{{ route('page.home') }}" class="no-hover">
+                <a href="{{ url('/') }}" class="no-hover">
                     <img src="{{ asset('images/rathes.jpg') }}" alt="I am Rathes" title="I am Rathes" width="120px" height="120px" class="circle">
                 </a>
                 @yield('content')
             </div>
         </main>
         <footer class="footer">
-            <a href="{{ route('page.imprint') }}">Imprint</a>
+            <a href="{{ url('/imprint') }}">Imprint</a>
         </footer>
     </body>
 </html>
