@@ -8,7 +8,7 @@ Arminiusstraße 6 <br>
 45721 Haltern am See
 
 #### Contact:
-Telefon: 017620210468 <br>
+Phone: 017620210468 <br>
 E-Mail: sachchi@rathes.de
 
 #### Disclaimer
