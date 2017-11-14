@@ -11,16 +11,17 @@
 
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet" />               
     </head>
-    <body class="{{ isset($noFlex) && $noFlex === true ? 'no-flex' : '' }}">
-        <main class="main">
-            <div class="content">
+    <body class="font-sans leading-loose text-sm h-screen {{ isset($noFlex) && $noFlex === true ? '' : 'flex flex-col' }}">
+        <main class="flex items-center justify-center w-full flex-grow">
+            <div class="max-w-sm text-center">
                 <a href="{{ url('/') }}" class="no-hover">
-                    <img src="{{ asset('images/rathes.jpg') }}" alt="I am Rathes" title="I am Rathes" width="120px" height="120px" class="circle">
+                    <img src="{{ asset('images/rathes.jpg') }}" alt="I am Rathes" title="I am Rathes" width="120px"
+                        height="120px" class="rounded-full border border-grey-light p-2">
                 </a>
                 @yield('content')
             </div>
         </main>
-        <footer class="footer">
+        <footer class="items-center flex text-xs justify-center h-8">
             <a href="{{ url('/imprint') }}">Imprint</a>
         </footer>
     </body>
