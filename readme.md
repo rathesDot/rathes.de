@@ -9,6 +9,14 @@ This is the code base for my upcoming new website at [rathes.de](https://rathes.
 
 ---
 
+Features
+---
+
+- This website uses [Laravel](https://laravel.com) as its framework
+- to render contents, I use [`aheenam/mozhi`](https://github.com/Aheenam/mozhi) which makes Markdown files to pages
+- uses [`spatie/laravel-responsecache`](https://github.com/spatie/laravel-responsecache) for caching
+- for styling I use [`TailwindCSS`](https://tailwindcss.com) that is compiled with Laravel Mix
+
 To-Do:
 ---
 
