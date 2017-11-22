@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300|Open+Sans:300,400');
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -56,48 +58,30 @@
   * @import "utilities/skew-transforms";
   */
 
-a {
-  color: rgba(0,0,0,0.8);
-  transition: all 200ms;    
-}
-
-a:not(.no-hover):hover {
-  background-color: rgba(0,0,0,1);
-  color: rgb(255,255,255);
+h1, h2, h3, h4, h5, h6 {
+    @apply .font-sans-title .font-light .tracking-wide
 }
 
 p {
-  max-width: 85%;
-  @apply .mx-auto
+    @apply .font-sans .font-light
 }
 
-.social a {
-    background-image: url('../images/social.png');
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 32px;
-    text-indent: -99999px;
-    width: 32px;
-    @apply .m-2
+a {
+    @apply .inline-block .text-indigo-dark .border-b .border-indigo-dark .no-underline .leading-normal
 }
 
-.social a:hover {
-    opacity: .9;
-    transition: opacity .25s;
+@screen md {
+    .js-menu {
+        display: block !important;
+    }
 }
 
-.twitter {
-    background-position:0 0
+.menu-link {
+    @apply .block .py-4 .text-sm .text-white .no-underline .font-light .border-0
 }
-.facebook{
-    background-position:-32px 0
-}
-.xing {
-    background-position:-64px 0
-}
-.linkedin {
-    background-position:-96px 0
-}
-.instagram {
-    background-position:-128px 0
+
+@screen md {
+    .menu-link {
+        @apply .inline-block .mr-4 .text-indigo-dark .border-b .border-indigo-dark .pb-1 .text-base
+    }
 }

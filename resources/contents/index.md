@@ -1,10 +1,8 @@
 ---
-noFlex: false
-social: true
+title: 'Das ist ein Test'
 ---
 
-Rathes Sachchithananthan
+Hi there!
 ===
 
-I am a former freelancing Web Designer and Web Developer. Currently you can find me working at [Aheenam](https://aheenam.com),
-the agency I started to provide digital solutions for anyone. Get in touch with me using social media!
+My name is **Rathes Sachchithananthan** and I am a former freelancing Web Designer and Web Developer. Currently you can find me working at [Aheenam](https://aheenam.com), the agency I started to provide digital solutions for anyone. Get in touch with me using social media!
