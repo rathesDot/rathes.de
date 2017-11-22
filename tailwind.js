@@ -194,6 +194,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Open Sans',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
@@ -205,6 +206,10 @@ module.exports = {
       'Droid Sans',
       'Helvetica Neue',
       'sans-serif',
+    ],
+    'sans-title': [
+      '"Barlow Semi Condensed"',
+      'sans-serif'
     ],
     'serif': [
       'Constantia',
@@ -625,6 +630,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
+    '32': '8rem',
   },
 
 
@@ -652,6 +659,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
+    '32': '8rem',
   },
 
 
