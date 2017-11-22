@@ -24,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-var defaultConfig = require('tailwindcss').defaultConfig()
+var defaultConfig = require('tailwindcss/defaultConfig')()
 
 
 /*
@@ -420,11 +420,11 @@ module.exports = {
   */
 
   borderRadius: {
+    'none': '0',
     default: '.25rem',
     'sm': '.125rem',
     'lg': '.5rem',
-    'full': '9999px',
-    'none': '0',
+    'full': '9999px'
   },
 
 
@@ -651,6 +651,7 @@ module.exports = {
   */
 
   margin: {
+    'auto': 'auto',
     'px': '1px',
     '0': '0',
     '1': '0.25rem',
