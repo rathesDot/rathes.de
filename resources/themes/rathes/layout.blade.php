@@ -15,7 +15,8 @@
 </head>
 
 <body>
-	<div class="flex flex-wrap items-center p-6 justify-between bg-indigo md:px-16 md:bg-grey-lightest md:content-end">
+	<div class="flex flex-wrap items-center p-6 justify-between bg-indigo md:px-16 md:bg-grey-lightest md:content-end
+        lg:px-32">
         <div class="w-1/3 flex-no-shrink">
             <img src="{{ asset('images/rathes.jpg') }}" alt="I am Rathes" title="I am Rathes"
                 class="rounded-full w-auto h-10 md:h-16">
