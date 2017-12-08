@@ -85,3 +85,16 @@ a {
         @apply .inline-block .mr-4 .text-indigo-dark .border-b .border-indigo-dark .pb-1 .text-base
     }
 }
+
+/** blog list **/
+.blog-list h2 {
+    @apply .mt-16 .uppercase .text-sm .font-normal .tracking-wide .text-grey
+}
+
+.blog-list ul {
+    @apply .list-reset .mt-4
+}
+
+.blog-list li {
+    @apply .my-4
+}

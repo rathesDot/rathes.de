@@ -3943,6 +3943,28 @@ a {
   }
 }
 
+/** blog list **/
+.blog-list h2 {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #9babb4;
+}
+
+.blog-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.blog-list li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
