@@ -1,8 +1,11 @@
-<div class="bg-indigo md:bg-grey-lightest">
+<div class="bg-indigo md:bg-transparent">
 	<div class="container mx-auto flex flex-wrap items-center p-6 justify-between  md:px-16 md:content-end">
         <div class="w-1/3 flex-no-shrink">
-            <img src="{{ asset('images/rathes.jpg') }}" alt="I am Rathes" title="I am Rathes"
-                class="rounded-full w-auto h-10 md:h-16">
+            <a href="{{ url('/') }}" class="font-logo text-white font-bold no-underline inline-block
+                md:text-indigo md:text-lg">
+                |) <br>
+                |\
+            </a>
         </div>
         <div class="block md:hidden">
             <button class="js-toggle flex items-center px-2 py-2 border rounded text-white border-white">

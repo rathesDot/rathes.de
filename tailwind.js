@@ -218,6 +218,10 @@ module.exports = {
       'Georgia',
       'serif',
     ],
+    'logo': [
+      'Space Mono',
+      'monospace'
+    ],
     'mono': [
       'Menlo',
       'Monaco',

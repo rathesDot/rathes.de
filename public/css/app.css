@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300|Open+Sans:300,400);/**
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300|Open+Sans:300,400|Space+Mono:400,700);/**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
@@ -779,6 +779,10 @@ button,
 
 .font-serif {
   font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+}
+
+.font-logo {
+  font-family: Space Mono, monospace;
 }
 
 .font-mono {
@@ -4248,6 +4252,10 @@ pre[class*="language-"] {
     font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
   }
 
+  .sm\:font-logo {
+    font-family: Space Mono, monospace;
+  }
+
   .sm\:font-mono {
     font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
@@ -7587,6 +7595,10 @@ pre[class*="language-"] {
 
   .md\:font-serif {
     font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  }
+
+  .md\:font-logo {
+    font-family: Space Mono, monospace;
   }
 
   .md\:font-mono {
@@ -10930,6 +10942,10 @@ pre[class*="language-"] {
     font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
   }
 
+  .lg\:font-logo {
+    font-family: Space Mono, monospace;
+  }
+
   .lg\:font-mono {
     font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
@@ -14269,6 +14285,10 @@ pre[class*="language-"] {
 
   .xl\:font-serif {
     font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  }
+
+  .xl\:font-logo {
+    font-family: Space Mono, monospace;
   }
 
   .xl\:font-mono {
