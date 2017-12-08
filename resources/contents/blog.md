@@ -1,5 +1,5 @@
 ---
-title: 'My writings'
+title: 'Blog'
 template: 'blog-list'
 ---
 
