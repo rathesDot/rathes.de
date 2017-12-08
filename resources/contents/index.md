@@ -1,5 +1,6 @@
 ---
 title: 'Das ist ein Test'
+template: index
 ---
 
 Hi there!
