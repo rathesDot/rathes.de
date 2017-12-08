@@ -30,6 +30,8 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+
+  @import '../../../node_modules/prismjs/themes/prism-okaidia.css';
  
  /**
   * This injects all of Tailwind's utility classes, generated based on your
@@ -59,15 +61,23 @@
   */
 
 h1, h2, h3, h4, h5, h6 {
-    @apply .font-sans-title .font-light .tracking-wide
+    @apply .font-sans .font-medium .tracking-wide
 }
 
 p {
-    @apply .font-sans .font-light
+    @apply .my-4
 }
 
 a {
-    @apply .inline-block .text-indigo-dark .border-b .border-indigo-dark .no-underline .leading-normal
+    @apply .text-indigo-dark
+}
+
+pre, pre[class*="language-"] {
+    @apply .my-8 .font-mono
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    @apply .font-mono .text-sm
 }
 
 @screen md {
@@ -97,4 +107,29 @@ a {
 
 .blog-list li {
     @apply .my-4
+}
+
+/** single blog post **/
+@screen md {
+
+    .single-blog-post p:first-of-type {
+        @apply .-mx-4 .my-6 .text-lg
+    }
+
+    .single-blog-post pre[class*="language-"] {
+        @apply .-mx-8
+    }
+
+}
+
+
+@screen md {    
+    .single-blog-post p:first-of-type {
+        @apply .-mx-12
+    }
+
+    .single-blog-post pre[class*="language-"] {
+        @apply .-mx-12
+    }
+
 }
