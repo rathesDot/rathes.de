@@ -6,8 +6,7 @@ template: 'blog-list'
 My writings
 ===
 
-2017
----
+## 2017
 
 - [12 Books in 12 Months](https://medium.com/p/54db49d8aaec)
 - [Looking forward to 2018](https://medium.com/@rathes/looking-forward-to-2018-927baae0f065)
@@ -19,8 +18,8 @@ My writings
 - [Namen in Formularen](/blog/de/namen-in-formularen)
 - [Top 8 inspirierende Sportfilme](/blog/de/sport-filme-inspiration)
 
-2016
----
+## 2016
+
 
 - [Jahresrückblick: Mein Jahr 2016](/blog/de/review-2016)
 - [Buchtipp: Meine Top 5 Bücher für Freelancer und Gründer](/blog/de/buchtipps-freelancer-gruender)
@@ -29,8 +28,7 @@ My writings
 - [Tamil: Warum es sich lohnt die Sprache der Tamilen zu erlernen und wie du dabei vorgehen solltest](/blog/de/tamil-lernen)
 - [Ist Tamilisch lernen schwierig?](/blog/de/ist-tamilisch-lernen-schwer)
 
-2015
----
+## 2015
 
 - [Jahresrückblick: Mein Jahr 2015](/blog/de/review-2015)
 - [Gulp – Wie du dank Taskrunner besser durchstartest](/blog/de/gulp-introduction)
