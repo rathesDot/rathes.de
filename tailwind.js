@@ -194,10 +194,10 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Roboto',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
-      'Roboto',
       'Oxygen',
       'Ubuntu',
       'Cantarell',
@@ -207,6 +207,7 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
+      'Amiri',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
