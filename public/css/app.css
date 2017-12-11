@@ -4222,6 +4222,11 @@ code {
     margin-left: -3rem;
     margin-right: -3rem;
   }
+
+  .single-blog-post img {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 @media (min-width: 576px) {
