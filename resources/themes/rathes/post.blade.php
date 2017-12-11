@@ -16,7 +16,7 @@
                 in {{ implode(',', $meta['categories']) }}
             </small>
         </header>
-        <div class="max-w-md mx-auto font-serif px-4 single-blog-post">
+        <div class="max-w-md mx-auto font-sans px-4 single-blog-post">
             {!! $content !!}
         </div>
     </div>

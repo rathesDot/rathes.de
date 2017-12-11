@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700|Amiri');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700');
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -61,7 +61,7 @@
   */
 
 h1, h2, h3, h4, h5, h6 {
-    @apply .font-sans .font-medium .tracking-wide
+    @apply .font-sans .font-medium .tracking-wide .mt-8 .mb-2
 }
 
 p {

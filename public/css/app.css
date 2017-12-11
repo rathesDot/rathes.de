@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700|Amiri);/**
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700);/**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
@@ -4051,6 +4051,8 @@ h6 {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 500;
   letter-spacing: 0.05em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
