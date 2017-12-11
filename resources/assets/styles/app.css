@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Space+Mono:400,700|Amiri');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700|Amiri');
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -93,6 +93,34 @@ code[class*="language-"], pre[class*="language-"] {
 @screen md {
     .menu-link {
         @apply .inline-block .mr-4 .text-indigo-dark .border-b .border-indigo-dark .pb-1 .text-base
+    }
+}
+
+/** home **/
+.home h1 {
+    @apply .text-indigo
+}
+
+.home ul {
+    @apply .list-reset .my-4 .text-xs .flex .justify-between
+}
+
+.home ul li {
+    @apply .my-8
+}
+
+.home ul li:before {
+    content: "";
+    @apply .block .my-2 .w-8 .border-t .border-indigo;
+}
+
+.home ul li a {
+    @apply .block .no-underline .text-sm
+}
+
+@screen sm {
+    .home ul li a {
+        @apply .text-base
     }
 }
 
