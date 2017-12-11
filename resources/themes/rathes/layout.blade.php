@@ -23,6 +23,7 @@
 <body>
     @include('theme::rathes.nav')
     @yield('content')
+	@include('theme::rathes.footer')
     <script src="{{ asset('/js/app.js') }}"></script>
 </body>
 
