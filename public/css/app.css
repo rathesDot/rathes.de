@@ -4042,6 +4042,11 @@ button,
   * @import "utilities/skew-transforms";
   */
 
+html,
+body {
+  background-color: #fafcfc;
+}
+
 h1,
 h2,
 h3,

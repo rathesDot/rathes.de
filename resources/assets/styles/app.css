@@ -60,6 +60,10 @@
   * @import "utilities/skew-transforms";
   */
 
+html, body {
+    @apply .bg-grey-lightest
+}
+
 h1, h2, h3, h4, h5, h6 {
     @apply .font-sans .font-medium .tracking-wide .mt-8 .mb-2
 }
