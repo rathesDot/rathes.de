@@ -176,4 +176,8 @@ code {
         @apply .-mx-12
     }
 
+    .single-blog-post img {
+        @apply .-mx-12
+    }
+
 }
