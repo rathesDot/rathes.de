@@ -1,5 +1,5 @@
 ---
-title: 'Das ist ein Test'
+title: 'Web Developer'
 template: index
 ---
 
