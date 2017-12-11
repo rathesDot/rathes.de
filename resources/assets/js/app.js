@@ -1,5 +1,6 @@
 import Menu from './menu'
 import Prism from 'prismjs'
+import 'prismjs/components/prism-php'
 
 let menu = new Menu;
 
