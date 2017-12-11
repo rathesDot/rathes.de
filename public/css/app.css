@@ -4180,6 +4180,14 @@ pre[class*="language-"] {
   margin-bottom: 1rem;
 }
 
+.blog-list li a {
+  text-decoration: none;
+}
+
+.blog-list p {
+  line-height: 2;
+}
+
 /** single blog post **/
 @media (min-width: 768px) {
   .single-blog-post p:first-of-type {

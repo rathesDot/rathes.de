@@ -6,6 +6,13 @@ template: 'blog-list'
 My writings
 ===
 
+From time to time, I do write. Sometime on my blog, but also on other blogs such as on [Medium](https://medium.com/@rathes). The topics, I write about are diverse. Obviously I write about the *web*,
+but also about non-web topics like my mother tongue *Tamil* or even about *movies* or *anime*.
+
+I do write in English, German and Tamil. So if you do not understand the title, it may be that you do not speak the language. If you want me to translate a specific article, just drop a message [@rswebdesigner](https://twitter.com/rswebdesigner)
+
+I had a blog called *Web und die Welt* which I closed by the end of 2017. From time to time, I'm going to move the most interesting articles to this blog.
+
 ## 2017
 
 - [12 Books in 12 Months](https://medium.com/p/54db49d8aaec)

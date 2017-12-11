@@ -141,6 +141,14 @@ code[class*="language-"], pre[class*="language-"] {
     @apply .my-4
 }
 
+.blog-list li a {
+    @apply .no-underline
+}
+
+.blog-list p {
+    @apply .leading-loose;
+}
+
 /** single blog post **/
 @screen md {
 
