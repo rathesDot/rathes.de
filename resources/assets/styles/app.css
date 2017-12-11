@@ -84,6 +84,10 @@ code[class*="language-"], pre[class*="language-"] {
     @apply .font-mono .text-sm
 }
 
+code {
+    @apply .text-xs .font-mono .bg-indigo-lightest .p-1 .text-indigo
+}
+
 @screen md {
     .js-menu {
         display: block !important;

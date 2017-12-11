@@ -4082,6 +4082,14 @@ pre[class*="language-"] {
   font-size: .875rem;
 }
 
+code {
+  font-size: .75rem;
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  background-color: #e6e8ff;
+  padding: 0.25rem;
+  color: #6574cd;
+}
+
 @media (min-width: 768px) {
   .js-menu {
     display: block !important;
