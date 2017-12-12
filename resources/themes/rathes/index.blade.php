@@ -8,7 +8,7 @@
                 {!! $content !!}
             </div>
         </div>
-        <div class="flex flex-wrap">
+        {{--  <div class="flex flex-wrap">
             <div class="bg-indigo-light w-1/2 h-64">
             </div>
             <div class="bg-indigo-lighter w-1/2">
@@ -19,6 +19,6 @@
             <div class="bg-indigo w-1/2">
                 Test
             </div>
-        </div>
+        </div>  --}}
     </main>
 @endsection
