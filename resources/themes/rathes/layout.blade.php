@@ -25,6 +25,7 @@
     @yield('content')
 	@include('theme::rathes.footer')
     <script src="{{ asset('/js/app.js') }}"></script>
+	@stack('javascript')
 </body>
 
 </html>
