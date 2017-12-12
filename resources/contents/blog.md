@@ -29,6 +29,7 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 
 
 - [Jahresrückblick: Mein Jahr 2016](/blog/de/review-2016)
+- [Pivot im Leben — Warum ich mich entschied nach Schleswig zu ziehen](https://medium.com/@rathes/pivot-in-leben-warum-ich-mich-entschied-nach-schleswig-zu-ziehen-dbb268db09a6#.1b5fgt1dc)
 - [Buchtipp: Meine Top 5 Bücher für Freelancer und Gründer](/blog/de/buchtipps-freelancer-gruender)
 - [Laravel 5: In wenigen Schritten zum Laravel 5 Package](/blog/de/laravel-package)
 - [Oslo: Was ich an Norwegens Hauptstadt liebe und was nicht](/blog/de/oslove)
