@@ -4090,6 +4090,20 @@ code {
   color: #6574cd;
 }
 
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: auto;
+  display: block;
+}
+
+hr::before {
+  content: "* * *";
+  letter-spacing: 0.05em;
+  font-style: italic;
+  color: #9babb4;
+}
+
 @media (min-width: 768px) {
   .js-menu {
     display: block !important;
