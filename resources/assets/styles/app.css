@@ -92,6 +92,10 @@ hr {
     @apply .my-8 .h-auto .block;
 }
 
+blockquote {
+    @apply .my-8 .italic
+}
+
 hr::before {
     content: "* * *";
     @apply .tracking-wide .italic .text-grey;
@@ -171,6 +175,10 @@ hr::before {
 
     .single-blog-post pre[class*="language-"] {
         @apply .-mx-8
+    }
+
+    .single-blog-post blockquote {
+        @apply -mx-8;
     }
 
 }

@@ -4097,6 +4097,12 @@ hr {
   display: block;
 }
 
+blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
 hr::before {
   content: "* * *";
   letter-spacing: 0.05em;
@@ -4221,6 +4227,11 @@ hr::before {
   }
 
   .single-blog-post pre[class*="language-"] {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .single-blog-post blockquote {
     margin-left: -2rem;
     margin-right: -2rem;
   }
