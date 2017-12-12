@@ -194,10 +194,10 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Roboto',
       '-apple-system',
       'BlinkMacSystemFont',
       'Segoe UI',
-      'Roboto',
       'Oxygen',
       'Ubuntu',
       'Cantarell',
@@ -207,6 +207,7 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
+      'Amiri',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -217,6 +218,10 @@ module.exports = {
       'Liberation Serif',
       'Georgia',
       'serif',
+    ],
+    'logo': [
+      'Space Mono',
+      'monospace'
     ],
     'mono': [
       'Menlo',
@@ -507,7 +512,8 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
-    'screen': '100vh'
+    'screen': '100vh',
+    '3/4-screen': '75vh'
   },
 
 
@@ -625,6 +631,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
+    '32': '8rem',
   },
 
 
@@ -653,6 +661,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
+    '32': '8rem',
   },
 
 
@@ -680,6 +690,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '12': '3rem'
   },
 
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700');
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -28,6 +30,8 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+
+  @import '../../../node_modules/prismjs/themes/prism-okaidia.css';
  
  /**
   * This injects all of Tailwind's utility classes, generated based on your
@@ -56,48 +60,154 @@
   * @import "utilities/skew-transforms";
   */
 
-a {
-  color: rgba(0,0,0,0.8);
-  transition: all 200ms;    
+html, body {
+    @apply .bg-grey-lightest
 }
 
-a:not(.no-hover):hover {
-  background-color: rgba(0,0,0,1);
-  color: rgb(255,255,255);
+h1, h2, h3, h4, h5, h6 {
+    @apply .font-sans .font-medium .tracking-wide .mt-8 .mb-2
 }
 
 p {
-  max-width: 85%;
-  @apply .mx-auto
+    @apply .my-4
 }
 
-.social a {
-    background-image: url('../images/social.png');
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 32px;
-    text-indent: -99999px;
-    width: 32px;
-    @apply .m-2
+a {
+    @apply .text-indigo-dark
 }
 
-.social a:hover {
-    opacity: .9;
-    transition: opacity .25s;
+pre, pre[class*="language-"] {
+    @apply .my-8 .font-mono
 }
 
-.twitter {
-    background-position:0 0
+code[class*="language-"], pre[class*="language-"] {
+    @apply .font-mono .text-sm
 }
-.facebook{
-    background-position:-32px 0
+
+code {
+    @apply .text-xs .font-mono .bg-indigo-lightest .p-1 .text-indigo
 }
-.xing {
-    background-position:-64px 0
+
+hr {
+    @apply .my-8 .h-auto .block;
 }
-.linkedin {
-    background-position:-96px 0
+
+blockquote {
+    @apply .my-8 .italic
 }
-.instagram {
-    background-position:-128px 0
+
+hr::before {
+    content: "* * *";
+    @apply .tracking-wide .italic .text-grey;
+}
+
+@screen md {
+    .js-menu {
+        display: block !important;
+    }
+}
+
+.menu-link {
+    @apply .block .py-4 .text-sm .text-white .no-underline .font-light .border-0
+}
+
+@screen md {
+    .menu-link {
+        @apply .inline-block .mr-4 .text-indigo-dark .border-b .border-indigo-dark .pb-1 .text-base
+    }
+}
+
+/** home **/
+.home h1 {
+    @apply .text-indigo
+}
+
+.home ul {
+    @apply .list-reset .my-4 .text-xs .flex .justify-between
+}
+
+.home ul li {
+    @apply .my-8
+}
+
+.home ul li:before {
+    content: "";
+    @apply .block .my-2 .w-8 .border-t .border-indigo;
+}
+
+.home ul li a {
+    @apply .block .no-underline .text-sm
+}
+
+@screen sm {
+    .home ul li a {
+        @apply .text-base
+    }
+}
+
+/** blog list **/
+.blog-list h1 {    
+    @apply .text-indigo
+}
+
+.blog-list h2 {
+    @apply .mt-16 .uppercase .text-sm .font-normal .tracking-wide .text-grey
+}
+
+.blog-list ul {
+    @apply .list-reset .mt-4
+}
+
+.blog-list li {
+    @apply .my-4
+}
+
+.blog-list li a {
+    @apply .no-underline
+}
+
+.blog-list p {
+    @apply .leading-normal;
+}
+
+@screen md {
+    
+    .blog-list p {
+        @apply .text-lg
+    }
+
+}
+
+/** single blog post **/
+@screen md {
+
+    .single-blog-post > p:first-of-type {
+        @apply .-mx-4 .my-6 .text-lg
+    }
+
+    .single-blog-post pre[class*="language-"] {
+        @apply .-mx-8
+    }
+
+    .single-blog-post blockquote {
+        @apply -mx-8;
+    }
+
+}
+
+
+@screen md {    
+    .single-blog-post > p:first-of-type {
+        @apply .-mx-12
+    }
+
+    .single-blog-post pre[class*="language-"] {
+        @apply .-mx-12
+    }
+
+    .single-blog-post img {
+        @apply .-mx-12 .my-4;
+        max-width: calc(100% + 6rem)
+    }
+
 }

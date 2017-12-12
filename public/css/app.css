@@ -1,3 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700);/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -655,11 +774,15 @@ button,
 }
 
 .font-sans {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
-  font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  font-family: Amiri, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+}
+
+.font-logo {
+  font-family: Space Mono, monospace;
 }
 
 .font-mono {
@@ -2621,6 +2744,10 @@ button,
   height: 100vh;
 }
 
+.h-3\/4-screen {
+  height: 75vh;
+}
+
 .min-h-0 {
   min-height: 0;
 }
@@ -2667,6 +2794,14 @@ button,
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-16 {
+  padding: 4rem;
+}
+
+.p-32 {
+  padding: 8rem;
 }
 
 .p-px {
@@ -2741,6 +2876,26 @@ button,
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .py-px {
@@ -2865,6 +3020,38 @@ button,
   padding-left: 2rem;
 }
 
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pr-16 {
+  padding-right: 4rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pl-16 {
+  padding-left: 4rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pr-32 {
+  padding-right: 8rem;
+}
+
+.pb-32 {
+  padding-bottom: 8rem;
+}
+
+.pl-32 {
+  padding-left: 8rem;
+}
+
 .pt-px {
   padding-top: 1px;
 }
@@ -2907,6 +3094,14 @@ button,
 
 .m-8 {
   margin: 2rem;
+}
+
+.m-16 {
+  margin: 4rem;
+}
+
+.m-32 {
+  margin: 8rem;
 }
 
 .m-auto {
@@ -2985,6 +3180,26 @@ button,
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.mx-32 {
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
 
 .my-auto {
@@ -3119,6 +3334,38 @@ button,
   margin-left: 2rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mr-16 {
+  margin-right: 4rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.ml-16 {
+  margin-left: 4rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mr-32 {
+  margin-right: 8rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
+.ml-32 {
+  margin-left: 8rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -3177,6 +3424,10 @@ button,
 
 .-m-8 {
   margin: -2rem;
+}
+
+.-m-12 {
+  margin: -3rem;
 }
 
 .-m-px {
@@ -3251,6 +3502,16 @@ button,
 .-mx-8 {
   margin-left: -2rem;
   margin-right: -2rem;
+}
+
+.-my-12 {
+  margin-top: -3rem;
+  margin-bottom: -3rem;
+}
+
+.-mx-12 {
+  margin-left: -3rem;
+  margin-right: -3rem;
 }
 
 .-my-px {
@@ -3373,6 +3634,22 @@ button,
 
 .-ml-8 {
   margin-left: -2rem;
+}
+
+.-mt-12 {
+  margin-top: -3rem;
+}
+
+.-mr-12 {
+  margin-right: -3rem;
+}
+
+.-mb-12 {
+  margin-bottom: -3rem;
+}
+
+.-ml-12 {
+  margin-left: -3rem;
 }
 
 .-mt-px {
@@ -3765,57 +4042,229 @@ button,
   * @import "utilities/skew-transforms";
   */
 
-a {
-  color: rgba(0, 0, 0, 0.8);
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
+html,
+body {
+  background-color: #fafcfc;
 }
 
-a:not(.no-hover):hover {
-  background-color: rgba(0, 0, 0, 1);
-  color: rgb(255, 255, 255);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.social a {
-  background-image: url(/images/social.png?789f2e7735d4dab1a2d827c3e620fdab);
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 32px;
-  text-indent: -99999px;
-  width: 32px;
-  margin: 0.5rem;
+a {
+  color: #5661b3;
 }
 
-.social a:hover {
-  opacity: .9;
-  -webkit-transition: opacity .25s;
-  transition: opacity .25s;
+pre,
+pre[class*="language-"] {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
-.twitter {
-  background-position: 0 0;
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: .875rem;
 }
 
-.facebook {
-  background-position: -32px 0;
+code {
+  font-size: .75rem;
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  background-color: #e6e8ff;
+  padding: 0.25rem;
+  color: #6574cd;
 }
 
-.xing {
-  background-position: -64px 0;
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: auto;
+  display: block;
 }
 
-.linkedin {
-  background-position: -96px 0;
+blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
-.instagram {
-  background-position: -128px 0;
+hr::before {
+  content: "* * *";
+  letter-spacing: 0.05em;
+  font-style: italic;
+  color: #9babb4;
+}
+
+@media (min-width: 768px) {
+  .js-menu {
+    display: block !important;
+  }
+}
+
+.menu-link {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: .875rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  border-width: 0;
+}
+
+@media (min-width: 768px) {
+  .menu-link {
+    display: inline-block;
+    margin-right: 1rem;
+    color: #5661b3;
+    border-bottom-width: 1px;
+    border-color: #5661b3;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+  }
+}
+
+/** home **/
+.home h1 {
+  color: #6574cd;
+}
+
+.home ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home ul li {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home ul li:before {
+  content: "";
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 2rem;
+  border-top-width: 1px;
+  border-color: #6574cd;
+}
+
+.home ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: .875rem;
+}
+
+@media (min-width: 576px) {
+  .home ul li a {
+    font-size: 1rem;
+  }
+}
+
+/** blog list **/
+.blog-list h1 {
+  color: #6574cd;
+}
+
+.blog-list h2 {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #9babb4;
+}
+
+.blog-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.blog-list li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-list li a {
+  text-decoration: none;
+}
+
+.blog-list p {
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .blog-list p {
+    font-size: 1.125rem;
+  }
+}
+
+/** single blog post **/
+@media (min-width: 768px) {
+  .single-blog-post > p:first-of-type {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  .single-blog-post pre[class*="language-"] {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .single-blog-post blockquote {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .single-blog-post > p:first-of-type {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .single-blog-post pre[class*="language-"] {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .single-blog-post img {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: calc(100% + 6rem);
+  }
 }
 
 @media (min-width: 576px) {
@@ -3913,11 +4362,15 @@ p {
   }
 
   .sm\:font-sans {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+    font-family: Amiri, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  }
+
+  .sm\:font-logo {
+    font-family: Space Mono, monospace;
   }
 
   .sm\:font-mono {
@@ -5879,6 +6332,10 @@ p {
     height: 100vh;
   }
 
+  .sm\:h-3\/4-screen {
+    height: 75vh;
+  }
+
   .sm\:min-h-0 {
     min-height: 0;
   }
@@ -5925,6 +6382,14 @@ p {
 
   .sm\:p-8 {
     padding: 2rem;
+  }
+
+  .sm\:p-16 {
+    padding: 4rem;
+  }
+
+  .sm\:p-32 {
+    padding: 8rem;
   }
 
   .sm\:p-px {
@@ -5999,6 +6464,26 @@ p {
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sm\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .sm\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .sm\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .sm\:py-px {
@@ -6123,6 +6608,38 @@ p {
     padding-left: 2rem;
   }
 
+  .sm\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .sm\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .sm\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .sm\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .sm\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .sm\:pr-32 {
+    padding-right: 8rem;
+  }
+
+  .sm\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .sm\:pl-32 {
+    padding-left: 8rem;
+  }
+
   .sm\:pt-px {
     padding-top: 1px;
   }
@@ -6165,6 +6682,14 @@ p {
 
   .sm\:m-8 {
     margin: 2rem;
+  }
+
+  .sm\:m-16 {
+    margin: 4rem;
+  }
+
+  .sm\:m-32 {
+    margin: 8rem;
   }
 
   .sm\:m-auto {
@@ -6243,6 +6768,26 @@ p {
   .sm\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .sm\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .sm\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .sm\:my-32 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  .sm\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 
   .sm\:my-auto {
@@ -6377,6 +6922,38 @@ p {
     margin-left: 2rem;
   }
 
+  .sm\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .sm\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .sm\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .sm\:ml-16 {
+    margin-left: 4rem;
+  }
+
+  .sm\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .sm\:mr-32 {
+    margin-right: 8rem;
+  }
+
+  .sm\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .sm\:ml-32 {
+    margin-left: 8rem;
+  }
+
   .sm\:mt-auto {
     margin-top: auto;
   }
@@ -6435,6 +7012,10 @@ p {
 
   .sm\:-m-8 {
     margin: -2rem;
+  }
+
+  .sm\:-m-12 {
+    margin: -3rem;
   }
 
   .sm\:-m-px {
@@ -6509,6 +7090,16 @@ p {
   .sm\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .sm\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .sm\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 
   .sm\:-my-px {
@@ -6631,6 +7222,22 @@ p {
 
   .sm\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .sm\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .sm\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .sm\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .sm\:-ml-12 {
+    margin-left: -3rem;
   }
 
   .sm\:-mt-px {
@@ -7104,11 +7711,15 @@ p {
   }
 
   .md\:font-sans {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+    font-family: Amiri, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  }
+
+  .md\:font-logo {
+    font-family: Space Mono, monospace;
   }
 
   .md\:font-mono {
@@ -9070,6 +9681,10 @@ p {
     height: 100vh;
   }
 
+  .md\:h-3\/4-screen {
+    height: 75vh;
+  }
+
   .md\:min-h-0 {
     min-height: 0;
   }
@@ -9116,6 +9731,14 @@ p {
 
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-16 {
+    padding: 4rem;
+  }
+
+  .md\:p-32 {
+    padding: 8rem;
   }
 
   .md\:p-px {
@@ -9190,6 +9813,26 @@ p {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .md\:py-px {
@@ -9314,6 +9957,38 @@ p {
     padding-left: 2rem;
   }
 
+  .md\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .md\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .md\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .md\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .md\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .md\:pr-32 {
+    padding-right: 8rem;
+  }
+
+  .md\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .md\:pl-32 {
+    padding-left: 8rem;
+  }
+
   .md\:pt-px {
     padding-top: 1px;
   }
@@ -9356,6 +10031,14 @@ p {
 
   .md\:m-8 {
     margin: 2rem;
+  }
+
+  .md\:m-16 {
+    margin: 4rem;
+  }
+
+  .md\:m-32 {
+    margin: 8rem;
   }
 
   .md\:m-auto {
@@ -9434,6 +10117,26 @@ p {
   .md\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .md\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .md\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .md\:my-32 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  .md\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 
   .md\:my-auto {
@@ -9568,6 +10271,38 @@ p {
     margin-left: 2rem;
   }
 
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .md\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .md\:ml-16 {
+    margin-left: 4rem;
+  }
+
+  .md\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .md\:mr-32 {
+    margin-right: 8rem;
+  }
+
+  .md\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .md\:ml-32 {
+    margin-left: 8rem;
+  }
+
   .md\:mt-auto {
     margin-top: auto;
   }
@@ -9626,6 +10361,10 @@ p {
 
   .md\:-m-8 {
     margin: -2rem;
+  }
+
+  .md\:-m-12 {
+    margin: -3rem;
   }
 
   .md\:-m-px {
@@ -9700,6 +10439,16 @@ p {
   .md\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .md\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .md\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 
   .md\:-my-px {
@@ -9822,6 +10571,22 @@ p {
 
   .md\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .md\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .md\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .md\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .md\:-ml-12 {
+    margin-left: -3rem;
   }
 
   .md\:-mt-px {
@@ -10295,11 +11060,15 @@ p {
   }
 
   .lg\:font-sans {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+    font-family: Amiri, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  }
+
+  .lg\:font-logo {
+    font-family: Space Mono, monospace;
   }
 
   .lg\:font-mono {
@@ -12261,6 +13030,10 @@ p {
     height: 100vh;
   }
 
+  .lg\:h-3\/4-screen {
+    height: 75vh;
+  }
+
   .lg\:min-h-0 {
     min-height: 0;
   }
@@ -12307,6 +13080,14 @@ p {
 
   .lg\:p-8 {
     padding: 2rem;
+  }
+
+  .lg\:p-16 {
+    padding: 4rem;
+  }
+
+  .lg\:p-32 {
+    padding: 8rem;
   }
 
   .lg\:p-px {
@@ -12381,6 +13162,26 @@ p {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .lg\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .lg\:py-px {
@@ -12505,6 +13306,38 @@ p {
     padding-left: 2rem;
   }
 
+  .lg\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .lg\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .lg\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .lg\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .lg\:pr-32 {
+    padding-right: 8rem;
+  }
+
+  .lg\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .lg\:pl-32 {
+    padding-left: 8rem;
+  }
+
   .lg\:pt-px {
     padding-top: 1px;
   }
@@ -12547,6 +13380,14 @@ p {
 
   .lg\:m-8 {
     margin: 2rem;
+  }
+
+  .lg\:m-16 {
+    margin: 4rem;
+  }
+
+  .lg\:m-32 {
+    margin: 8rem;
   }
 
   .lg\:m-auto {
@@ -12625,6 +13466,26 @@ p {
   .lg\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .lg\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .lg\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .lg\:my-32 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  .lg\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 
   .lg\:my-auto {
@@ -12759,6 +13620,38 @@ p {
     margin-left: 2rem;
   }
 
+  .lg\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .lg\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .lg\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .lg\:ml-16 {
+    margin-left: 4rem;
+  }
+
+  .lg\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .lg\:mr-32 {
+    margin-right: 8rem;
+  }
+
+  .lg\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .lg\:ml-32 {
+    margin-left: 8rem;
+  }
+
   .lg\:mt-auto {
     margin-top: auto;
   }
@@ -12817,6 +13710,10 @@ p {
 
   .lg\:-m-8 {
     margin: -2rem;
+  }
+
+  .lg\:-m-12 {
+    margin: -3rem;
   }
 
   .lg\:-m-px {
@@ -12891,6 +13788,16 @@ p {
   .lg\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .lg\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .lg\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 
   .lg\:-my-px {
@@ -13013,6 +13920,22 @@ p {
 
   .lg\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .lg\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .lg\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .lg\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .lg\:-ml-12 {
+    margin-left: -3rem;
   }
 
   .lg\:-mt-px {
@@ -13486,11 +14409,15 @@ p {
   }
 
   .xl\:font-sans {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+    font-family: Amiri, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  }
+
+  .xl\:font-logo {
+    font-family: Space Mono, monospace;
   }
 
   .xl\:font-mono {
@@ -15452,6 +16379,10 @@ p {
     height: 100vh;
   }
 
+  .xl\:h-3\/4-screen {
+    height: 75vh;
+  }
+
   .xl\:min-h-0 {
     min-height: 0;
   }
@@ -15498,6 +16429,14 @@ p {
 
   .xl\:p-8 {
     padding: 2rem;
+  }
+
+  .xl\:p-16 {
+    padding: 4rem;
+  }
+
+  .xl\:p-32 {
+    padding: 8rem;
   }
 
   .xl\:p-px {
@@ -15572,6 +16511,26 @@ p {
   .xl\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .xl\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .xl\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .xl\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .xl\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .xl\:py-px {
@@ -15696,6 +16655,38 @@ p {
     padding-left: 2rem;
   }
 
+  .xl\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .xl\:pr-16 {
+    padding-right: 4rem;
+  }
+
+  .xl\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .xl\:pl-16 {
+    padding-left: 4rem;
+  }
+
+  .xl\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .xl\:pr-32 {
+    padding-right: 8rem;
+  }
+
+  .xl\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
+  .xl\:pl-32 {
+    padding-left: 8rem;
+  }
+
   .xl\:pt-px {
     padding-top: 1px;
   }
@@ -15738,6 +16729,14 @@ p {
 
   .xl\:m-8 {
     margin: 2rem;
+  }
+
+  .xl\:m-16 {
+    margin: 4rem;
+  }
+
+  .xl\:m-32 {
+    margin: 8rem;
   }
 
   .xl\:m-auto {
@@ -15816,6 +16815,26 @@ p {
   .xl\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .xl\:my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .xl\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .xl\:my-32 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  .xl\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 
   .xl\:my-auto {
@@ -15950,6 +16969,38 @@ p {
     margin-left: 2rem;
   }
 
+  .xl\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .xl\:mr-16 {
+    margin-right: 4rem;
+  }
+
+  .xl\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .xl\:ml-16 {
+    margin-left: 4rem;
+  }
+
+  .xl\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .xl\:mr-32 {
+    margin-right: 8rem;
+  }
+
+  .xl\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .xl\:ml-32 {
+    margin-left: 8rem;
+  }
+
   .xl\:mt-auto {
     margin-top: auto;
   }
@@ -16008,6 +17059,10 @@ p {
 
   .xl\:-m-8 {
     margin: -2rem;
+  }
+
+  .xl\:-m-12 {
+    margin: -3rem;
   }
 
   .xl\:-m-px {
@@ -16082,6 +17137,16 @@ p {
   .xl\:-mx-8 {
     margin-left: -2rem;
     margin-right: -2rem;
+  }
+
+  .xl\:-my-12 {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
+  .xl\:-mx-12 {
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 
   .xl\:-my-px {
@@ -16204,6 +17269,22 @@ p {
 
   .xl\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .xl\:-mt-12 {
+    margin-top: -3rem;
+  }
+
+  .xl\:-mr-12 {
+    margin-right: -3rem;
+  }
+
+  .xl\:-mb-12 {
+    margin-bottom: -3rem;
+  }
+
+  .xl\:-ml-12 {
+    margin-left: -3rem;
   }
 
   .xl\:-mt-px {

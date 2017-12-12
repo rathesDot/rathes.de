@@ -1,5 +1,5 @@
 ---
-noFlex: true
+title: Legal Information
 ---
 
 #### Pursuant to § 5 TMG:

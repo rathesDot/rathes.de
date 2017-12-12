@@ -1,10 +1,15 @@
 ---
-noFlex: false
-social: true
+title: 'Web Developer'
+template: index
 ---
 
-Rathes Sachchithananthan
+Hello there!
 ===
 
-I am a former freelancing Web Designer and Web Developer. Currently you can find me working at [Aheenam](https://aheenam.com),
-the agency I started to provide digital solutions for anyone. Get in touch with me using social media!
+My name is **Rathes Sachchithananthan** and I'm a web developer currently living in Germany.
+
+My focus is developing apps using **Laravel**, **VueJS** & **React (Native)**, but I'm open for any topic in tech that sounds interesting.
+
+- Working at [netinsiders](https://netinsiders.de)
+- Living in [Schleswig](https://goo.gl/maps/sdJfBDU8Zs42)
+- Follow me [@rswebdesigner](https://twitter.com/rswebdesigner)
