@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(5);
+module.exports = __webpack_require__(6);
 
 
 /***/ }),
@@ -80,6 +80,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prismjs__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prismjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prismjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prismjs_components_prism_php__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prismjs_components_prism_php___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prismjs_components_prism_php__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prismjs_components_prism_json__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prismjs_components_prism_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prismjs_components_prism_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prismjs_components_prism_yaml__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prismjs_components_prism_yaml___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prismjs_components_prism_yaml__);
+
+
+
 
 
 
@@ -994,7 +1003,208 @@ module.exports = g;
 /* 5 */
 /***/ (function(module, exports) {
 
+/**
+ * Original by Aaron Harun: http://aahacreative.com/2012/07/31/php-syntax-highlighting-prism/
+ * Modified by Miles Johnson: http://milesj.me
+ *
+ * Supports the following:
+ * 		- Extends clike syntax
+ * 		- Support for PHP 5.3+ (namespaces, traits, generators, etc)
+ * 		- Smarter constant and function matching
+ *
+ * Adds the following new token classes:
+ * 		constant, delimiter, variable, function, package
+ */
+
+Prism.languages.php = Prism.languages.extend('clike', {
+	'string': {
+		pattern: /(["'])(?:\\[\s\S]|(?!\1)[^\\])*\1/,
+		greedy: true
+	},
+	'keyword': /\b(?:and|or|xor|array|as|break|case|cfunction|class|const|continue|declare|default|die|do|else|elseif|enddeclare|endfor|endforeach|endif|endswitch|endwhile|extends|for|foreach|function|include|include_once|global|if|new|return|static|switch|use|require|require_once|var|while|abstract|interface|public|implements|private|protected|parent|throw|null|echo|print|trait|namespace|final|yield|goto|instanceof|finally|try|catch)\b/i,
+	'constant': /\b[A-Z0-9_]{2,}\b/,
+	'comment': {
+		pattern: /(^|[^\\])(?:\/\*[\s\S]*?\*\/|\/\/.*)/,
+		lookbehind: true
+	}
+});
+
+// Shell-like comments are matched after strings, because they are less
+// common than strings containing hashes...
+Prism.languages.insertBefore('php', 'class-name', {
+	'shell-comment': {
+		pattern: /(^|[^\\])#.*/,
+		lookbehind: true,
+		alias: 'comment'
+	}
+});
+
+Prism.languages.insertBefore('php', 'keyword', {
+	'delimiter': {
+		pattern: /\?>|<\?(?:php|=)?/i,
+		alias: 'important'
+	},
+	'variable': /\$\w+\b/i,
+	'package': {
+		pattern: /(\\|namespace\s+|use\s+)[\w\\]+/,
+		lookbehind: true,
+		inside: {
+			punctuation: /\\/
+		}
+	}
+});
+
+// Must be defined after the function pattern
+Prism.languages.insertBefore('php', 'operator', {
+	'property': {
+		pattern: /(->)[\w]+/,
+		lookbehind: true
+	}
+});
+
+// Add HTML support if the markup language exists
+if (Prism.languages.markup) {
+
+	// Tokenize all inline PHP blocks that are wrapped in <?php ?>
+	// This allows for easy PHP + markup highlighting
+	Prism.hooks.add('before-highlight', function(env) {
+		if (env.language !== 'php' || !/(?:<\?php|<\?)/ig.test(env.code)) {
+			return;
+		}
+
+		env.tokenStack = [];
+
+		env.backupCode = env.code;
+		env.code = env.code.replace(/(?:<\?php|<\?)[\s\S]*?(?:\?>|$)/ig, function(match) {
+			var i = env.tokenStack.length;
+			// Check for existing strings
+			while (env.backupCode.indexOf('___PHP' + i + '___') !== -1)
+				++i;
+
+			// Create a sparse array
+			env.tokenStack[i] = match;
+
+			return '___PHP' + i + '___';
+		});
+
+		// Switch the grammar to markup
+		env.grammar = Prism.languages.markup;
+	});
+
+	// Restore env.code for other plugins (e.g. line-numbers)
+	Prism.hooks.add('before-insert', function(env) {
+		if (env.language === 'php' && env.backupCode) {
+			env.code = env.backupCode;
+			delete env.backupCode;
+		}
+	});
+
+	// Re-insert the tokens after highlighting
+	Prism.hooks.add('after-highlight', function(env) {
+		if (env.language !== 'php' || !env.tokenStack) {
+			return;
+		}
+
+		// Switch the grammar back
+		env.grammar = Prism.languages.php;
+
+		for (var i = 0, keys = Object.keys(env.tokenStack); i < keys.length; ++i) {
+			var k = keys[i];
+			var t = env.tokenStack[k];
+
+			// The replace prevents $$, $&, $`, $', $n, $nn from being interpreted as special patterns
+			env.highlightedCode = env.highlightedCode.replace('___PHP' + k + '___',
+					"<span class=\"token php language-php\">" +
+					Prism.highlight(t, env.grammar, 'php').replace(/\$/g, '$$$$') +
+					"</span>");
+		}
+
+		env.element.innerHTML = env.highlightedCode;
+	});
+}
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
+/***/ (function(module, exports) {
+
+Prism.languages.json = {
+	'property': /"(?:\\.|[^\\"\r\n])*"(?=\s*:)/i,
+	'string': {
+		pattern: /"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+		greedy: true
+	},
+	'number': /\b-?(?:0x[\dA-Fa-f]+|\d*\.?\d+(?:[Ee][+-]?\d+)?)\b/,
+	'punctuation': /[{}[\]);,]/,
+	'operator': /:/g,
+	'boolean': /\b(?:true|false)\b/i,
+	'null': /\bnull\b/i
+};
+
+Prism.languages.jsonp = Prism.languages.json;
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+Prism.languages.yaml = {
+	'scalar': {
+		pattern: /([\-:]\s*(?:![^\s]+)?[ \t]*[|>])[ \t]*(?:((?:\r?\n|\r)[ \t]+)[^\r\n]+(?:\2[^\r\n]+)*)/,
+		lookbehind: true,
+		alias: 'string'
+	},
+	'comment': /#.*/,
+	'key': {
+		pattern: /(\s*(?:^|[:\-,[{\r\n?])[ \t]*(?:![^\s]+)?[ \t]*)[^\r\n{[\]},#\s]+?(?=\s*:\s)/,
+		lookbehind: true,
+		alias: 'atrule'
+	},
+	'directive': {
+		pattern: /(^[ \t]*)%.+/m,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'datetime': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:\d{4}-\d\d?-\d\d?(?:[tT]|[ \t]+)\d\d?:\d{2}:\d{2}(?:\.\d*)?[ \t]*(?:Z|[-+]\d\d?(?::\d{2})?)?|\d{4}-\d{2}-\d{2}|\d\d?:\d{2}(?::\d{2}(?:\.\d*)?)?)(?=[ \t]*(?:$|,|]|}))/m,
+		lookbehind: true,
+		alias: 'number'
+	},
+	'boolean': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:true|false)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'null': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)(?:null|~)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true,
+		alias: 'important'
+	},
+	'string': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)("|')(?:(?!\2)[^\\\r\n]|\\.)*\2(?=[ \t]*(?:$|,|]|}))/m,
+		lookbehind: true,
+		greedy: true
+	},
+	'number': {
+		pattern: /([:\-,[{]\s*(?:![^\s]+)?[ \t]*)[+\-]?(?:0x[\da-f]+|0o[0-7]+|(?:\d+\.?\d*|\.?\d+)(?:e[+-]?\d+)?|\.inf|\.nan)[ \t]*(?=$|,|]|})/im,
+		lookbehind: true
+	},
+	'tag': /![^\s]+/,
+	'important': /[&*][\w]+/,
+	'punctuation': /---|[:[\]{}\-,|>?]|\.\.\./
+};
+
 
 /***/ })
 /******/ ]);

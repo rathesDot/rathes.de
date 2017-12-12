@@ -18,13 +18,15 @@ Promises in JavaScript sind ein mächtiges Feature, dass die Arbeit mit asynchro
 
 Gerade wenn du dich im Bereich der Web-App Entwicklung herumtreibst, wirst du im das Thema asynchrone Requests nicht herumkommen. Denn du wirst in der Regel sehr viele Anfragen an eine API machen, die nicht synchron laufen werden. Wenn du zum Beispiel das Package Axios einsetzt (welche ich in meinem Beitrag zur Einführung in Vuex bereits erwähnt habe), dann wirst du sehr oft Code wie Folgenden gemacht haben.
 
-<pre><code class='js-code language-javascript'>axios.get('https://domain.tld/api/xyz')
-  .then((response) =&gt; {
+```javascript
+axios.get('https://domain.tld/api/xyz')
+  .then((response) => {
     console.log(response)
   })
-  .catch((error) =&gt; {
+  .catch((error) => {
     console.log(error)
-  })</code></pre>
+  })
+```
 
 Das ist ein sehr gutes Beispiel für einen Promise im Einsatz. Du führst eine asynchrone Anfrage durch und wartest auf ein Resultat. Und sobald das Resultat da ist, kannst du je nach Erfolg oder Misserfolg mit diesem Resultat weiterarbeiten.
 
@@ -50,8 +52,9 @@ Außerdem wirst du auf die zwei Begriffe resolve und reject stoßen, welche ich 
 
 Ein einfacher Promise sieht wie folgt aus:
 
-<pre><code class='js-code language-javascript'>function myAsyncRequest (uri) {
-  return new Promise((resolve, reject) =&gt; {
+```javascript
+function myAsyncRequest (uri) {
+  return new Promise((resolve, reject) => {
     
     let image = new Image();
     
@@ -68,82 +71,90 @@ Ein einfacher Promise sieht wie folgt aus:
 }
 
 myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
-  .then((image) =&gt; {
+  .then((image) => {
     console.log(image);
   })
-  .catch((error) =&gt; {
+  .catch((error) => {
     console.log(error);
-  })</code></pre>
+  })
+```
 
-Einen Promise erzeugst du mit dem Konstruktor <code class='js-code language-javascript'>new Promise()</code> der wiederum eine Funktion als Parameter beinhaltet. Diese Funktion hat die Variablen resolve und reject (die beiden Begriffe, die ich bereits oben erwähnt habe). Diese beiden Funktionen werden im Code auch ausgeführt. Die Funktion &#8222;resolve&#8220; wird immer dann benutzt, wenn die Aktion als erfolgreich deklariert werden soll, &#8222;reject&#8220; markiert, dass etwas nicht erfolgreich war.
+Einen Promise erzeugst du mit dem Konstruktor `new Promise()` der wiederum eine Funktion als Parameter beinhaltet. Diese Funktion hat die Variablen resolve und reject (die beiden Begriffe, die ich bereits oben erwähnt habe). Diese beiden Funktionen werden im Code auch ausgeführt. Die Funktion `resolve` wird immer dann benutzt, wenn die Aktion als erfolgreich deklariert werden soll, `reject` markiert, dass etwas nicht erfolgreich war.
 
-An diesen Promise kann man nun die Funktionen <code class='js-code language-javascript'>.then()</code> und <code class='js-code language-javascript'>.catch()</code> anhängen und so die beiden Fälle abfangen. Ganz einfach oder?
+An diesen Promise kann man nun die Funktionen `.then()` und `.catch()` anhängen und so die beiden Fälle abfangen. Ganz einfach oder?
 
 ## Promise Chaining
 
-Die <code class='js-code language-javascript'>.then()</code> Funktion eines Promises liefert immer wieder einen weiteren Promise aus, sodass wir weitere <code class='js-code language-javascript'>.then()</code> Funktionen an diesen Promise anhängen können.
+Die `.then()` Funktion eines Promises liefert immer wieder einen weiteren Promise aus, sodass wir weitere `.then()` Funktionen an diesen Promise anhängen können.
 
-<pre><code class='js-code language-javascript'>myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
-  .then((image) =&gt; {
+```javascript
+myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
+  .then((image) => {
     console.log(image);
     return { src: image.src, width: image.width, height: image.height }
   })
-  .then((data) =&gt; {
+  .then((data) => {
     console.log(data.height);
     console.log(data.width);
     console.log(data.src);
   })
-  .catch((error) =&gt; {
+  .catch((error) => {
     console.log(error);
-  })</code></pre>
+  })
+```
 
-Die erste Funktion liefert ein Objekt zurück, das die Daten des Bildes beinhaltet. Dieses können wir ganz einfach in einem weiteren <code class='js-code language-javascript'>.then()</code> abgreifen und weiterverarbeiten.
+Die erste Funktion liefert ein Objekt zurück, das die Daten des Bildes beinhaltet. Dieses können wir ganz einfach in einem weiteren `.then()` abgreifen und weiterverarbeiten.
 
 ## Promise auflösen
 
-Anders als oben gezeigt, muss das catch nicht unbedingt am Ende dieser Kette stehen. Stellen wir uns bei diesem Beispiel vor, dass wir ein &#8222;Dummy-Bild&#8220; anzeigen wollen, wenn das Bild nicht geladen werden konnte. Das würde dann wie folgt aussehen:
+Anders als oben gezeigt, muss das catch nicht unbedingt am Ende dieser Kette stehen. Stellen wir uns bei diesem Beispiel vor, dass wir ein "Dummy-Bild" anzeigen wollen, wenn das Bild nicht geladen werden konnte. Das würde dann wie folgt aussehen:
 
-<pre><code class='js-code language-javascript'>myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
-  .catch((error) =&gt; {
+```javascript
+myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
+  .catch((error) => {
     console.log(error);
     let notFoundImage = new Image()
     notFoundImage.src = "./some/path/dummy.png"
     return notFoundImage
   })
-  .then((image) =&gt; {
+  .then((image) => {
     console.log(image);
     return { src: image.src, width: image.width, height: image.height }
   })
-  .then((data) =&gt; {
+  .then((data) => {
     console.log(data.height);
     console.log(data.width);
     console.log(data.src);
-  })</code></pre>
+  })
+```
 
-Man kann sogar einen weiteren Promise in dem auflösenden <code class='js-code language-javascript'>.then()</code> zurückgeben, welcher dann vor dem nächsten <code class='js-code language-javascript'>.then()</code> ausgeführt wird.
+Man kann sogar einen weiteren Promise in dem auflösenden `.then()` zurückgeben, welcher dann vor dem nächsten `.then()` ausgeführt wird.
 
-<pre><code class='js-code language-javascript'>myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
-  .catch((error) =&gt; {
+```javascript
+myAsyncRequest("https://this.is.my/uri/to/my/image.jpg")
+  .catch((error) => {
     console.log(error);
     return myAsyncRequest("./some/path/dummy.png")
   })
-  .then((image) =&gt; {
+  .then((image) => {
     console.log(image);
     return { src: image.src, width: image.width, height: image.height }
   })
-  .then((data) =&gt; {
+  .then((data) => {
     console.log(data.height);
     console.log(data.width);
     console.log(data.src);
-  })</code></pre>
+  })
+```
 
 ## Promise.all()
 
 Bisher hast du immer nur ein Bild asynchron geladen. Was aber, wenn du mehr als nur eines laden willst? Und erst dann eine Aktion ausführen willst, wenn alle Bilder geladen wurden?
 
-Der erste Gedanke wäre eine sehr lange Kette und am Ende dieser Kette im letzten <code class='js-code language-javascript'>.then()</code> dann die Aktion. Es geht aber definitiv einfacher:
+Der erste Gedanke wäre eine sehr lange Kette und am Ende dieser Kette im letzten `.then()` dann die Aktion. Es geht aber definitiv einfacher:
 
-<pre><code class='js-code language-javascript'>var urls = ['https://my.tld/one.jpg', 'https://my.tld/two.png', 'https://my.tld/three.png'];
+```javascript
+var urls = ['https://my.tld/one.jpg', 'https://my.tld/two.png', 'https://my.tld/three.png'];
 let promises = urls.map(myAsyncRequest);
 
 Promise.all(promises)
@@ -152,14 +163,13 @@ Promise.all(promises)
  })
  .catch(function(err) {
  console.error(err);
- });</code></pre>
+ });
+```
 
-Wenn man <code class='js-code language-javascript'>Promise.all()</code> einen Array an Promises übergeben, wartet dieser ab, bis alle geladen werden und geht dann erst in die nächste <code class='js-code language-javascript'>.then()</code> Funktion.
+Wenn man `Promise.all()` einen Array an Promises übergeben, wartet dieser ab, bis alle geladen werden und geht dann erst in die nächste `.then()` Funktion.
 
-* * *
+---
 
-Wie du siehst sind Promises gar nicht so schwer zu verstehen und trotzdem sehr hilfreich. Promises sind seit ES2015 Standard und <a href="https://caniuse.com/#feat=promises" target="_blank" rel="noopener noreferrer">werden auch von allen aktuellen Browsern unterstützt</a>. (Der IE11 ist kein aktueller Browser mehr).
+Wie du siehst sind Promises gar nicht so schwer zu verstehen und trotzdem sehr hilfreich. Promises sind seit ES2015 Standard und [werden auch von allen aktuellen Browsern unterstützt](https://caniuse.com/#feat=promises). (Der IE11 ist kein aktueller Browser mehr).
 
-Die Promises selbst haben bereits eine Erweiterung erfahren. Mit <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions" target="_blank" rel="noopener noreferrer">Async/Await</a> werden sogar die .then() überflüssig gemacht bzw. vereinfacht, aber das ist dann wohl Stoff für einen weiteren Beitrag.
-
-&nbsp;
+Die Promises selbst haben bereits eine Erweiterung erfahren. Mit [Async/Await](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions) werden sogar die .then() überflüssig gemacht bzw. vereinfacht, aber das ist dann wohl Stoff für einen weiteren Beitrag.

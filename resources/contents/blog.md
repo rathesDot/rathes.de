@@ -17,6 +17,7 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 
 - [12 Books in 12 Months](https://medium.com/p/54db49d8aaec)
 - [Looking forward to 2018](https://medium.com/@rathes/looking-forward-to-2018-927baae0f065)
+- [One Piece Theorien](/blog/de/one-piece-theorien)
 - [Den Laravel Code mit dem Repository Pattern entkoppeln](/blog/de/laravel-repository-pattern)
 - [Facebook Messenger Chatbot mit Laravel](/blog/de/facebook-messenger-chatbot-laravel)
 - [Einführung in JavaScript Promise](/blog/de/javascript-promise-introduction)
@@ -29,11 +30,12 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 
 
 - [Jahresrückblick: Mein Jahr 2016](/blog/de/review-2016)
+- [Pivot im Leben — Warum ich mich entschied nach Schleswig zu ziehen](https://medium.com/@rathes/pivot-in-leben-warum-ich-mich-entschied-nach-schleswig-zu-ziehen-dbb268db09a6#.1b5fgt1dc)
 - [Buchtipp: Meine Top 5 Bücher für Freelancer und Gründer](/blog/de/buchtipps-freelancer-gruender)
 - [Laravel 5: In wenigen Schritten zum Laravel 5 Package](/blog/de/laravel-package)
 - [Oslo: Was ich an Norwegens Hauptstadt liebe und was nicht](/blog/de/oslove)
+- [Laravel Homestead unter Windows 10 einrichten](/blog/de/laravel-homestead-einrichten-windows-10)
 - [Tamil: Warum es sich lohnt die Sprache der Tamilen zu erlernen und wie du dabei vorgehen solltest](/blog/de/tamil-lernen)
-- [Ist Tamilisch lernen schwierig?](/blog/de/ist-tamilisch-lernen-schwer)
 
 ## 2015
 
