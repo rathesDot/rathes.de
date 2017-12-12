@@ -4212,7 +4212,7 @@ hr::before {
 
 /** single blog post **/
 @media (min-width: 768px) {
-  .single-blog-post p:first-of-type {
+  .single-blog-post > p:first-of-type {
     margin-left: -1rem;
     margin-right: -1rem;
     margin-top: 1.5rem;
@@ -4227,7 +4227,7 @@ hr::before {
 }
 
 @media (min-width: 768px) {
-  .single-blog-post p:first-of-type {
+  .single-blog-post > p:first-of-type {
     margin-left: -3rem;
     margin-right: -3rem;
   }

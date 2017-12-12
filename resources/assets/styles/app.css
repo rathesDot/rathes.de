@@ -165,7 +165,7 @@ hr::before {
 /** single blog post **/
 @screen md {
 
-    .single-blog-post p:first-of-type {
+    .single-blog-post > p:first-of-type {
         @apply .-mx-4 .my-6 .text-lg
     }
 
@@ -177,7 +177,7 @@ hr::before {
 
 
 @screen md {    
-    .single-blog-post p:first-of-type {
+    .single-blog-post > p:first-of-type {
         @apply .-mx-12
     }
 
