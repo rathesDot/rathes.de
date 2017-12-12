@@ -146,6 +146,10 @@ hr::before {
 }
 
 /** blog list **/
+.blog-list h1 {    
+    @apply .text-indigo
+}
+
 .blog-list h2 {
     @apply .mt-16 .uppercase .text-sm .font-normal .tracking-wide .text-grey
 }
@@ -163,7 +167,15 @@ hr::before {
 }
 
 .blog-list p {
-    @apply .leading-loose;
+    @apply .leading-normal;
+}
+
+@screen md {
+    
+    .blog-list p {
+        @apply .text-lg
+    }
+
 }
 
 /** single blog post **/

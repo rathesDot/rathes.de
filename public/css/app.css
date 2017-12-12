@@ -4187,6 +4187,10 @@ hr::before {
 }
 
 /** blog list **/
+.blog-list h1 {
+  color: #6574cd;
+}
+
 .blog-list h2 {
   margin-top: 4rem;
   text-transform: uppercase;
@@ -4213,7 +4217,13 @@ hr::before {
 }
 
 .blog-list p {
-  line-height: 2;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .blog-list p {
+    font-size: 1.125rem;
+  }
 }
 
 /** single blog post **/
