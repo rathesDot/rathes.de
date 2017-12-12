@@ -34,7 +34,6 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 - [Laravel 5: In wenigen Schritten zum Laravel 5 Package](/blog/de/laravel-package)
 - [Oslo: Was ich an Norwegens Hauptstadt liebe und was nicht](/blog/de/oslove)
 - [Tamil: Warum es sich lohnt die Sprache der Tamilen zu erlernen und wie du dabei vorgehen solltest](/blog/de/tamil-lernen)
-- [Ist Tamilisch lernen schwierig?](/blog/de/ist-tamilisch-lernen-schwer)
 
 ## 2015
 
