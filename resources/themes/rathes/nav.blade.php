@@ -13,9 +13,9 @@
             </button>
         </div>
         <nav class="w-full mt-4 js-menu md:w-auto md:mt-0">
-            <a class="menu-link" href="/resume">Resume</a>
+            {{--  <a class="menu-link" href="/resume">Resume</a>
             <a class="menu-link" href="/about">About</a>
-            <a class="menu-link" href="/work">Work</a>
+            <a class="menu-link" href="/work">Work</a>  --}}
             <a class="menu-link" href="/blog">Blog</a>
         </nav>
 	</div>
