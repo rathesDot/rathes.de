@@ -17,6 +17,7 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 
 - [12 Books in 12 Months](https://medium.com/p/54db49d8aaec)
 - [Looking forward to 2018](https://medium.com/@rathes/looking-forward-to-2018-927baae0f065)
+- [One Piece Theorien](/blog/de/one-piece-theorien)
 - [Den Laravel Code mit dem Repository Pattern entkoppeln](/blog/de/laravel-repository-pattern)
 - [Facebook Messenger Chatbot mit Laravel](/blog/de/facebook-messenger-chatbot-laravel)
 - [Einführung in JavaScript Promise](/blog/de/javascript-promise-introduction)
