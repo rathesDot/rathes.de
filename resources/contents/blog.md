@@ -33,6 +33,7 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 - [Buchtipp: Meine Top 5 Bücher für Freelancer und Gründer](/blog/de/buchtipps-freelancer-gruender)
 - [Laravel 5: In wenigen Schritten zum Laravel 5 Package](/blog/de/laravel-package)
 - [Oslo: Was ich an Norwegens Hauptstadt liebe und was nicht](/blog/de/oslove)
+- [Laravel Homestead unter Windows 10 einrichten](/blog/de/laravel-homestead-einrichten-windows-10)
 - [Tamil: Warum es sich lohnt die Sprache der Tamilen zu erlernen und wie du dabei vorgehen solltest](/blog/de/tamil-lernen)
 
 ## 2015
