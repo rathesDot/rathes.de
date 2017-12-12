@@ -4240,6 +4240,9 @@ hr::before {
   .single-blog-post img {
     margin-left: -3rem;
     margin-right: -3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: calc(100% + 6rem);
   }
 }
 

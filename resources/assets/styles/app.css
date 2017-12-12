@@ -186,7 +186,8 @@ hr::before {
     }
 
     .single-blog-post img {
-        @apply .-mx-12
+        @apply .-mx-12 .my-4;
+        max-width: calc(100% + 6rem)
     }
 
 }
