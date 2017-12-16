@@ -11,7 +11,10 @@
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
-    "laravel-mix": "^1.7.2"
+    "glob": "^7.1.2",
+    "glob-all": "^3.1.0",
+    "laravel-mix": "^1.7.2",
+    "purgecss-webpack-plugin": "^0.15.0"
   },
   "dependencies": {
     "prism-themes": "^1.0.0",
