@@ -1,4 +1,4 @@
-@extends('theme::rathes.layout')
+@extends('theme::rathes.layouts.blog')
 
 @section('content')
     <div class="container mx-auto leading-normal md:mt-16">
