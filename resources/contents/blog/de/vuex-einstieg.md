@@ -11,7 +11,8 @@ tags:
   - Frontendentwicklung
   - vuejs
 ---
-sdfEs gibt immer einen Zeitpunkt bei der Entwicklung einer Webapp mit Vue, ab dem du dir ernsthaft Gedanken darüber machen musst wie du mit deinen Daten umgehen willst und diese organisieren willst. Mit Vue kannst du sehr einfach mit Daten innerhalb einer Komponente arbeiten. Sobald es einmal größer wird, reicht das aber nicht aus. Hier kommt Vuex ins Spiel.
+
+Es gibt immer einen Zeitpunkt bei der Entwicklung einer Webapp mit Vue, ab dem du dir ernsthaft Gedanken darüber machen musst wie du mit deinen Daten umgehen willst und diese organisieren willst. Mit Vue kannst du sehr einfach mit Daten innerhalb einer Komponente arbeiten. Sobald es einmal größer wird, reicht das aber nicht aus. Hier kommt Vuex ins Spiel.
 
 <!--more-->
 
