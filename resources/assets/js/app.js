@@ -12,3 +12,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
   Prism.highlightAll();
 
 });
+
+
+window.addEventListener("load", function () {
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#383b75"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    },
+    "theme": "edgeless",
+    "content": {
+      "dismiss": "OK",
+      "href": "https://rathes.de/imprint"
+    }
+  })
+});

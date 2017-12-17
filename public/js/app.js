@@ -100,6 +100,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
   __WEBPACK_IMPORTED_MODULE_1_prismjs___default.a.highlightAll();
 });
 
+window.addEventListener("load", function () {
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#383b75"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    },
+    "theme": "edgeless",
+    "content": {
+      "dismiss": "OK",
+      "href": "https://rathes.de/imprint"
+    }
+  });
+});
+
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
