@@ -10,6 +10,9 @@ AddHandler php71-cgi .php
     RewriteCond %{HTTPS} off
     RewriteRule (.*) https://%{HTTP_HOST}/$1 [R=301,L]
 
+    RewriteCond %{HTTP_HOST} ^www\.rathes\.de [NC]
+    RewriteRule ^(.*)$ http://rathes.de/$1 [L,R=301]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
