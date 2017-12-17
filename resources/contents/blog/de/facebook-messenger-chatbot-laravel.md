@@ -5,6 +5,7 @@ date: 2017-04-01T18:02:37+00:00
 author: Rathes Sachchithananthan
 template: post
 image: /images/blog/laravel-facebook-messenger-chatbot.png
+description: In diesem Artikel zeige ich dir wie du mit Laravel einen Chatbot für den Facebook Messenger aufsetzen kannst.
 categories:
   - Featured
   - Web
@@ -12,6 +13,7 @@ tags:
   - Chatbot
   - Facebook Messenger
   - Laravel
+locale: de_DE
 ---
 
 In diesem Artikel zeige ich dir wie du mit Laravel einen Chatbot für den Facebook Messenger aufsetzen kannst.

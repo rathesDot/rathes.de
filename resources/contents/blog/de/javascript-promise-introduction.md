@@ -10,6 +10,8 @@ tags:
   - Frontendentwicklung
   - JavaScript
 template: post
+description: Promises in JavaScript sind ein mächtiges Feature, dass die Arbeit mit asynchronem Code sehr vereinfacht. Ich möchte dich in diesem Beitrag in die Welt der Promises einführen.
+locale: de_DE
 ---
 
 Promises in JavaScript sind ein mächtiges Feature, dass die Arbeit mit asynchronem Code sehr vereinfacht. Ich möchte dich in diesem Beitrag in die Welt der Promises einführen.

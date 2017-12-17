@@ -10,6 +10,7 @@ categories:
   - Welt
 tags:
   - Tamil Gesellschaft
+locale: de_DE
 ---
 Die USA haben die gleichgeschlechtliche Ehe legalisiert. Diese Entscheidung wird als historischer Paukenschlag gefeiert. Andere Länder sind aber noch nicht soweit. Andere Kulturen haben noch weitaus andere Sorgen, so auch wir Tamilen.
 

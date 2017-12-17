@@ -10,6 +10,8 @@ categories:
 tags:
   - Usability
   - UX
+locale: de_DE
+description: Du kannst alleine durch das Erfragen des Namens deinen Benutzer direkt wieder verlieren. Wie du das verhinderst zeige ich dir hier.
 ---
 Es gibt einige Momente im Web, wo du den Namen von deinen Benutzern in Erfahrung bringen musst. In den meisten Fällen wirst du das über ein einfaches Formular machen. Wie sieht das Formular bei dir dann aus? Hast du ein oder mehrere Felder?
 

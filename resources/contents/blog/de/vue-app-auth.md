@@ -10,6 +10,8 @@ categories:
 tags:
   - Frontendentwicklung
   - vuejs
+locale: de_DE
+description: So realisierst du die Authentifizierung in einer Web App, die auf VueJS basiert.
 ---
 
 Authentifizierung ist ein Thema, mit dem man sich fast immer beschäftigen muss, wenn man eine größere Webanwendung entwickelt. Anders als bei der klassischen Authentifizierung bei serverseitigen Anwendungen, kann man bei der Entwicklung einer Webapp, die auf eine API zugreift, nicht mit Sessions arbeiten. REST API’s, die im Web immer wieder Verwendung finden, sind zustandslos. Daher muss bei jeder Anfrage eine die Information der Authentifizierung immer mitgeschickt werden.

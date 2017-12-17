@@ -10,6 +10,8 @@ categories:
 tags:
   - Film
   - Inspiration
+locale: de_DE
+description: Sport sorgt sowohl im echten Leben als auch im Film für ganz viel Action und Spannung. Sport Filme haben aber auch oft die Eigenschaft motivierend und inspirierend zu sein. Heute stelle ich dir 10 inspirierende Sportfilme vor.
 ---
 
 Sport sorgt sowohl im echten Leben als auch im Film für ganz viel Action und Spannung. Sport Filme haben aber auch oft die Eigenschaft motivierend und inspirierend zu sein. Heute stelle ich dir 10 inspirierende Sportfilme vor.

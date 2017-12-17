@@ -11,6 +11,8 @@ categories:
 tags:
   - Laravel
   - Webentwicklung
+locale: de_DE
+description: Ich zeige dir, wie du das Repository Pattern in Laravel anwendest und damit deinen Code noch besser machst.
 ---
 Mit der regelmäßigen Weiterentwicklung einer Laravel Webanwendung steigt auch die Komplexität dieser. Um trotzdem einen sauberen Code zu haben, lohnt es sich die Software regelmäßig zu überarbeiten und zu optimieren. Ein Muster, das dir die Arbeit des Refactoring erheblich erleichtern kann, ist das Repository Pattern.
 

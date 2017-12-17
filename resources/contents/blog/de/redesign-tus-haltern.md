@@ -13,6 +13,7 @@ tags:
   - Redesign
   - responsive Webdesign
   - Webdesign
+locale: de_DE
 ---
 Einmal im Monat veröffentliche ich Redesigns. Dabei suche ich mir eine Webseite aus und entwickle ein verbessertes Webdesign dieser. Dieses Mal habe ich die Webseite des TuS Haltern neu gestaltet.
 

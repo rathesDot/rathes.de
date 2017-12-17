@@ -11,7 +11,10 @@ tags:
   - Laravel
   - PHP
   - Webentwicklung
+description: Eine Schritt für Schritt Anleitung wie du in Laravel 5 eigene Packages entwickelst.
+locale: de_DE
 ---
+
 Du willst ein eigenes Package für Laravel entwickeln? Als ich mich das erste Mal damit beschäftigt habe, fand ich es recht schwer brauchbare Informationen oder eine Anleitung dafür zu finden. Dieser Beitrag soll die Lücke füllen und die eine Schritt für Schritt Anleitung liefern wie du in Laravel 5 eigene Packages entwickelst.
 
 <!--more-->

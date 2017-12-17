@@ -11,6 +11,8 @@ tags:
   - Arbeitsleben
   - Oslo
   - Reisen
+locale: de_DE
+desciption: Ich bin jetzt schon einige Male in Oslo gewesen, der Hauptstadt von Norwegen. Derzeit befinde ich mich auch dort und werde wie immer sehr begeistert aus dieser Stadt zurückkehren.
 ---
 Ich bin jetzt schon einige Male in Oslo gewesen, der Hauptstadt von Norwegen. Derzeit befinde ich mich auch dort und werde wie immer sehr begeistert aus dieser Stadt zurückkehren.
 

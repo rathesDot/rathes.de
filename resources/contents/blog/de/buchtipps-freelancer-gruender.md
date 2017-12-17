@@ -5,12 +5,14 @@ date: 2016-09-13T18:40:13+00:00
 author: Rathes Sachchithananthan
 template: post
 image: /images/blog/buchtipps.jpg
+description: Ich stelle dir die Top 5 Bücher vor, die du als Gründer oder Freelancer gelesen haben solltest.
 categories:
   - Unternehmer
 tags:
   - Buch
   - Buchtipp
   - Freelancer
+locale: de_DE
 ---
 Als Freelancer und Solopreneur muss man auf vieles achten. Um nicht nur bei der Gründungsphase, sondern auch sonst immer aktuell zu bleiben, ist es wichtig, dass man sich auch Inspiration von anderen holt. Eine sehr einfache Art und Weise dies zu tun ist das Lesen. Heute stelle ich dir meine Top 5 Bücher vor, die du als Gründer oder als Freelancer gelesen haben solltest.
 

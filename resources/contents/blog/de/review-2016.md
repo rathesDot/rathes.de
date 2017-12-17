@@ -7,6 +7,7 @@ template: post
 image: /images/blog/oslo-16-12.jpg
 categories:
   - Welt
+locale: de_DE
 ---
 Es ist bei mir üblich, dass ich mich jedes Jahr hinsetze und mir Gedanken darüber mache wie das Jahr gelaufen ist, was ich daraus lernen kann und was ich mir für das kommende Jahr erhoffe. Dieses Jahr neigt sich ebenfalls dem Ende zu und es wird Zeit für einen kleinen Jahresrückblick.<!--more-->
 

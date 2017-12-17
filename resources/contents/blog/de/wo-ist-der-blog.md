@@ -6,6 +6,7 @@ author: Rathes Sachchithananthan
 template: post
 categories:
   - Sonstiges
+locale: de_DE
 ---
 
 Wenn du diesen Beitrag liest, dann hast du sehr wahrscheinlich auf einen Link geklickt, der auch meinen alten Blog "Web und die Welt" verweist. Diesen habe ich im Dezember 2017 zugunsten meiner eigenen Webseite aufgegeben.

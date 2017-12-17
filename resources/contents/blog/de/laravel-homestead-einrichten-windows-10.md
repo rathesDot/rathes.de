@@ -11,6 +11,8 @@ tags:
   - Laravel
   - PHP
   - Vagrant
+description: Mit dieser Anleitung schaffst du es Laravel Homestead auch ganz einfach unter Windows 10 einzurichten.
+locale: de_DE
 ---
 Homestead ist eine von Laravel vorkonfigurierte Vagrant Box, die es einem ermöglicht ganz einfach und unkompliziert Laravel in seiner lokalen Umgebung zu installieren. Für Windows User ist es dann doch nicht so unkompliziert. Daher gibt es hier eine kleine Anleitung für die Einrichtung von Laravel Homestead unter Windows.
 

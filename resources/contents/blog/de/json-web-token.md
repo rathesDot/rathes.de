@@ -12,6 +12,8 @@ tags:
   - Frontendentwicklung
   - PHP
   - Webentwicklung
+description: Was ist das JSON Web Token, wie funktioniert es und welche Vorteile hat man mit JSON Web Token im Vergleich zu Cookies. Und es geht um die Anwendung in PHP.
+locale: de_DE
 ---
 REST API’s, die im Web immer wieder Verwendung finden, sind zustandslos. Das bedeutet, dass bei jeder Anfrage vom Client an den Server diese mit allen Informationen bestückt sein muss, die für die Verarbeitung der Anfrage benötigt wird. Um diese Zustandslosigkeit auch beim Login und dem Status des Logins beizubehalten braucht man eine andere Methode als das gute $_SESSION in PHP. An dieser Stelle kommt das JSON Web Token zum Einsatz.
 

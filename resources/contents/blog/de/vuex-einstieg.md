@@ -10,6 +10,8 @@ categories:
 tags:
   - Frontendentwicklung
   - vuejs
+locale: de_DE
+description: Mit Vuex wirst du Herr der Lage, wenn es um die ganzen Mengen an Daten geht, die sich in einer Web App, die auf VueJS basiert, ansammeln.
 ---
 
 Es gibt immer einen Zeitpunkt bei der Entwicklung einer Webapp mit Vue, ab dem du dir ernsthaft Gedanken darüber machen musst wie du mit deinen Daten umgehen willst und diese organisieren willst. Mit Vue kannst du sehr einfach mit Daten innerhalb einer Komponente arbeiten. Sobald es einmal größer wird, reicht das aber nicht aus. Hier kommt Vuex ins Spiel.
