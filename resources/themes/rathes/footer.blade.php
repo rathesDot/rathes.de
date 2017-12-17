@@ -4,6 +4,6 @@
         &copy; 2017 - Rathes Sachchithananthan
     </div>
     <div>
-        <a class="no-underline text-grey" href="imprint">Legal Information</a>
+        <a class="no-underline text-grey" href="/imprint">Legal Information</a>
     </div>
 </footer>
