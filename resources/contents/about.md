@@ -30,7 +30,7 @@ While I was working most of my time as a Freelancer, in 2016 I decided decrease 
 
 ---
 
-**Co-Founder/Web Developer at [Kernwerk](https://kernwerk.de)**\
+**Co-Founder/Web Developer at [KERNWERK](https://kernwerk.de)**\
 *Oct 2015 - January 2018*
 
 Together with some friends we created the awesome app for digital personal training. I created the backend of first MVP using Laravel as the framework of choice. Due to lack of time and shift of interests, I left this project by the end of 2017.
