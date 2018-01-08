@@ -1,6 +1,9 @@
 <!doctype html>
+@if($meta && isset($meta['locale']))
+<html lang="{{ explode('_', $meta['locale'])[0] }}">
+@else
 <html lang="{{ app()->getLocale() }}">
-
+@endif
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
