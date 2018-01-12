@@ -79,7 +79,13 @@ This is where my journey in the professional web industry started. Before that, 
 
 ### Specialization
 
-*soon*
+It took me quite a while to realize that it's better to be a specialist instead of a generalist. On the other side I'm interested in many aspects of tech and web.
+
+In 2014 I shifted more towards **PHP with Laravel** and **JavaScript (ES2015+) with Vue and React**. That's my specialization as a developer.
+
+Additionally I am focused on the aspect of requirements engineering. My bachelor thesis at university was about **goal driven requirements engineering**. I adopted this method to use it for the whole aspect of running a business to make it profitable as soon as possible.
+
+Last but not least, I read a lot about **AI and Machine Learning**. I'm not that far that I would call me pro in this field, but it is a goal to get more into the field.
 
 ## Portfolio
 
