@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use Mozhi;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Mozhi;
 
 class RouteServiceProvider extends ServiceProvider
 {
