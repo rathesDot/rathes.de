@@ -15,7 +15,7 @@ Features
 - This website uses [Laravel](https://laravel.com) as its framework
 - to render contents, I use [`aheenam/mozhi`](https://github.com/Aheenam/mozhi) which makes Markdown files to pages
 - uses [`spatie/laravel-responsecache`](https://github.com/spatie/laravel-responsecache) for caching
-- for styling I use [`TailwindCSS`](https://tailwindcss.com) that is compiled with Laravel Mix. Additionally I use [PurgeCSS](https://github.com/FullHuman/purgecss) to remove all unused CSS which is really useful for an optimized version of Tailwind
+- for styling I use [`TailwindCSS`](https://tailwindcss.com) that is compiled with Laravel Mix. ~~Additionally I use [PurgeCSS](https://github.com/FullHuman/purgecss) to remove all unused CSS which is really useful for an optimized version of Tailwind~~ (Can't do that as contents coming from Mozhi are not recognized, still looking for a solution for this)
 
 Deployment
 ---
