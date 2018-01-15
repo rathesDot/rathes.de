@@ -61,7 +61,7 @@
   */
 
 html, body {
-    @apply .bg-grey-lightest
+    @apply .bg-grey-lightest .font-sans
 }
 
 h1, h2, h3, h4, h5, h6 {
