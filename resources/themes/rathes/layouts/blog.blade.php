@@ -50,9 +50,9 @@
         content="{{ isset($meta['modified']) ? $meta['modified'] : $meta['date'] }}" />
     <meta property="og:updated_time" content="{{ $meta['date'] }}" />
     @if($meta && isset($meta['image']))
-        <meta property="og:image" content="{{ $meta['image'] }}" />
-        <meta property="og:image:secure_url" content="{{ $meta['image'] }}" />
-        <meta name="twitter:image" content="{{ $meta['image'] }}" />
+        <meta property="og:image" content="{{ url($meta['image']) }}" />
+        <meta property="og:image:secure_url" content="{{ url($meta['image']) }}" />
+        <meta name="twitter:image" content="{{ url($meta['image']) }}" />
     @endif
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="{{ isset($meta['description']) ? $meta['description'] : '' }}" />
