@@ -1,7 +1,7 @@
 @extends('theme::rathes.layouts.blog')
 
 @section('content')
-    <div class="container mx-auto leading-normal md:mt-16">
+    <div class="container mx-auto leading-normal md:mt-16 text-grey-darker">
         @if(isset($meta['image']))
             <div class="max-w-lg mx-auto">
                 <img src="{{ asset($meta['image']) }}" alt="">
