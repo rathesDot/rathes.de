@@ -90,4 +90,12 @@ Last but not least, I read a lot about **AI and Machine Learning**. I'm not that
 
 ## Portfolio
 
-*soon*
+Here are some open sourced projects I actively work on:
+
+- [`aheenam/mozhi`](https://github.com/Aheenam/mozhi) is a Laravel package that contains a simple implementation of a Markdown-file-based CMS.
+
+- [`aheenam/laravel-package-cli`](https://github.com/Aheenam/laravel-package-cli) is a generator that scaffolds a Laravel package project. Just run a single command to get a full starting point for your next Laravel package.
+
+- [`rathesDot/rathes.de`](https://github.com/rathesDot/rathes.de) is the source code for my personal website at [rathes.de](https://rathes.de). (If you are reading this online, you are probably on this website already).
+
+To find more stuff done by myself, just visit my website or check out one of my social media profiles.
