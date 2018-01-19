@@ -125,7 +125,7 @@ pre[class*="language-"] {
  * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  *
  * If using `postcss-import`, you should import this line from it's own file:
- * 
+ *
  * @import "./tailwind-preflight.css";
  *
  * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
@@ -648,7 +648,7 @@ button,
   * config file.
   *
   * If using `postcss-import`, you should import this line from it's own file:
-  * 
+  *
   * @import "./tailwind-utilities.css";
   *
   * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
@@ -4832,6 +4832,13 @@ p {
 
 a {
   color: #5661b3;
+}
+
+b,
+strong {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 pre,
