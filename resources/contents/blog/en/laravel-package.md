@@ -14,3 +14,12 @@ tags:
   - webdev
 locale: en_US
 ---
+
+- What is a (Laravel) package?
+- Prerequisites
+- name of vendor + package
+- directory structure
+- composer file
+- the service provider
+- tests (with testbench)
+- laravel package generator
