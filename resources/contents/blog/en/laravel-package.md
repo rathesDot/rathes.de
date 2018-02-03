@@ -22,4 +22,9 @@ locale: en_US
 - composer file
 - the service provider
 - tests (with testbench)
+- creating the package
+    - Routing + Controller
+    - Views
+- Publishing
+    - choosing a license
 - laravel package generator
