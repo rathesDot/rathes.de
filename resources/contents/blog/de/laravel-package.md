@@ -360,9 +360,9 @@ Hier sehen wir, dass wieder etwas benutzt wird, welches eine neue Dependecy ben�
 
 ### Routen und Controller registrieren
 
-Als nächstes werden wir Laravel mitteilen, dass es auch unsere neuen Routen und Controller aus dem Package verwenden soll. Hier kommt nun der ServiceProvider ins Spiel. Der ServiceProvider hat zwei Funktionen `boot()` und `register()`.
+Als nächstes werden wir Laravel mitteilen, dass es auch unsere neuen Routen aus dem Package verwenden soll. Hier kommt nun der ServiceProvider ins Spiel. Der ServiceProvider hat zwei Funktionen `boot()` und `register()`.
 
-Mit der `boot` Methode kannst du nun unsere Routen und Controller laden lassen. Das geschieht wie in den folgenden Zeilen:
+Mit der `boot` Methode kannst du nun unsere Routen laden lassen:
 
 ```php
 /**
@@ -373,7 +373,6 @@ Mit der `boot` Methode kannst du nun unsere Routen und Controller laden lassen.
 public function boot()
 {
     $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-    $this->app->make('Aheenam\Test\Controllers\TestController');
 }
 ```
 
