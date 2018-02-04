@@ -316,8 +316,8 @@ Darin kannst du dann so arbeiten wie du es unter Laravel kennst. Du musst nur da
 ```php
 <?php
 
-Route::get('/test/{name}',
-    'Aheenam\Awesome\Controllers\TestController@index');
+Route::get('/test/{name}')
+    ->uses('Aheenam\Awesome\Controllers\TestController@index');
 ```
 
 Mit einem GET-Request auf diese Route können wir also nun einen Namen festlegen, welchen wir dann später für die Ausgabe benutzen können. Diese Route führt zum TestController, in welcher dann die Methode index() aufgerufen werden soll.
