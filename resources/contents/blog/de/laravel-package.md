@@ -2,6 +2,7 @@
 id: 1558
 title: 'Laravel 5: In wenigen Schritten zum Laravel 5 Package'
 date: 2016-08-16T14:25:25+00:00
+updated: 2018-02-04T06:28:00+00:00
 author: Rathes Sachchithananthan
 template: post
 image: /images/blog/laravel-logo.png
@@ -15,108 +16,321 @@ description: Eine Schritt für Schritt Anleitung wie du in Laravel 5 eigene Pack
 locale: de_DE
 ---
 
-Du willst ein eigenes Package für Laravel entwickeln? Als ich mich das erste Mal damit beschäftigt habe, fand ich es recht schwer brauchbare Informationen oder eine Anleitung dafür zu finden. Dieser Beitrag soll die Lücke füllen und die eine Schritt für Schritt Anleitung liefern wie du in Laravel 5 eigene Packages entwickelst.
-
-<!--more-->
+Du willst ein eigenes Package für Laravel entwickeln? Als ich mich das erste Mal damit beschäftigt habe, fand ich es recht schwer brauchbare Informationen oder eine Anleitung dafür zu finden. Dieser Beitrag soll die Lücke füllen und dir eine Schritt für Schritt Anleitung liefern wie du für Laravel 5 eigene Packages entwickelst.
 
 ## Allgemeines zu Laravel Packages
 
-Laravel Packages sind die Möglichkeit deine Laravel Instanz um essenzielle Funktionalitäten zu erweitern. An sich ist das Laravel Framework auch ein solches Paket und es kommt mit vielen weiteren Paketen, die du im `vendor/` Verzeichnis deiner Laravel Installation findest. Diese müssen nicht unbedingt Laravel spezifische Pakete sein, die nur die Laravel Funktionalitäten erweitern, sondern können auch komplett von Laravel unabhängige Pakete sein. Bestes Beispiel dafür ist das [Carbon Paket](http://carbon.nesbot.com/docs/), das nicht nur in Laravel funktioniert, sondern auch Standalone in anderen PHP-Projekten.
+Laravel Packages sind eine Möglichkeit dein Laravel-Projekt um Funktionalitäten zu erweitern. An sich ist das Laravel Framework auch ein solches Paket und es kommt mit vielen weiteren Paketen, die du im `vendor/` Verzeichnis deiner Laravel Installation findest. Diese müssen nicht unbedingt Laravel spezifische Pakete sein, die nur die Laravel Funktionalitäten erweitern, sondern können auch komplett von Laravel unabhängige Pakete sein. Ein Beispiel dafür ist das [Carbon Paket](http://carbon.nesbot.com/docs/), das nicht nur in Laravel funktioniert, sondern auch Standalone in anderen PHP-Projekten.
 
-In diesem Projekte zeige ich dir, wie du ganz einfach ein Package entwickelst, das die Laravel Funktionalität erweitert. Ich werde nur die ersten Schritte erläutern, aber ich denke, dass damit die grundlegendsten Fragen geklärt sein werden. Falls dir trotzdem etwas unklar sein sollte, kannst du dich gerne über die Kommentar-Funktion an mich wenden.
+In diesem Beitrag zeige ich dir, wie du ganz einfach ein Package entwickelst, das die Laravel Funktionalität erweitert. Ich werde nur die ersten Schritte erläutern, aber ich denke, dass damit die grundlegendsten Fragen geklärt sein werden. Falls du trotzdem noch weitere Fragen haben solltest, kannst du dich gerne an mich wenden.
 
 ## Voraussetzungen
 
-Um die folgenden Schritte durchführen zu können, erwarte ich, dass du Laravel in der 5er Variante bereits installiert und lauffähig bekommen hast. Ich benutze hier die Version Laravel 5.2, da diese die zum Zeitpunkt aktuellste Version ist.
+Die folgenden Schritte sind darauf ausgelegt, dass das resultierende Package am Ende mit Laravel 5.5 funktioniert. Aber wir sind am Ende nicht auf diese Version limitiert. Je nach dem, wie du die Anforderungen im späteren Verlauf anpasst, kann das Package auch ohne Probleme mit den Laravel-Versionen 5.3 bis hin zu 5.6 funktionieren. Dafür musst du nicht einmal am Code etwas ändern.
 
-Dass du Laravel installiert hast, setzt auch voraus, dass du composer bei dir installiert hast. Falls nicht solltest du das definitiv nachholen. Eine Anleitung wie du Composer installierst, findest du im [Getting Started Bereich der Composer Webseite](https://getcomposer.org/doc/00-intro.md).
+Prinzipiell sollte das Package auch für die Versionen 5.0 - 5.1 einzurichten sein, aber da will ich dir nichts garantieren. Bedenke nämlich, dass du je mehr Versionen du unterstützt du auch beim Code vielmehr auch Rückwärtskompatibilität achten musst. So funktionieren Features aus 5.5 nicht in 5.1, das musst du beim Entwickeln eines Packages dann immer berücksichtigen.
 
-Und natürlich solltest du wissen wie PHP funktioniert, aber das denke ich mal sollte klar sein 😉
+Für das Entwickeln eines Laravel-Packages brauchst du mindestens composer als Tool. Da du dich mit Laravel beschäftigst, wirst du composer aber sehr wahrscheinlich bei dir bereits installiert haben. Falls nicht solltest du das definitiv nachholen. Eine Anleitung wie du Composer installierst, findest du im [Getting Started Bereich der Composer Webseite](https://getcomposer.org/doc/00-intro.md).
 
-## 1. Schritt: Package Vendor und Name
+Du solltest auch ein wenig Erfahrung mit Laravel gesammelt haben, da wir bei der Entwicklung eines Packages keine Laravel-Instanz haben werden, sondern in einem leeren Ordner anfangen werden.
 
-Als erstes solltest du im Root-Verzeichnis deiner Laravel Installation einen neuen Ordner `packages/` erstellen. In diesen Ordner kommt dein neues Package rein. Jedes Package besteht aus zwei Teilen: Einem Vendor-Namen und einem Package-Namen. Der Vendor-Name ist der Name des Erstellers dieses Pakets und der Package-Name ist dann der Name des Pakets. Zusammengenommen hast du dann eine vollständige Identifikation deines Pakets.
+Wenn du doch ein wenig unsicher bist, dann erstelle dir ein neues Projekt und entwickle das Package in diesem Projekt. Erstelle dir einfach einen neuen Ordner `packages` im Root-Verzeichnis des Projektes. Darin erstelle einen Ordner mit deinem Namen oder dem Namen deines Unternehmens (der vendor) und darin wiederum einen Ordner mit dem Namen des Packages.
 
-Schau einfach mal im `vendor/` deiner Laravel Installation nach: Dort findest du zum Beispiel einen Unterordner `laravel/` und darin den Unterordner `framework/`. Letzteres ist der Name des Pakets für das Laravel-Framework und **laravel** ist dann der Name des vendors. In der `composer.json` Datei findest du unter `require` dann den Eintrag `laravel/framework`. Diese sorgt dann dafür, dass genau dieses Paket geladen wird.
+Wenn ich zum Beispiel für mein Unternehmen [Aheenam](https://aheenam.com) das Package *Awesome* erstellen will, dann habe arbeite ich im Ordner `packages/aheenam/awesome/`.
 
-Wir wollen nun auch ein Paket erstellen und dieses heißt bei uns einfach **test** (Ich weiß, sehr kreativ) und der Vendor-Name lautet **aheenam**. Das ist der Name meiner [Digitalagentur Aheenam](https://aheenam.com), die viel mit Laravel arbeitet. Also erstellen wir uns im bereits erstellten `packages/` Ordner weitere Unterordner, sodass wir am Ende folgende Struktur haben:
+## 1. Die Struktur
 
-```markup
-packages/
-    aheenam/
-        test/
+Es gibt keine festen Vorgaben wie ein Package aufgebaut sein muss. Abgesehen von einigen Kleinigkeiten kannst du dein Packages so strukturieren wie du willst. Laravel stellt sich da in keinster Weise quer, sondern unterstützt dich dabei sogar.
+
+Trotzdem macht es Sinn eine gewissen Struktur zu haben, um ein sauberes und wartbares Repository zu haben. Im Folgenden stelle ich dir die Struktur vor, die ich in meinen Projekten benutze.
+
+```
+├── database/
+│   ├── .gitkeep
+├── config/
+│   ├── package-name.php
+├── src/
+│   ├── PackageNameServiceProvider.php
+├── tests/
+│   ├── TestCase.php
+├── .gitignore
+├── CHANGELOG.md
+├── composer.json
+├── LICENSE
+├── phpunit.xml
+├── README.md
 ```
 
-Im Test-Ordner erstellen wir noch einen weiteren Ordner `src/`, welcher später den Code des Packages beinhalten wird. Damit hätten wir vorerst die grobe Ordnerstruktur unseres neuen Pakets erstellt.
+Das ist quasi das Grundgerüst eines jeden Packages bei mir. Gehen wir diese mal einzeln durch. Den `database/` Ordner kennst du wahrscheinlich bereits aus Laravel. Wie auch dort landen in diesem Ordner meine `migrations`, `seeds`, und `factories`.
 
-## 2. Schritt: Meta-Daten für unser Paket
+In `config/` befindet sich die Config-Datei, die später in den genauso benannten Ordner im Laravel-Projekt gepublished wird.
 
-Im zweiten Schritt definieren wir die Meta-Daten für unser Package. Diese werden in einer composer-Datei definiert. Dazu gehen wir über die Konsole zu unserem Paket und rufen von packages/Aheenam/test/ aus den Befehl `composer init` auf.
+Im `src/` Ordner befindet sich die komplette Logik des Laravel Packages. Das fängt mit dem `ServiceProvider` an und kennt ab dann keine Grenzen.
 
-Hier werden dir dann schrittweise die Informationen zu deinem Paket abgefragt, die du hier beantwortest. Du kannst hier auch direkt Pakete definieren, die du für dein eigenes Paket benötigst. Für unser Projekt brauchen wir keines, daher belassen wir es einfach. Am Ende wird eine in deinem Ordner eine **composer.json** generiert, die so ähnlich wie folgende aussehen wird:
+Wie du dir wahrscheinlich denken kannst, befinden sich im `tests/` Ordner die Tests zu diesem Projekt.
+
+All diese Ordner sind alle nicht Pflicht und du musst auch nicht alle so benutzen. Beispielsweise könntest du die `config/` und `database/` Ordner auch ins `src/` Verzeichnis schieben, oder gar auf das `src/` komplett verzichten. Das ist komplett dir überlassen.
+
+Wenn du vorhast das Package zu veröffentlichen und Open-Source zu stellen, dann solltest du vielleicht darauf achten, dass der Code nicht durcheinander ist und man sich schnell und gut zurecht findet.
+
+## 2. Schritt: `composer init`
+
+Jetzt wo wir die Struktur geklärt haben, können wir loslegen das Grundgerüst eines Laravel Packages umzusetzen. Als Erstes brauchen wir eine `composer.json` Datei. In dieser werden nicht nur Meta-Daten vom Package festgehalten, sondern auch definiert was der Autoloader machen soll, wenn das Package in einem Projekt installiert wird.
+
+Führe `composer init` in deinem neuen Verzeichnis aus und folge den Anweisungen. Beim Namen kannst du wie bereits oben erklärt deinen Vendor-Namen und Package-Namen benutzen. In meinem Fall wäre das `aheenam/awesome`.
+
+Arbeite dich durch die Fragen bis du bei den Anforderungen ankommst. Es gibt mindestens zwei dependencies, die du direkt zu Anfang schon definieren kannst:
+
+1. `illuminate/support` brauchst du für den ServiceProvider
+2. `php` um festzulegen, unter welcher PHP-Version du arbeitest.
+
+Wenn du dein Package auch testen willst, dann werden auch diese Packages für dich interessant sein.
+
+3. `phpunit/phpunit`
+4. `orchestra/testbench`
+
+Bei der Version musst du nun überlegen, welches Version du unterstützen willst. In unserem Fall würdest du bei `illuminate/support` als Version `5.5` eintragen. Du kannst aber auch, wenn du mehrere Versionen unterstützen willst `5.3|5.4|5.5` usw. eintragen. Genau Informationen wie du Versionen edfinierst findest du auf der [entsprechenden Seite von Composer](https://getcomposer.org/doc/articles/versions.md).
+
+Am Ende solltest du eine `composer.json` Datei in deinem Projekt haben.
+
+Meine Datei sieht so aus:
 
 ```json
 {
-    "name": "aheenam/test",
-    "description": "A simple test for Laravel 5 packages created by Aheenam",
-    "type": "laravel-package",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Rathes Sachchithananthan",
-            "email": "rathes@aheenam.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+  "name": "aheenam/awesome",
+  "description": "An awesome Laravel Package",
+  "license": "MIT",
+  "authors": [
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php" : "^7.0",
+    "illuminate/support": "~5.5.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.*|^6.3",
+    "orchestra/testbench": "~3.4.0|~3.5.0"
+  }
 }
 ```
 
-Jetzt haben wir unsere Struktur erstellt und auch unser Paket über Meta-Daten beschrieben. Im nächsten Schritt müssen wir unserer Laravel Instanz klarmachen, dass das Paket auch existiert.
+Wenn du nun 
 
-## 3. Schritt: Autoloader für das Package erstellen
+```bash
+$ composer install
+```
 
-Dazu wechseln wir wieder in das Hauptverzeichnis unserer Laravel Installation. Dort finden wir die composer.json Datei der Laravel Instanz wieder. Dort findest du einen Abschnitt autoload, in welchem du unter psr-4 nun den Namespace deines Pakets eintragen musst. Das sieht in unserem Beispiel wie folgt aus:
+ausführst, werden die Packages im `vendor` Ordner installiert.
+
+### Autoloading
+
+Wenn jemand dein Package in seinem Laravel Projekt installiert, schaut composer in dieser generierten `composer.json` nach, ob irgendetwas in den Autoloader muss oder nicht. Diese Defition fehlt bei uns noch. Füge also noch je nach dem wie deine Ordner-Struktur aussieht die entsprechenden Regeln hinzu.
 
 ```json
 "autoload": {
-    "classmap": [
-        "database"
-    ],
     "psr-4": {
-        "App\\": "app/",
-        "Aheenam\\Test\\": "packages/aheenam/test/src"
+        "Aheenam\\Awesome\\": "src"
+    }
+},
+"autoload-dev": {
+    "psr-4": {
+        "Aheenam\\Awesome\\Test\\": "tests"
+    }
+},
+```
+
+Bei mir wird ganz einfach alles mit `Aheenam\Awesome` in den `src/` Ordner gemappt und alles, wo noch ein *Test* dran ist, in den `tests/` Ordner. Die anderen Ordner `config` und `database` lasse ich hier weg.
+
+### Package Discovery
+
+In früheren Versionen von Laravel musste man den ServiceProvider eines Packages immer in seiner `app.php` Config-Datei eintragen, damit die Laravel Instanz das Package erkannt hat. Seit Laravel 5.5 gibt es das Feature "Package Discovery", welches dafür sorgt, dass der ServiceProvider automatisch erkannt wird.
+
+Da Laravel aber dem Entwickler keine Vorgaben macht wie man sein Package zu strukturieren hat, muss man dem Feature irgendwie eine Information mitgeben wo der ServiceProvider liegt. Dies erfolgt auch in der `composer.json`.
+
+```json
+"extra": {
+    "laravel": {
+        "providers": [
+            "Aheenam\\Awesome\\AwesomeServiceProvider"
+        ]
+    }
+},
+```
+
+Mit diesem kleinen Eintrag sorgst du dafür, dass der Benutzer deines Package bei sich einfach nur ein `composer require aheenam/awesome` ausführen muss und Laravel dann erkennt, dass unter dem Namespace `Aheenam\\Awesome\\AwesomeServiceProvider` sich ein ServiceProvider befindet.
+
+## 3. Schritt: Der ServiceProvider
+
+Im nächsten Schritt müssen wir natürlich auch den ServiceProvider erstellen, den wir bereits definiert haben. Dieser liegt bei mir direkt im `src/` Verzeichnis und trägt den Namen des Packages: Der ServiceProvider für das Package *Awesome* lautet also `AwesomeServiceProvider`.
+
+So sieht die Grundstruktur für diesen Provider aus:
+
+```php
+<?php
+
+namespace Aheenam\Awesome;
+
+use Illuminate\Support\ServiceProvider;
+
+class AwesomeServiceProvider extends ServiceProvider
+{
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = false;
+
+    /**
+     * Bootstrap the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+    }
+
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
     }
 }
 ```
 
-Mit dem Befehl `composer dump-autoload` sorgst du dafür, dass der Autoloader aktualisiert wird und dein Paket nun auch geladen wird.
+Dieser Service Provider ist quasi das Grundgerüst jedes Packages und ist für das Registrieren und Laden bestimmter Elemente eines Laravel-Pakets zuständig. Selbst der Laravel-Core wird über Service Provider geladen. In der offiziellen Dokumentation findest du mehr [Informationen über die Service Provider](https://laravel.com/docs/providers).
 
-## 4. Schritt: Der Service Provider
+Erstmal lassen wir diesen so wie er ist. Sobald wir anfangen zu Entwickeln, werden wir diesen wieder benötigen.
 
-Jetzt ist der Konfigurationsteil abgeschlossen und man kann anfangen das Paket mit Inhalt zu befüllen. Das Hauptelement eines Pakets ist der Service Provider. Dieser Service Provider ist quasi das Grundgerüst jedes Pakets und ist für das Registrieren und Laden bestimmter Elemente eines Laravel-Pakets zuständig. Selbst der Laravel-Core wird über Service Provider geladen. In der offiziellen Dokumentation findest du mehr [Informationen über die Service Provider](https://laravel.com/docs/5.2/providers). Hier werde ich nur die groben Funktionen erläutern, die in den kommenden Schritten benötigt werden.
+## 4. Schritt: Testing
 
-Als erstes brauchen wir für unser Paket eine ServiceProvider-Datei, die `TestServiceProvider.php`. Diese legen wir im `src/` Ordner unseres Pakets an. Ich mache das immer folgendermaßen:
+Als letzen Schritt bevor wir anfangen unser Package zu entwickeln kommt das Thema `Testing`. Dieser Schritt ist nicht Pflicht, doch rate ich jedem Entwickler Tests zu schreiben. Gerade dann, wenn das Projekt mehr als nur ein Prototyp ist und nicht nur auf deinem heimischen Rechner installiert wird.
 
-- Mit `php artisan make:provider TestServiceProvider` lasse ich mir einen ServiceProvider via artisan generieren.
-- Dieser landet immer in `app/providers`. Von dort schiebe ich das dann in meinen Paket-Ordner. In unserem Falls also nach `packages/aheenam/test/src/`. Dabei muss ich natürlich auch daran denken den Namespace zu aktualisieren.
+Für das Testen benutze ich [PHPUnit](https://phpunit.de/index.html). Dies kannst du mit einer XML Datei konfigurieren.
 
-Wenn wir das erledigt haben, müssen wir nur noch die ServiceProvider-Datei mit unserer Laravel Installation verknüpfen. Dazu fügen wir einfach unseren neuen Service Provider in die Konfigurationsdatei der Anwendung hinzu. In der Datei `config/app.php` fügen wir also die Zeile `Aheenam\Test\TestServiceProvider::class,` als neuen Eintrag in das Providers-Array hinzu.
+Erstelle dafür eine `phpunit.xml` im Root-Verzeichnis deines Projektes und trage folgendes ein:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false">
+    <testsuites>
+        <testsuite name="Aheenam Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
+```
+
+Genaue Details zu weiteren Konfigurationsmöglichkeiten findest du in der [Dokumentation von PHPUnit](http://phpunit.readthedocs.io/en/latest/configuration.html)
+
+### Testbench
+
+Bei einfachen PHP Packages könnten wir den TestCase von PHPUnit benutzen, um unsere Tests zu schreiben. In unserem Fall wollen wir aber testen, ob unser Package in einer Laravel Umgebung funktioniert. Diese haben wir aber in unserem Package nicht.
+
+Diesen Problem begegnet Testbench. Wir legen eine `TestCase.php` in unserem Ordner `tests/` an.
+
+```php
+<?php
+
+namespace Aheenam\Awesome\Test;
+
+use Aheenam\Awesome\AwesomeServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
+
+abstract class TestCase extends Orchestra
+{
+
+    /**
+     * Setup the test environment.
+     */
+    public function setUp()
+    {
+        parent::setUp();
+    }
+
+    /**
+     * add the package provider
+     *
+     * @param $app
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [AwesomeServiceProvider::class];
+    }
+
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        // Setup default database to use sqlite :memory:
+        $app['config']->set('database.default', 'testing');
+        $app['config']->set('database.connections.testing', [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ]);
+    }
+}
+```
+
+In diesem TestCase können wir nun den ServiceProvider unseres Projektes hinterlegen, Änderungen an den Configs eines Laravel Projektes machen und weitere Einstellungen vornehmen. Details dazu findest du auf der [GitHub-Seite von Testbench](https://github.com/orchestral/testbench)
+
+Nun müssen wir nur noch darauf achten, dass wir bei jedem Test auch diesen TestCase benutzen.
 
 ## 5. Schritt: Controllers & Routes
 
-Nun können wir anfangen unseren ersten Code zu erstellen. Unse triviales "Hello World"-Programm soll nichts anderes machen als beim Aufruf einer bestimmten Route einfach den Namen, der in der Route enthalten ist zu begrüßen.
+Nun können wir anfangen unseren ersten Code zu erstellen. Unser triviales "Hello World"-Programm soll nichts anderes machen als beim Aufruf einer bestimmten Route einfach den Namen, der in der Route enthalten ist zu begrüßen.
 
-Das brauchen wir als erstes die Route. Dafür erstellen wir uns zuerst eine **routes.php** im `src/` Ordner des Pakets. Dies funktioniert nun so wie du es bereits von einer normalen Laravel Applikation kennst:
+Das brauchen wir als erstes die Route. Wie auch in der Laravel App erstellen wir uns einen Ordner `routes/` und darin eine `web.php`:
+
+```bash
+$ touch src/routes/web.php
+```
+
+Darin kannst du dann so arbeiten wie du es unter Laravel kennst. Du musst nur dabei bedenken, dass du wieder ein neues Package in deine dependencies aufnehmen musst: `illuminate/routing`
 
 ```php
 <?php
 
 Route::get('/test/{name}',
-    'Aheenam\Test\Controllers\TestController@index');
+    'Aheenam\Awesome\Controllers\TestController@index');
 ```
 
-Mit einem GET-Request auf diese Route können wir also nun einen Namen festlegen, welchen wir dann später für die Ausgabe benutzen können. Diese Route führt zum TestController, in welcher dann die Methode index() aufgerufen werden soll. Erstellen wir diesen also auch. Wir erstellen also einen  Ordner `Controllers/` innerhalb des `src/` Ordners und erstellen darin unseren Controller. Natürlich könntest du den Ordner auch weglassen und direkt in src/ den TestController erstellen, aber bei einem größeren Projekt könnte das sehr schnell unübersichtlich werden. Aus diesem Grund fangen wir schon direkt am Anfang an sauber zu sortieren. Der TestController sieht dann so aus:
+Mit einem GET-Request auf diese Route können wir also nun einen Namen festlegen, welchen wir dann später für die Ausgabe benutzen können. Diese Route führt zum TestController, in welcher dann die Methode index() aufgerufen werden soll.
+
+Beachte, dass du hier den ganzen Namespace des Controllers hinterlegen musst.
+
+Erstellen wir nun den Controller
+
+```bash
+$ touch src/Controllers/TestController.php
+```
+
+Im TestController arbeitest du so wie du auch im normalen Projekt arbeiten würdest.
 
 ```php
 <?php
@@ -142,11 +356,13 @@ class TestController extends Controller
 }
 ```
 
+Hier sehen wir, dass wieder etwas benutzt wird, welches eine neue Dependecy benötigt: `illuminate/view`. Dies muss dann also auch in die `composer.json`
+
 ### Routen und Controller registrieren
 
-Als nächstes werden wir Laravel mitteilen, dass es auch unsere neuen Routen und Controller aus dem Package verwenden soll. Hier kommt nun unser generierter Service Provider ins Spiel. Diesen haben wir bereits in einem der vorigen Schritte mit der App verknüpft. Nun öffnen wir mal diese Datei und sehen dort zwei Funktionen `boot()` und `register()`.
+Als nächstes werden wir Laravel mitteilen, dass es auch unsere neuen Routen und Controller aus dem Package verwenden soll. Hier kommt nun der ServiceProvider ins Spiel. Der ServiceProvider hat zwei Funktionen `boot()` und `register()`.
 
-Mit der `boot` Methode kannst du nun unsere Routen und Controller. Das geschieht wie in den folgenden Zeilen:
+Mit der `boot` Methode kannst du nun unsere Routen und Controller laden lassen. Das geschieht wie in den folgenden Zeilen:
 
 ```php
 /**
@@ -156,18 +372,16 @@ Mit der `boot` Methode kannst du nun unsere Routen und Controller. Das geschieh
  */
 public function boot()
 {
-    include __DIR__.'/routes.php';
+    $this->loadRoutesFrom(__DIR__.'/routes/web.php');
     $this->app->make('Aheenam\Test\Controllers\TestController');
 }
 ```
 
 ## 6. Schritt: Die View
 
-Nun können wir also die Route aufrufen und das, was im Controller steht wird nun auch ausgeführt. Was steht in diesem? Wir übergeben die Variable `$name` aus der Route direkt an die View weiter. Diese heißt in diesem Fall **test::index**. Wir sehen hier, dass die View einen Präfix index:: hat. Dies signalisiert, dass nicht im normalen View-Fenster geschaut werden soll, sondern in den View-Ordner, der über einen Service Provider definiert wurde. Diese Definition haben wir noch nicht gemacht. Holen wir dies also nach.
+Nun können wir also die Route aufrufen und das, was im Controller steht wird nun auch ausgeführt. Was steht in diesem? Wir übergeben die Variable `$name` aus der Route direkt an die View weiter. Diese heißt in diesem Fall **test::index**. Wir sehen hier, dass die View einen Präfix `test::` hat. Dies signalisiert, dass nicht im normalen View-Fenster geschaut werden soll, sondern in den View-Ordner, der über einen Service Provider definiert wurde. Diese Definition haben wir noch nicht gemacht. Holen wir dies also nach.
 
 Erstellen wir erst einmal einen Ordner innerhalb unseres `src/` mit dem Namen `views/` und befüllen diese direkt mit der **index.blade.php**, die wir später benutzen werden. Als nächstes wechseln wir wieder zu unserem Service Provider. Dort legen wir in der `boot` Methode fest, von welchem Ordner die Views geladen werden sollen.
-
-Während die register nur dazu benutzt wird, die Elemente zu registrieren, die benötigt wird, ist die boot die Funktion, die nach dem Laden aller Service Provider geladen wird und so Zugriff auf alle Funktionen hat. Die register sieht bei uns folgendermaßen aus:
 
 ```php
 /**
@@ -178,28 +392,39 @@ Während die register nur dazu benutzt wird, die Elemente zu registrieren, die b
 public function register()
 {
     $this->loadViewsFrom(__DIR__.'/views', 'test');
-
-    $this->publishes([
-        __DIR__.'/views' => base_path('resources/views/aheenam/test'),
-    ]);
-
 }
 ```
 
-In der ersten Zeile legen wir fest, dass der Ordner `views/` für die Views zuständig sind. Wir definieren im zweiten Parameter auch direkt den Namespace dafür, welchen wir bereit vorher als Präfix beim Laden der View benutzt haben.
+Wir legen fest, dass der Ordner `views/` für die Views zuständig ist. Wir definieren im zweiten Parameter auch direkt den Namespace dafür, welchen wir bereit vorher als Präfix beim Laden der View benutzt haben.
 
-### Veröffentlichen der Views
+Für weiterführende Informationen schaue auf der [entsprechenden Seite in der Laravel Dokumentation](https://laravel.com/docs/packages) nach. Dort findest du auch Informationen wie du Config-Files und Translations lädst und auch wie du bestimmte Assets zum Publishen freigibst.
 
-In den darauffolgenden Zeilen legen wir fest, wohin die Views kopiert werden sollen, wenn der Benutzer die Views veröffentlicht. Was heißt das?
+## Veröffentlichen des Laravel Packages
 
-Stell dir vor, du hast dein Package veröffentlicht und ein anderer Benutzer hat dieses im Einsatz. Er will aber Änderungen an dieser View machen und führt diese direkt im `views/` Verzeichnis des Pakets durch. Was passiert, wenn du dann ein Update zur Verfügung stellst und er ein Update durchführt? Genau, seine Änderungen sind alle weg. Um das zu vermeiden, gibt es die Möglichkeit zu publishen. Dabei wird einfach eine Kopie der Elemente an einer bestimmten Stelle erstellt, wo dann der User seine Änderungen durchführen kann.
+Mit diesen einfachen 6 Schritten hast du dein erstes Paket erstellt. Nun könntest du auf die Idee kommen, dass dein Package auch für andere interessant sein könnte. Dann solletst du es anderen über [Packagist](https://packagist.org/) anderen zur Verfügung stellen.
 
-Laravel schaut dann beim Laden der Views auf diese geänderten Dateien statt in den Hauptdateien des Pakets. Das macht diese Funktion. Wir können nicht nur Views kopieren, sondern auch Konfigurationsdateien oder sogar Datenbank-Migrations.
+Vorher gibt es aber noch Kleinigkeiten vorzubereiten:
 
-## Weiterführende Informationen
+- README: Du solltest dem Benutzer deines Package eine verständliche Dokumentation deines Packages zur Verfügung stellen. Informationen wie man das Package installiert und benutzt solltest du in einer `README.md` festhalten
+- Contribution Guide: Ob und wie andere Entwickler mit an deinem Package arbeiten können, solltest du in einer `CONTRIBUTION.md` definieren
+- LICENSE: Welche Lizenz soll dein OpenSource Package haben? Lege die Regel für dein Package in einer `LICENSE` Datei fest. Eine gute Anlaufstelle hier ist [Choose an open source license](https://choosealicense.com/)
 
-Mit diesen einfachen 6 Schritten hast du dein erstes Paket erstellt. Natürlich gibt es noch mehr, aber für den Einstieg ist das denke ich mal genug. Den Rest erlernst du ganz einfach, indem du an einem praxisnahen Anwendungsfall dein eigenes Paket erstellst.
+Wenn du diese Vorbereitungen alle getroffen hast, kannst du dein Package über Packagist veröffentlichen. Das geht einfach indem du dir einen Account dort erstellst und ein kleines Formular deine GitHub URL deines Packages dort einreichst.
 
-Du kannst dann, wenn du fertig bist, natürlich dein Paket über [packagist](https://packagist.org/) anderen zur Verfügung stellen. Wie das funktioniert, werde ich dir vielleicht in einem weiteren Beitrag erläutern.
+## Laravel Package Generator
 
-Wenn du Details über den Service Provider erfahren willst, dann ist die Laravel Dokumentation eine gute Anlaufstelle. Wenn du Fragen hast, dann stell sie mir in den Kommentaren.
+Jedesmal, wenn du ein Laravel Packages neu erstellst, wirst du die ersten oben genannten Schritte immer wieder durchführen. Um sich diese Schritte zu sparen, habe ich einen kleinen Generator geschrieben, der einem die Arbeit an dieser Stelle abnehmen soll.
+
+Installiere das composer package global mit
+
+```bash
+$ composer global require aheenam/laravel-package-cli
+```
+
+Nun kannst du mit
+
+```bash
+$ laravel-package generate vendor/package-name
+```
+
+dir das Grundgerüst generieren lassen. Für mehr Einstellungsmöglichkeiten, schau dir die [GitHub Seite vom Laravel Package CLI](https://github.com/aheenam/laravel-package-cli) an. Falls du Features vermisst, oder generell Hilfe brauchst, benutze die Issue, um mich zu kontaktieren.
