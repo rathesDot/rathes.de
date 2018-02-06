@@ -330,14 +330,14 @@ Erstellen wir nun den Controller
 $ touch src/Controllers/TestController.php
 ```
 
-Im TestController arbeitest du so wie du auch im normalen Projekt arbeiten würdest.
+Im TestController arbeitest du so wie du auch im normalen Projekt arbeiten würdest, mit der einzigen Ausnahme, dass wir direkt den Basis Controller aus dem `illuminate/routing` package erweitern anstelle des Controllers aus dem `app/` Ordner im Projekt.
 
 ```php
 <?php
 
 namespace Aheenam\Test\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 
 class TestController extends Controller
 {
@@ -358,7 +358,7 @@ class TestController extends Controller
 
 Hier sehen wir, dass wieder etwas benutzt wird, welches eine neue Dependecy benötigt: `illuminate/view`. Dies muss dann also auch in die `composer.json`
 
-### Routen und Controller registrieren
+### Routen registrieren
 
 Als nächstes werden wir Laravel mitteilen, dass es auch unsere neuen Routen aus dem Package verwenden soll. Hier kommt nun der ServiceProvider ins Spiel. Der ServiceProvider hat zwei Funktionen `boot()` und `register()`.
 
