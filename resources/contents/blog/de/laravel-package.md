@@ -44,7 +44,8 @@ Es gibt keine festen Vorgaben wie ein Package aufgebaut sein muss. Abgesehen von
 
 Trotzdem macht es Sinn eine gewissen Struktur zu haben, um ein sauberes und wartbares Repository zu haben. Im Folgenden stelle ich dir die Struktur vor, die ich in meinen Projekten benutze.
 
-```
+```text
+
 ├── database/
 │   ├── .gitkeep
 ├── config/

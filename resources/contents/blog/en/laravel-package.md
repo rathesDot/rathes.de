@@ -47,7 +47,8 @@ Nevertheless it makes sense to have a certain structure to ensure that your resu
 
 The following structure is how I basically create packages:
 
-```
+```text
+
 ├── database/
 │   ├── .gitkeep
 ├── config/
