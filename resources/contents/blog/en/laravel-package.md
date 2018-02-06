@@ -15,25 +15,25 @@ tags:
 locale: en_US
 ---
 
-So in this article I'm going to show you step by step how you would create a package for Laravel. When I started creating Laravel packages, it was quite difficult to get some proper information, so I ended up checking existing packages and learn from how they were created.
+So in this article I'm going to show you step by step how you would create a package for Laravel. When I started creating Laravel packages, it was quite difficult to get some proper information, so I ended up checking existing packages and learn how they were created.
 
-For me packages by [Spatie](https://github.com/spatie) were a great inspiration. Their packages are well structured and their code is well written and documented, so it was a good place to get some idea on how to start.
+For me packages by [Spatie](https://github.com/spatie) were a great inspiration. Their packages are well structured and their code is well written and documented, so it was a really starting point.
 
 ## What is a Laravel package?
 
-Laravel as a framework comes with a lot of features that make creating web application really easy. Authentication? Laravel got you covered! Form Validation? Yeah, we've got that! File System? Yeah!
+Laravel as a framework comes with a lot of features that make creating web applications really easy. Authentication? Laravel got you covered! Form Validation? Yeah, we've got that! File System? Of course!
 
-Though we have a lot of features, there are still some features you might miss. Extending the Laravel Core isn't that difficult, it's done using packages.
+Though we have a lot of features, there are still some you might miss. Though, extending the Laravel core isn't that difficult, it's done using packages.
 
-Laravel itself provides some packages like [Passport](https://laravel.com/docs/5.5/passport), [Scout](https://laravel.com/docs/5.5/scout) or [Socialite](https://laravel.com/docs/5.5/socialite), but there are - like Spatie - awesome companies that commit really great awesome open source laravel packages to community.
+Laravel itself provides some packages like [Passport](https://laravel.com/docs/5.5/passport), [Scout](https://laravel.com/docs/5.5/scout) or [Socialite](https://laravel.com/docs/5.5/socialite), but there are - like Spatie - awesome companies that commit really awesome open source Laravel packages to community.
 
 In this article I want to show you, how you can create a package on your own, that you may publish as well.
 
 ## Prerequisites
 
-Following steps are taken with having in mind to ship this package for Laravel 5.5 (current version as of Feb 04th, 2018) , but we are not limited to this version only. By slightly changing some dependecies you can make you package work for other versions from 5.3 - 5.6 as well.
+Following steps are taken with having in mind to ship this package for Laravel 5.5 (current version as of Feb 04th, 2018), but we are not limited to this version only. By slightly changing some dependecies you can make you package work for other versions from 5.3 - 5.6 as well.
 
-You can also use these steps to make your package work for 5.0 - 5.2, but I won't guarantee anything. Remember that the more versions you support there you have to make sure that your package is backwards compatible. Also you won't be able to use 5.5 features in a package that also has to work with Laravel 5.2.
+You can also use these steps to make your package work for Laravel 5.0 - 5.2, but I won't guarantee anything. Remember that the more versions you support the more you have to make sure that your package is backwards compatible. Also you won't be able to use 5.5 features in a package that also has to work with Laravel 5.2.
 
 For developing a Laravel package you just need composer. And as you are working with Laravel already, I'm pretty sure you are using composer already. If not just make sure you have it installed. You'll get the instructions on the [getting started page on their website](https://getcomposer.org/doc/00-intro.md).
 
@@ -43,7 +43,7 @@ You should also have some little experience with Laravel as you are going to ext
 
 There is no rule on how to design you package. Apart from little exceptions you can structure your package as you want to. Laravel as a framework does not expect anything from you at this point.
 
-Nevertheless it makes sense to have a certain structure to ensure that you result will be clean, maintainable repository.
+Nevertheless it makes sense to have a certain structure to ensure that your result will be a clean and maintainable repository.
 
 The following structure is how I basically create packages:
 
@@ -64,15 +64,15 @@ The following structure is how I basically create packages:
 ├── README.md
 ```
 
-That's the backbone of every package I work on. So let's have a detailed look on it.
+That's the backbone of every package I work on. So let's have a detailed look at it:
 
-The `database/` and the `config/` directories are the same as you know from a common Laravel projects. In database I have all the `migrations`, `seeds`, and `factories`. In `config/` I store my config file of this package. (Never had the situation that I had more than a single config file so far.)
+The `database/` and the `config/` directories are the same as you know from common Laravel projects. In database I have all the `migrations`, `seeds`, and `factories`. In `config/` I store my config file of this package. (Never had the situation that I had more than a single config file so far.)
 
-The `src/` directory is the location for all the logic of the package. Starting with the ServiceProvider `src/` can contain anything related to the package.
+The `src/` directory is the location for all the logic of the package. Starting with the service provider `src/` can contain anything related to the package.
 
 As you may have guessed `tests` contains the tests.
 
-This is not a mandatory structure, so you don't have to structure your packages this way. If you don't need any configuration, you don't need `config/`, if your package doesn't touch the database, you don't need `database/`. You may even move these two directories into `src/`, it's all up to you.
+This is not a mandatory structure, so you don't have to structure your packages this way. If you don't need any configuration, you don't need `config/` at all, if your package doesn't touch the database, you don't need `database/`. You may even move these two directories into `src/`, it's all up to you.
 
 But if you consider to publish and open source your package, you should care about a consistent structure, no matter how you define it.
 
@@ -80,27 +80,25 @@ But if you consider to publish and open source your package, you should care abo
 
 Now as we have our structure, we can start creating the backbone of your package.
 
-Create a new directory with the name of your package, enter it and run initialze a composer file:
+Create a new directory with the name of your package, enter it and initialze a composer file:
 
 ```bash
 $ mkdir awesome && cd awesome && composer init
 ```
 
-This will start a interactive CLI programm. Just run through it until you reach the question for interactivly defining the dependecies. Here you can already define at least two:
+This will start an interactive CLI programm. Just run through it until you reach the question for interactivly defining the dependencies. Here you can already define at least two:
 
-1. You need `illuminate/support` for the Service Provider
-2. With defining `php` you can define the minimum PHP version that you support.
+1. You need `illuminate/support` for the service provider
+2. With defining `php` you can define the minimum PHP version that your package will support
 
 If you want to test you application, you may also add the following packages as dev-dependencies:
 
 3. `phpunit/phpunit`
 4. `orchestra/testbench`
 
-So what version should you use? At the beginning of this article, I mentioned that I'm gonna create a Laravel package for 5.5, so I'm gonna choose this, but you can define what ever you want, for example `5.3|5.4|5.5` if you want to support multiple Laravel version. Get the detailed information on [versioning and constraints]((https://getcomposer.org/doc/articles/versions.md)) on the composer website.
+So what version should you use? At the beginning of this article, I mentioned that I'm gonna create a Laravel package for 5.5, so I'm gonna choose this, but you can define what ever you want, for example `5.3|5.4|5.5` if you want to support multiple Laravel versions. Get the detailed information on [versioning and constraints]((https://getcomposer.org/doc/articles/versions.md)) on the composer website.
 
-At the end of this program you should have a `composer.json` file.
-
-This is the output of my file:
+At the end of this program you should have a `composer.json` file. This is the output of my file:
 
 ```json
 {
@@ -125,7 +123,7 @@ Now run `composer install` to install the dependecies you defined.
 
 ### Autloading
 
-When some installs you package for his Laravel project, the autoloader of his package will look up your `composer.json` if there is anything to autoload. This is missing right now, so we have to add this:
+When someone installs your package for his Laravel project, the autoloader of his project will look up in your `composer.json` if there is anything to autoload. This is missing right now, so we have to add this:
 
 ```json
 "autoload": {
@@ -144,11 +142,11 @@ So in my case, I just let `Aheenam\Awesome` map to `src/` and `Aheenam\Awesome\T
 
 ### Package Discovery
 
-In earlier versions of Laravel, you manually had to add the Service Provider of the package you installed to the projects `config/app.php`.
+In earlier versions of Laravel, you manually had to add the service provider of the package you installed to the projects `config/app.php`.
 
 As of Laravel 5.5 there is a feature called "Package Discovery" that makes this step redundant.
 
-But as Laravel does not expect you to structure your package in a specific way, you need another way to expose your packages Service Provider to the Laravel instance. That is also done in `composer.json`
+But as Laravel does not expect you to structure your package in a specific way, you need another way to expose your packages service provider to the Laravel instance. That is also done in `composer.json`
 
 ```json
 "extra": {
@@ -160,11 +158,11 @@ But as Laravel does not expect you to structure your package in a specific way, 
 },
 ```
 
-This little entry makes the Laravel project to discover your packages Service Provider.
+This little entry makes the Laravel project to discover your packages service provider.
 
-## Step 3: The Service Provider
+## Step 3: The service provider
 
-We have already linked the Service Provider in the `composer.json` file, but haven't created it yet. So let's do this:
+We have already linked the service provider in the `composer.json` file, but haven't created it yet. So let's do this:
 
 Just create a file in `src/`. It's not uncommon to name the main service provider the same as the packages name, but you can name it as you want. Just make sure it matches to what you named it in you `composer.json`
 
@@ -211,7 +209,7 @@ class AwesomeServiceProvider extends ServiceProvider
 }
 ```
 
-The service provider is basically the root of you package. Here you define which config files are loaded, where view file can be found and which assets can be published. Get more information on [service providers in the Laravel documentations](https://laravel.com/docs/providers)
+The service provider is basically the root of you package. Here you define which config files are loaded, where the view file can be found and which assets can be published. Get more information on [service providers in the Laravel documentations](https://laravel.com/docs/providers)
 
 For now we leave it as it is. While developing the package, we will add some stuff to it.
 
@@ -221,7 +219,7 @@ The last step of configuration before we start coding belongs to testing. This s
 
 I use [PHPUnit](https://phpunit.de/index.html) for testing purposes. Configuring PHPUnit is done via an `phpunit.xml` file in the root of our package.
 
-There are a lot of config options, which you may find out [in the docs of PHPUnit](http://phpunit.readthedocs.io/en/latest/configuration.html), but most of my packages just have following simple configuration, which may enough for you needs as well:
+There are a lot of config options, which you may find out [in the docs of PHPUnit](http://phpunit.readthedocs.io/en/latest/configuration.html), but most of my packages just have following simple configuration, which may be enough for your needs as well:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -255,7 +253,7 @@ When creating simple PHP packages, we would use the TestCase provided by PHPUnit
 
 To solve this issue, we use [TestBench](https://github.com/orchestral/testbench). It makes sure that we can create a package using all the benefits of Laravel.
 
-So instead of using the TestCase by PHPUnit, we are now going to make use of the TestCase Testbench provides use.
+So instead of using the TestCase by PHPUnit, we are now going to make use of the TestCase that Testbench provides us.
 
 ```php
 <?php
@@ -308,17 +306,17 @@ abstract class TestCase extends Orchestra
 
 Testbench gives us a basic Laravel setup. We now have to update this setup adding our own package. This means that we at least add the packages service provider to the environment. In our example above, I also change the default database configuration to testing which I setup as an in-memory sqlite database.
 
-There are some more options, so please make sure to ckeckout the [GitHub page of Testbench]((https://github.com/orchestral/testbench)).
+There are some more options, so please make sure to cHeckout the [GitHub page of Testbench]((https://github.com/orchestral/testbench)).
 
 ## Step 5: Controllers & Routes
 
 So now starts the interesting part, but also the part I do not need to explain that much. You can start coding now.
 
-In my simple "Hello World" project, I just want to add an route that responds with greeting the name given in the route.
+In my simple "Hello World" package, I just want to add an route that responds with greeting the name given in this route.
 
 So for example `GET /hello/john` would create a response view that says "Hello John".
 
-To realize this, we need a route. So let's create a route file. The location of the route file is up to you, I like to follow the concept of Laravel having a `routes/` directory and inside of it, having a `web.php` or `api.php`or whatever I need:
+To realize this, we need a route. So let's create a route file. The location of the route file is up to you, I like to follow the concept of Laravel having a `routes/` directory and inside of it, having a `web.php` or `api.php` or whatever I need:
 
 ```bash
 $ touch src/routes/web.php
@@ -333,15 +331,15 @@ Route::get('/test/{name}')
     ->uses('Aheenam\Awesome\Controllers\TestController@index');
 ```
 
-Make sure that you add `illuminate/routing` as a dependecy to you `composer.json`.
+Make sure that you add `illuminate/routing` as a dependecy to your `composer.json`.
 
-So we now have defined our Route and set it up to use the `index()` of a `TestController`, so let's create this as well:
+So we now have defined our route and set it up to use the `index()` function of a `TestController`, so let's create this controller as well:
 
 ```bash
 $ touch src/Controllers/TestController.php
 ```
 
-The TestController looks like a controller of a Laravel project, just with the exception that we extend the base controller of `illuminate/routing` instead of the one in the `app/Controllers` directory of the project.
+The TestController looks like a controller of a Laravel project, just with the exception that we extend the base controller of `illuminate/routing` instead of the one in the `app/Controllers` directory of a Laravel project.
 
 ```php
 <?php
@@ -373,9 +371,9 @@ So now we have to add this view as well. For working with views, we also need to
 
 ### Register routes
 
-Currently we have defined the routes, added the controller and it's method, but the route will never be triggered as we haven't registered it yet. So right now, out project will just look up for the routes in the projects `routes/` directory, but will never load the `web.php` of our package.
+Currently we have defined a route, added the controller and its method, but the route will never be triggered as we haven't registered it yet. So right now, a project using out package would just look up for the routes in the projects `routes/` directory, but will never load the `web.php` of our package.
 
-To make sure that the routes are loaded correctly, we have to modify the `boot()` our service provider as following:
+To make sure that the routes are loaded correctly, we have to modify the `boot()` function of our service provider as following:
 
 ```php
 /**
@@ -393,13 +391,13 @@ public function boot()
 
 We have already added `illuminate/view` as a dependency, and in our controller we are loading `test::index` as the view.
 
-Note the `test::` prefix? This says that the view method should not look up the view in the normal views directory, but in the directory that was tagged with this prefix. In our case we want it to look for the view file in our package, so let's create the file:
+Note the `test::` prefix? This says that the view method should not be looked up in the normal views directory, but in the directory that was tagged with this prefix. In our case we want it to look for the view file in our package, so let's create the file:
 
 ```bash
 $ touch resources/views/index.blade.php
 ```
 
-We still have to define that the views having `test::` as a prefix should be loaded from our newly created directory. As we did for the routes, we can do this in our service provider. This time we add a method to the `register()` function:
+We still have to define that the views having `test::` as a prefix should be loaded from our newly created directory. As we did for the routes, we can do this in our service provider. This time we call a method in the `register()` function:
 
 ```php
 /**
@@ -409,7 +407,7 @@ We still have to define that the views having `test::` as a prefix should be loa
  */
 public function register()
 {
-    $this->loadViewsFrom(__DIR__.'/..resources/views', 'test');
+    $this->loadViewsFrom(__DIR__.'/../resources/views', 'test');
 }
 ```
 
@@ -417,17 +415,17 @@ The first parameter of `loadViewsFrom()` is the path of our views directory, the
 
 ---
 
-Following this way you can now start developing you package. Like we did for routes and view, you can also do for config files, translations and more. Just check out the [Laravel docs for package development](https://laravel.com/docs/packages) for all the possibilities.
+Following this way you can now start developing your package. Like we did for routes and views, you can also load config files, translations and more. Just check out the [Laravel docs for package development](https://laravel.com/docs/packages) for all the possibilities.
 
 ## Publish your Laravel package
 
-That were six steps to create your first Laravel package. Now you may think, that your package is interesting for other developers as well. You should the make the package available for others via [packagist](https://packagist.org/).
+That were six steps to create your first Laravel package. Now you may think, that your package is interesting for other developers as well. You should then make the package available for others via [packagist](https://packagist.org/).
 
-Before you should prepare your package and make it publish-ready:
+But before that, you should prepare your package and make it publish-ready:
 
-- README: You know what you package does, but others don't, so please provide a useful documentation of the package. Information on how to install and configure the package and information of the basic usage of the package should be added to a `README.md`
-- Contribution Guide: If and how other developers can contribute to you package should be defined in a `CONTRIBUTION.md`
-- LICENSE: Under what License do you want to publish you package? Choose one and add the appropriate license information to a `LICENSE` file. A good starting point for choosing a license is the [Choose an open source license](https://choosealicense.com/) website!
+- README: You know what your package does, but others don't, so please provide a useful documentation of the package. Information on how to install and configure the package and information of the basic usage of the package should be added to a `README.md`
+- Contribution Guide: If and how other developers can contribute to your package should be defined in a `CONTRIBUTION.md`
+- LICENSE: Under what license do you want to publish your package? Choose one and add the appropriate license information to a `LICENSE` file. A good starting point for choosing a license is the [Choose an open source license](https://choosealicense.com/) website!
 
 Once you have made your package ready for publication, go to the packagist website, sign in with your GitHub account and submit your repository. That's really easy.
 
@@ -441,10 +439,10 @@ Install the project globally with
 $ composer global require aheenam/laravel-package-cli
 ```
 
-and you are now able to create the base construct of the new package using
+and you are now able to create the base construct of a new package using
 
 ```bash
 $ laravel-package generate vendor/package-name
 ```
 
-Check out the [GitHub page of Laravel Package CLI](https://github.com/aheenam/laravel-package-cli) for further information. In case of feature requests or just for help, just open an issue to contact me!
+Check out the [GitHub page of Laravel Package CLI](https://github.com/aheenam/laravel-package-cli) for further information. In case of feature requests or just for help, feel free to open an issue and contact me this way!
