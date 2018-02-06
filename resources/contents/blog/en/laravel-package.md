@@ -174,8 +174,6 @@ $ touch src/AwesomeServiceProvider.php
 
 The base structure of a service provider looks like following:
 
-
-
 ```php
 <?php
 
@@ -213,7 +211,7 @@ class AwesomeServiceProvider extends ServiceProvider
 }
 ```
 
-The service provider is basically the root of you package. Here you define which config files are loaded, where view file can be found and which assets can be published. Get more information on [service providers on the Laravel documentations](https://laravel.com/docs/providers)
+The service provider is basically the root of you package. Here you define which config files are loaded, where view file can be found and which assets can be published. Get more information on [service providers in the Laravel documentations](https://laravel.com/docs/providers)
 
 For now we leave it as it is. While developing the package, we will add some stuff to it.
 
@@ -221,7 +219,7 @@ For now we leave it as it is. While developing the package, we will add some stu
 
 The last step of configuration before we start coding belongs to testing. This step is not mandatory, but I highly recommend to write tests for you packages (as I recommend tests for any type of writing software).
 
-I use [PHPUnit](https://phpunit.de/index.html) for Testing purposes. Configuring it is done via an `phpunit.xml` file in the root of our package.
+I use [PHPUnit](https://phpunit.de/index.html) for testing purposes. Configuring PHPUnit is done via an `phpunit.xml` file in the root of our package.
 
 There are a lot of config options, which you may find out [in the docs of PHPUnit](http://phpunit.readthedocs.io/en/latest/configuration.html), but most of my packages just have following simple configuration, which may enough for you needs as well:
 
@@ -251,9 +249,202 @@ There are a lot of config options, which you may find out [in the docs of PHPUni
 </phpunit>
 ```
 
-- creating the package
-    - Routing + Controller
-    - Views
-- Publishing
-    - choosing a license
-- laravel package generator
+### Testbench
+
+When creating simple PHP packages, we would use the TestCase provided by PHPUnit to write tests, but in our case we want our code to work in a Laravel environment. But we don't have one in our project.
+
+To solve this issue, we use [TestBench](https://github.com/orchestral/testbench). It makes sure that we can create a package using all the benefits of Laravel.
+
+So instead of using the TestCase by PHPUnit, we are now going to make use of the TestCase Testbench provides use.
+
+```php
+<?php
+
+namespace Aheenam\Awesome\Test;
+
+use Aheenam\Awesome\AwesomeServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
+
+abstract class TestCase extends Orchestra
+{
+
+    /**
+     * Setup the test environment.
+     */
+    public function setUp()
+    {
+        parent::setUp();
+    }
+
+    /**
+     * add the package provider
+     *
+     * @param $app
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [AwesomeServiceProvider::class];
+    }
+
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        // Setup default database to use sqlite :memory:
+        $app['config']->set('database.default', 'testing');
+        $app['config']->set('database.connections.testing', [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ]);
+    }
+}
+```
+
+Testbench gives us a basic Laravel setup. We now have to update this setup adding our own package. This means that we at least add the packages service provider to the environment. In our example above, I also change the default database configuration to testing which I setup as an in-memory sqlite database.
+
+There are some more options, so please make sure to ckeckout the [GitHub page of Testbench]((https://github.com/orchestral/testbench)).
+
+## Step 5: Controllers & Routes
+
+So now starts the interesting part, but also the part I do not need to explain that much. You can start coding now.
+
+In my simple "Hello World" project, I just want to add an route that responds with greeting the name given in the route.
+
+So for example `GET /hello/john` would create a response view that says "Hello John".
+
+To realize this, we need a route. So let's create a route file. The location of the route file is up to you, I like to follow the concept of Laravel having a `routes/` directory and inside of it, having a `web.php` or `api.php`or whatever I need:
+
+```bash
+$ touch src/routes/web.php
+```
+
+In this case I need a `web.php` with following content:
+
+```php
+<?php
+
+Route::get('/test/{name}')
+    ->uses('Aheenam\Awesome\Controllers\TestController@index');
+```
+
+Make sure that you add `illuminate/routing` as a dependecy to you `composer.json`.
+
+So we now have defined our Route and set it up to use the `index()` of a `TestController`, so let's create this as well:
+
+```bash
+$ touch src/Controllers/TestController.php
+```
+
+The TestController looks like a controller of a Laravel project, just with the exception that we extend the base controller of `illuminate/routing` instead of the one in the `app/Controllers` directory of the project.
+
+```php
+<?php
+
+namespace Aheenam\Test\Controllers;
+
+use Illuminate\Routing\Controller;
+
+class TestController extends Controller
+{
+
+    /**
+     * @param $name
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index($name)
+    {
+        return view('test::index', [
+            'name' => $name
+        ]);
+    }
+
+}
+```
+
+So our `index()` method returns a view passing the name as a variable to this view.
+
+So now we have to add this view as well. For working with views, we also need to add `illuminate/view` as a dependecy. So add this to your `composer.json` as well.
+
+### Register routes
+
+Currently we have defined the routes, added the controller and it's method, but the route will never be triggered as we haven't registered it yet. So right now, out project will just look up for the routes in the projects `routes/` directory, but will never load the `web.php` of our package.
+
+To make sure that the routes are loaded correctly, we have to modify the `boot()` our service provider as following:
+
+```php
+/**
+ * Bootstrap the application services.
+ *
+ * @return void
+ */
+public function boot()
+{
+    $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+}
+```
+
+## Step 6: The view
+
+We have already added `illuminate/view` as a dependency, and in our controller we are loading `test::index` as the view.
+
+Note the `test::` prefix? This says that the view method should not look up the view in the normal views directory, but in the directory that was tagged with this prefix. In our case we want it to look for the view file in our package, so let's create the file:
+
+```bash
+$ touch resources/views/index.blade.php
+```
+
+We still have to define that the views having `test::` as a prefix should be loaded from our newly created directory. As we did for the routes, we can do this in our service provider. This time we add a method to the `register()` function:
+
+```php
+/**
+ * Register the application services.
+ *
+ * @return void
+ */
+public function register()
+{
+    $this->loadViewsFrom(__DIR__.'/..resources/views', 'test');
+}
+```
+
+The first parameter of `loadViewsFrom()` is the path of our views directory, the second one is the prefix for this location.
+
+---
+
+Following this way you can now start developing you package. Like we did for routes and view, you can also do for config files, translations and more. Just check out the [Laravel docs for package development](https://laravel.com/docs/packages) for all the possibilities.
+
+## Publish your Laravel package
+
+That were six steps to create your first Laravel package. Now you may think, that your package is interesting for other developers as well. You should the make the package available for others via [packagist](https://packagist.org/).
+
+Before you should prepare your package and make it publish-ready:
+
+- README: You know what you package does, but others don't, so please provide a useful documentation of the package. Information on how to install and configure the package and information of the basic usage of the package should be added to a `README.md`
+- Contribution Guide: If and how other developers can contribute to you package should be defined in a `CONTRIBUTION.md`
+- LICENSE: Under what License do you want to publish you package? Choose one and add the appropriate license information to a `LICENSE` file. A good starting point for choosing a license is the [Choose an open source license](https://choosealicense.com/) website!
+
+Once you have made your package ready for publication, go to the packagist website, sign in with your GitHub account and submit your repository. That's really easy.
+
+## Laravel Package Generator
+
+As you may have noticed, all the steps except for #5, are nearly always the same. So to make life easier, I created a little generator to take this scaffold work out of your hands.
+
+Install the project globally with 
+
+```bash
+$ composer global require aheenam/laravel-package-cli
+```
+
+and you are now able to create the base construct of the new package using
+
+```bash
+$ laravel-package generate vendor/package-name
+```
+
+Check out the [GitHub page of Laravel Package CLI](https://github.com/aheenam/laravel-package-cli) for further information. In case of feature requests or just for help, just open an issue to contact me!
