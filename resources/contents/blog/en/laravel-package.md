@@ -97,7 +97,7 @@ If you want to test you application, you may also add the following packages as 
 3. `phpunit/phpunit`
 4. `orchestra/testbench`
 
-So what version should you use? At the beginning of this article, I mentioned that I'm gonna create a Laravel package for 5.5, so I'm gonna choose this, but you can define what ever you want, for example `5.3|5.4|5.5` if you want to support multiple Laravel versions. Get the detailed information on [versioning and constraints]((https://getcomposer.org/doc/articles/versions.md)) on the composer website.
+So what version should you use? At the beginning of this article, I mentioned that I'm gonna create a Laravel package for 5.5, so I'm gonna choose this, but you can define what ever you want, for example `5.3|5.4|5.5` if you want to support multiple Laravel versions. Get the detailed information on [versioning and constraints](https://getcomposer.org/doc/articles/versions.md) on the composer website.
 
 At the end of this program you should have a `composer.json` file. This is the output of my file:
 
