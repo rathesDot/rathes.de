@@ -19,7 +19,7 @@ Features
 
 ### Sitemap
 
-To generate the sitemap of this website, I use [`spatie/laravel-sitemap`](https://github.com/spatie/laravel-sitemap). Using this package I set up the artisan command to generate a new sitemap and put it in `/pulic/sitemap.xml`. So whenever you run
+To generate the sitemap of this website, I use [`spatie/laravel-sitemap`](https://github.com/spatie/laravel-sitemap). Using this package I set up the artisan command to generate a new sitemap and put it in `/public/sitemap.xml`. So whenever you run
 
 ```bash
 php artisan sitemap:generate
