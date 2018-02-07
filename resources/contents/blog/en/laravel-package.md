@@ -307,7 +307,7 @@ abstract class TestCase extends Orchestra
 
 Testbench gives us a basic Laravel setup. We now have to update this setup adding our own package. This means that we at least add the packages service provider to the environment. In our example above, I also change the default database configuration to testing which I setup as an in-memory sqlite database.
 
-There are some more options, so please make sure to cHeckout the [GitHub page of Testbench]((https://github.com/orchestral/testbench)).
+There are some more options, so please make sure to cHeckout the [GitHub page of Testbench](https://github.com/orchestral/testbench).
 
 ## Step 5: Controllers & Routes
 
@@ -434,7 +434,7 @@ Once you have made your package ready for publication, go to the packagist websi
 
 As you may have noticed, all the steps except for #5, are nearly always the same. So to make life easier, I created a little generator to take this scaffold work out of your hands.
 
-Install the project globally with 
+Install the project globally with
 
 ```bash
 $ composer global require aheenam/laravel-package-cli
