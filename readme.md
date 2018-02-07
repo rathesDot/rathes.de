@@ -19,13 +19,13 @@ Features
 
 ### Sitemap
 
-To generate the sitemap of this website, I use [`spatie/laravel-sitemap`]. Using this package I set up the artisan command to generate a new sitemap and put it in `/pulic/sitemap.xml`. So whenever you run
+To generate the sitemap of this website, I use [`spatie/laravel-sitemap`](https://github.com/spatie/laravel-sitemap). Using this package I set up the artisan command to generate a new sitemap and put it in `/pulic/sitemap.xml`. So whenever you run
 
 ```bash
 php artisan sitemap:generate
 ```
 
-and new `sitemap.xml` will be generated.
+and a new `sitemap.xml` will be generated.
 
 To avoid that I have to run this command manually everytime I create a new article for example, I added this command to the post-deploy-commands of DeployBot.
 
