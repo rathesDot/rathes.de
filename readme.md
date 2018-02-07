@@ -17,6 +17,18 @@ Features
 - uses [`spatie/laravel-responsecache`](https://github.com/spatie/laravel-responsecache) for caching
 - for styling I use [`TailwindCSS`](https://tailwindcss.com) that is compiled with Laravel Mix. ~~Additionally I use [PurgeCSS](https://github.com/FullHuman/purgecss) to remove all unused CSS which is really useful for an optimized version of Tailwind~~ (Can't do that as contents coming from Mozhi are not recognized, still looking for a solution for this)
 
+### Sitemap
+
+To generate the sitemap of this website, I use [`spatie/laravel-sitemap`]. Using this package I set up the artisan command to generate a new sitemap and put it in `/pulic/sitemap.xml`. So whenever you run
+
+```bash
+php artisan sitemap:generate
+```
+
+and new `sitemap.xml` will be generated.
+
+To avoid that I have to run this command manually everytime I create a new article for example, I added this command to the post-deploy-commands of DeployBot.
+
 Deployment
 ---
 
