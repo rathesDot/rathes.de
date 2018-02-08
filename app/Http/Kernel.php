@@ -3,7 +3,6 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Illuminate\Http\Middleware\SetCacheHeaders;
 
 class Kernel extends HttpKernel
 {
