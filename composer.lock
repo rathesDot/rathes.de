@@ -4,8 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf3682d68838077da6bf55dc99364e41",
+    "content-hash": "853261ece64b26b8792bab6afb34acd4",
     "packages": [
+        {
+            "name": "aheenam/estimated-reading-time",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aheenam/estimated-reading-time.git",
+                "reference": "9daac91485da464d047ad6534626bad531da0880"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aheenam/estimated-reading-time/zipball/9daac91485da464d047ad6534626bad531da0880",
+                "reference": "9daac91485da464d047ad6534626bad531da0880",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "^1.7",
+                "phpunit/phpunit": "^6.3|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aheenam\\EstimatedReadingTime\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Calculate the reading time for any given webpage",
+            "time": "2018-02-14T21:10:33+00:00"
+        },
         {
             "name": "aheenam/mozhi",
             "version": "0.2.0",

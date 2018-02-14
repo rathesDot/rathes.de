@@ -11,17 +11,15 @@
             <h1 class="text-3xl font-medium leading-tight">
                 {{ $meta['title'] }}
             </h1>
-            @if(isset($meta['updated']))
-                <small class="block mt-1 text-sm text-grey">
+            <small class="block mt-1 text-sm text-grey">
+                @if(isset($meta['updated']))
                     updated {{ \Illuminate\Support\Carbon::createFromTimestamp($meta['updated'])->diffForHumans() }} 
-                    in {{ implode(',', $meta['categories']) }}
-                </small>
-            @else
-                <small class="block mt-1 text-sm text-grey">
+                @else
                     posted {{ \Illuminate\Support\Carbon::createFromTimestamp($meta['date'])->diffForHumans() }} 
-                    in {{ implode(',', $meta['categories']) }}
-                </small>
-            @endif
+                @endif
+                in {{ implode(',', $meta['categories']) }} | 
+                @readingTime($content) min read
+            </small>
         </header>
         <div class="max-w-md mx-auto font-sans px-4 single-blog-post">
             {!! $content !!}
