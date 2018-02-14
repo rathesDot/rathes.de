@@ -29,6 +29,23 @@ and a new `sitemap.xml` will be generated.
 
 To avoid that I have to run this command manually everytime I create a new article for example, I added this command to the post-deploy-commands of DeployBot.
 
+### Estimated Reading Time
+
+On every single post of my blog you can see the information how long it will take you to read the text. I'm using my own package [`aheenam/estimated-reading-time`](https://github.com/aheenam/estimated-reading-time) for this.
+
+I added a custom Blade directive that uses the method of this package:
+
+```php
+<?php
+
+Blade::directive('readingTime', function ($content) {
+    return "<?php echo (new \Aheenam\EstimatedReadingTime\EstimatedReadingTime)
+        ->setText($content)
+        ->calculateTime();
+    ?>";
+});
+```
+
 Deployment
 ---
 
