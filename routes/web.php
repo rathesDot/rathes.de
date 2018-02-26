@@ -16,7 +16,7 @@ Route::get('/resume', function () {
             'dpi' => 300,
             'defaultFont' => 'sans-serif',
             'isHtml5ParserEnabled' => true,
-            'isFontSubsettingEnabled' => true
+            'isFontSubsettingEnabled' => true,
         ])
         ->loadView('resume')
         ->stream('resume.pdf');
