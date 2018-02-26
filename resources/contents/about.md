@@ -2,6 +2,8 @@
 title: About me
 ---
 
+*Looking for a PDF version? [Click here to download my resume](https://rathes.de/resume)*
+
 I'm Rathes Sachchithananthan and I'm a web developer. If you are interested in learning more about me, you will find the information here.
 
 **Name**: Rathes Sachchithananthan, 1992/04/26\
