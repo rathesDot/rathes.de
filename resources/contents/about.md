@@ -2,7 +2,7 @@
 title: About me
 ---
 
-*Looking for a PDF version? [Click here to download my resume](https://rathes.de/resume)*
+*Looking for a PDF version? [Click here to download my resume](/resume)*
 
 I'm Rathes Sachchithananthan and I'm a web developer. If you are interested in learning more about me, you will find the information here.
 
@@ -18,11 +18,10 @@ I started working as a professional web designer and web developer at very young
 After my BSc. in Computer Science in 2014, I decided to set my main focus more on developments and spend only little on design. Now I'm mainly working as a web developer on Laravel (PHP), Vue and React (JavaScript) projects.
 
 ---
+**Web Developer at [Teamleader](https://www.teamleader.eu/)**\
+*May 2018 - now*
 
-**Web Developer at [netinsiders](https://netinsiders.de)**\
-*Nov 2016 - now*
-
-By the end of 2016, I joined the team of netinsiders as a Web Developer. Now at daytime I work there as a Laravel and Vue Developer and by night I work on my own projects for Aheenam.
+In summer 2018 I started a new chapter and joined Teamleader. This is not only a great opportunity for me to grow as a developer, but also a big new adventure as I am moving to a new city in a new country with a language I still have to learn.
 
 ---
 
@@ -33,17 +32,17 @@ While I was working most of my time as a Freelancer, in 2016 I decided decrease 
 
 ---
 
+**Web Developer at [netinsiders](https://netinsiders.de)**\
+*Nov 2016 - Apr 2018*
+
+By the end of 2016, I joined the team of netinsiders as a Web Developer. During that time I worked as a Laravel and Vue Developer and by night I work on my own projects for Aheenam.
+
+---
+
 **Co-Founder/Web Developer at [KERNWERK](https://kernwerk.de)**\
 *Oct 2015 - January 2018*
 
 Together with some friends we created the awesome app for digital personal training. I created the backend of first MVP using Laravel as the framework of choice. Due to lack of time and shift of interests, I left this project by the end of 2017.
-
----
-
-**Web Developer at rathesDot**\
-*Apr 2010 - Mar 2016*
-
-I basically just changed my name from CreativeCreation to rathesDot, I still had the same clients and did the same job as earlier.
 
 ---
 
