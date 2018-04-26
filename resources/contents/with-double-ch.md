@@ -1,6 +1,7 @@
 ---
 title: 'With Double CH'
-template: 'blog-list'
+template: 'double-ch.list'
+is_list: true
 ---
 
 With Double CH
