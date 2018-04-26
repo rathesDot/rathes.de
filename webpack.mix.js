@@ -11,7 +11,11 @@ let tailwindcss = require('tailwindcss');
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.postCss('resources/assets/styles/app.css', 'public/css', [
+mix
+  .postCss('resources/assets/styles/app.css', 'public/css', [
+    tailwindcss('./tailwind.js'),
+  ])
+  .postCss('resources/assets/styles/double-ch.pcss', 'public/css', [
     tailwindcss('./tailwind.js'),
   ])
   .js('resources/assets/js/app.js', 'public/js');
