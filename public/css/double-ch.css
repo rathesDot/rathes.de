@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700);/**
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);/**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
  *
@@ -663,6 +663,39 @@ button,
   * @import "components/buttons";
   * @import "components/forms";
   */
+
+.article-list {
+  padding: 2rem;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.article-list h1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: #222b2f;
+}
+
+.article-list p {
+  font-family: Amiri, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  font-size: 1.125rem;
+}
+
+.article-list ol {
+  margin-top: 2rem;
+  list-style: upper-roman;
+}
+
+.article-list li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.article-list li a {
+  text-decoration: none;
+  color: #364349;
+}
 
 /**
   * This injects all of Tailwind's utility classes, generated based on your

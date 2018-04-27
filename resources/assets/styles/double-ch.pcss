@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Space+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -30,6 +30,31 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+
+  .article-list {
+    @apply .p-8 .font-sans
+  }
+
+  .article-list h1 {
+    @apply .text-3xl .font-medium .text-black
+  }
+
+  .article-list p {
+    @apply .font-serif .text-lg
+  }
+
+  .article-list ol {
+    @apply .mt-8;
+    list-style: upper-roman;
+  }
+
+  .article-list li {
+    @apply .my-4 .text-lg .font-medium
+  }
+
+  .article-list li a {
+   @apply .no-underline .text-grey-darkest
+  }
 
  /**
   * This injects all of Tailwind's utility classes, generated based on your
