@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
         <title>Rathes Sachchithananthan — Web Designer & Web Developer</title>
 
         <style>
@@ -87,7 +87,7 @@
                 font-size: 8pt;
                 line-height: 14pt;
             }
-            
+
             .clear:before {
                 display: table;
                 content: " ";
@@ -227,11 +227,20 @@
             </div>
             <div class="experience">
                 <div class="title">Experience</div>
+                <p>
+                    I started working as a professional web designer and web developer at very young ages. When I was 14 I had my first client jobs and in 2008, at the age of 16, I founded my first own company for web design and development. Since then I have worked with several clients doing quite a wide range of tasks.
+                <br><br>
+                    After my BSc. in Computer Science in 2014, I decided to set my main focus more on developments and spend only little on design. Now I'm mainly working as a web developer on Laravel (PHP), Vue and React (JavaScript) projects.
+                <br><br>
+                </p>
+                <p>
+                    Below you can find my recent employments. Contact me or visit my website at https://rathes.de to find a full list.
+                </p>
                 <div class="experience__Item">
-                    <div class="title--sub">Web Developer | netinsiders</div>
-                    <div>NOV 2016 - present</div>
+                    <div class="title--sub">Web Developer | Teamleader</div>
+                    <div>MAY 2018 - present</div>
                     <p>
-                        By the end of 2016, I joined the team of netinsiders as a Web Developer. Now at daytime I work there as a Laravel and Vue Developer and by night I work on my own projects for Aheenam.
+                        In summer 2018 I started a new chapter and joined Teamleader. This is not only a great opportunity for me to grow as a developer, but also a big new adventure as I am moving to a new city in a new country with a language I still have to learn.
                     </p>
                 </div>
                 <div class="experience__Item">
@@ -242,31 +251,17 @@
                     </p>
                 </div>
                 <div class="experience__Item">
+                    <div class="title--sub">Web Developer | netinsiders</div>
+                    <div>NOV 2016 - APR 2018</div>
+                    <p>
+                        By the end of 2016, I joined the team of netinsiders as a Web Developer. Now at daytime I work there as a Laravel and Vue Developer and by night I work on my own projects for Aheenam.
+                    </p>
+                </div>
+                <div class="experience__Item">
                     <div class="title--sub">Co-Founder/Web Developer | KERNWERK</div>
                     <div>OCT 2015 - JAN 2018</div>
                     <p>
                         Together with some friends we created the awesome app for digital personal training. I created the backend of first MVP using Laravel as the framework of choice. Due to lack of time and shift of interests, I left this project by the end of 2017.
-                    </p>
-                </div>
-                <div class="experience__Item">
-                    <div class="title--sub">Web Developer | rathesDot</div>
-                    <div>APR 2010 - MAR 2016</div>
-                    <p>
-                        I basically just changed my name from CreativeCreation to rathesDot, I still had the same clients and did the same job as earlier.
-                    </p>
-                </div>
-                <div class="experience__Item">
-                    <div class="title--sub">Production Assistant | Kopierland GmbH</div>
-                    <div>JUN 2011 - MAR 2014</div>
-                    <p>
-                        This was my first non freelance job. Had this job during my studies of Media Computer Science at University Ulm, where I got great insights of the world of digital printing and print design.
-                    </p>
-                </div>
-                <div class="experience__Item">
-                    <div class="title--sub">Web Designer | CreativeCreation</div>
-                    <div>JUN 2006 - APR 2010</div>
-                    <p>
-                        This is where my journey in the professional web industry started. Before that, I just created stuff for myself with the idea of promoting my career as a rapper.
                     </p>
                 </div>
             </div>
