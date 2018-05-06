@@ -46,15 +46,6 @@
         <meta property="og:site_name" content="rathes.de" />
         <meta property="article:author" content="https://www.facebook.com/rathes.de" />
         <meta property="article:section" content="With Double CH" />
-        <meta property="article:published_time" content="{{ $meta['date'] }}" />
-        <meta property="article:modified_time"
-            content="{{ isset($meta['modified']) ? $meta['modified'] : $meta['date'] }}" />
-        <meta property="og:updated_time" content="{{ $meta['date'] }}" />
-        @if($meta && isset($meta['image']))
-            <meta property="og:image" content="{{ url($meta['image']) }}" />
-            <meta property="og:image:secure_url" content="{{ url($meta['image']) }}" />
-            <meta name="twitter:image" content="{{ url($meta['image']) }}" />
-        @endif
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content="{{ isset($meta['description']) ? $meta['description'] : '' }}" />
         <meta name="twitter:title" content="{{ $meta['title'] }} &mdash; rathes.de" />
