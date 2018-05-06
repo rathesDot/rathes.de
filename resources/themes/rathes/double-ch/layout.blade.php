@@ -67,7 +67,6 @@
 <body>
     @yield('content')
 	@include('theme::rathes.double-ch.footer')
-    <script src="{{ asset('/js/app.js') }}"></script>
 	@stack('javascript')
 </body>
 
