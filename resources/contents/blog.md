@@ -13,6 +13,10 @@ I do write in English, German and Tamil. So if you do not understand the title, 
 
 I had a blog called *Web und die Welt* which I closed by the end of 2017. From time to time, I'm going to move the most interesting articles to this blog.
 
+## Books & Whitepapers
+
+- [With Double CH](/with-double-ch)
+
 ## 2018
 
 - [Create your own Laravel package](/blog/en/laravel-package)
