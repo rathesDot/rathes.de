@@ -44,8 +44,7 @@
   }
 
   .article-list ol {
-    @apply .mt-8;
-    list-style: upper-roman;
+    @apply .mt-8 .list-reset
   }
 
   .article-list li {
@@ -54,6 +53,18 @@
 
   .article-list li a {
    @apply .no-underline .text-grey-darkest
+  }
+
+  .article-list li em {
+    @apply .text-grey
+  }
+
+  .article-list h2 {
+    @apply .text-xs .mb-0 .mt-16 .uppercase .text-grey .tracking-wide .font-normal
+  }
+
+  .article-list h2 + ol {
+    @apply .mt-0
   }
 
  /**
