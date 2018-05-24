@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/blog', function () {
+    return redirect('/writings');
+});
+
 Route::get('/resume', function () {
     return PDF::setOptions([
             'dpi' => 300,
