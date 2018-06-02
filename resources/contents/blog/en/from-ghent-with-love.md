@@ -13,7 +13,6 @@ tags:
 locale: en_US
 ---
 
-# From Ghent with Love
 It has been a month now that I moved from the small city Schleswig near the Danish border to Ghent in Belgium. So I spent some time on thinking about my kind of hasty decision to leave Germany and move to an entirely new place.
 
 ## The city
