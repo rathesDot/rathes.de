@@ -19,6 +19,7 @@ I had a blog called *Web und die Welt* which I closed by the end of 2017. From t
 
 ## 2018
 
+- [From Ghent with Love](/blog/en/from-ghent-with-love)
 - [Create your own Laravel package](/blog/en/laravel-package)
 
 ## 2017
