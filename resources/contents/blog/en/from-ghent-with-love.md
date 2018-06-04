@@ -4,6 +4,7 @@ title: 'From Ghent with love'
 date: 2018-06-02T17:42:25+00:00
 author: Rathes Sachchithananthan
 template: post
+image: /images/blog/ghent-2.jpg
 description: How and why I enjoyed my first month in Ghent and at Teamleader
 categories:
   - Web
@@ -21,6 +22,8 @@ My first day in Ghent was already enough for me to know that I was going to enjo
 The city is much smaller than both of them. But it can be as vivid as Amsterdam, but at the same time as calm as Oslo can be. Perfect, right?
 
 In the following days after my arrival I spent some days exploring the city by running through it. (Yeah, I started running again). When I moved to Schleswig, I made the huge mistake to move there in November. Fucking cold and depressing at that time. I learned from it and my first days in Ghent were full of sun. I think I even already had more sunny and really hot days than I had in the entire last 1.5 years in Schleswig.
+
+![Ghent](/images/blog/ghent.jpg)
 
 ## The job at Teamleader
 Moving to another city also meant to start a new job. This does not have to be the case anymore thanks to remote working possibilities, but I needed that change. So in May I started as a back-end engineer at Teamleader.
