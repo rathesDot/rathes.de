@@ -1,7 +1,3 @@
-**WIP This repository is still not finished**
-
----
-
 My personal website rathes.de
 ===
 
