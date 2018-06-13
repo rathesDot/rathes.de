@@ -11,6 +11,7 @@ This is a collection of articles with thought, ideas and experiences I had in my
 
 1. [Prologue](/with-double-ch/prologue)
 2. [Being different](/with-double-ch/being-different)
+3. [The movement and me](/with-double-ch/the-movement-and-me)
 
 ## Soon
 
