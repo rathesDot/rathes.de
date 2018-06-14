@@ -45,7 +45,7 @@ Blade::directive('readingTime', function ($content) {
 Deployment
 ---
 
-Currently the site is still hosted on the shared hosting service [ALL-INKL](https://all-inkl.com/?partner=374001) and deployed using [DeployBot](https://deploybot.com). By time I'm going to move the whole project to [DigitalOcean](https://www.digitalocean.com/) provisioned by [Laravel Forge](https://forge.laravel.com/).
+The whole project is running on a [DigitalOcean](https://www.digitalocean.com/) droplet provisioned by [Laravel Forge](https://forge.laravel.com/).
 
 To-Do:
 ---
