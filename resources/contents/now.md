@@ -18,9 +18,9 @@ Reading & Writing
 
 Last year I had that wonderful habit of reading. I read at least one book a month, resulting in [12 books in 12 months](https://medium.com/@rathes/12-books-in-12-months-54db49d8aaec). This year, I somehow got stuck. I just finished my first book a few days ago. But I'm doing my best in re-introducing my habit. Currently I am reading 3 books:
 
-1. "A Fortune-Teller Told Me: Earth-bound Travels in the Far East" by Tiziano Terzani
-2. "Domain-Driven Design in PHP" by Carlos Buenosvinos, Christian Soronellas & Keyvan Akbary
-3. "Six of Crows" by Leigh Bardugo
+1. **A Fortune-Teller Told Me: Earth-bound Travels in the Far East** by Tiziano Terzani
+2. **Domain-Driven Design in PHP** by Carlos Buenosvinos, Christian Soronellas & Keyvan Akbary
+3. **Six of Crows** by Leigh Bardugo
 
 Hopefully, the next time I update this page, there will be different names.
 
