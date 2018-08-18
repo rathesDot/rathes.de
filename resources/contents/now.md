@@ -51,3 +51,7 @@ I am also working on my first technical talk. I actually had a topic and an idea
 There are two topics with (for now) really low priorities that I spent time on learning. The first are some basics in lingustics with the focus on understanding the concept Farming/Language Dispersal.
 
 The second is Machine Learning. Here I'm on my way mastering the basic algorithmns. One day I want to be able to use those algorithmns properly in suiting use cases.
+
+---
+
+*I found the idea of a now-page on Twitter on Joel Gascoigne's profile. The original idea can be found here: https://nownownow.com/*
