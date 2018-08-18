@@ -7,38 +7,47 @@ This page will tell you what I am focussed on at this current point of my life. 
 Life
 ---
 
-- moved to Ghent
-- started at Teamleader
-- new apartment, new lift
-- new language (focus on Dutch)
-- also getting back to old skills in Spanish/Norwegian
-- generally bring back structure in life again
+Starting May I made a huge step by leaving Germany permanently. I left my previous place in Schleswig and moved to the beautiful city of Ghent. Moving permanently is way different than my movings within Germany. For me it does not only mean a new apartment and a new job, but also new people around me speaking a (for me) new language.
+
+So currently, I am working on getting used to this new environment. Actually, I'm already used to the life here. The only things I have to pick up are the legal stuff and the language. Instead of learning Dutch in a school my plan is to "learn-by-living" assisted by some self-teaching lessons.
+
+Since I just found my apartment a few weeks ago, the place and life is still quite messy, but I'm doing my best to bring back some structure in life. Having a quite well organized daily life is crucial for me to be successful.
 
 Reading & Writing
 ---
 
-- reading 3 books
-- "A Fortune-Teller Told Me: Earth-bound Travels in the Far East" by Tiziano Terzani
-- "Domain-Driven Design in PHP" by Carlos Buenosvinos, Christian Soronellas & Keyvan Akbary
-- "Six of Crows" by Leigh Bardugo
+Last year I had that wonderful habit of reading. I read at least one book a month, resulting in [12 books in 12 months](https://medium.com/@rathes/12-books-in-12-months-54db49d8aaec). This year, I somehow got stuck. I just finished my first book a few days ago. But I'm doing my best in re-introducing my habit. Currently I am reading 3 books:
 
-- also working on my first crime novel
-- started a while ago, but not really gained any momentum
-- still optimistic
+1. "A Fortune-Teller Told Me: Earth-bound Travels in the Far East" by Tiziano Terzani
+2. "Domain-Driven Design in PHP" by Carlos Buenosvinos, Christian Soronellas & Keyvan Akbary
+3. "Six of Crows" by Leigh Bardugo
+
+Hopefully, the next time I update this page, there will be different names.
+
+Next to reading a book, I also started writing. I always wanted to publish a crime novel and this year I started that project. In the beginning it went quite well, I made up a plot and as organized as I am, I planned everything that would happen in this story. Characters that act in the plot, characters that had an impact on that novels hero, the place where everything takes place and even the murder(s). But all this went too well.
+
+After the planning was done, it took me a while start the first sentences. And I even deleted all the stuff I wrote so far as I absolutely did not like that stuff anymore.
+
+Now I'm writing again. But this time in a structured way, with a schedule and a master plan on how to keep that schedule. The new city and the new apartment are quite helpful on that.
 
 Fitness
 ---
 
-- Currently running: Goal is 21k in a 06:00/km pace within the next 12 months
-- but also get back to fitness, not sure if gym, CrossFit box or KERNWERK
-- road to 65kg (from right now 60)
+One of my goals in "The 100" is to run a marathon. When I moved to Ghent, I actually started practicing. And as a first step I want to run a half-marathon in the upcoming 12 months. And I want to be able to run it at a pace of 06:00/km.
 
-Learn
+I'm also starting my nutritional and fitness plans. For now I will just workout with body weight, but when it gets colder my plan is to go to either a regular gym or a CrossFit box near to my workplace. Goal is to reach 65kg (from now at 59/60kg)
+
+Learn & Side-Projects
 ---
 
-- working on my side projects
-- launch 2 small realeases of a bigger project called "Tamil"
-- preparing to work a bit more structured/focussed on side projects again
-- find a topic and create talk (current idea is way too big to get it done in the near future)
-- basics about linguistic (especially Farming/Language Dispersal)
-- basics in Machine Learning (basic understanding of the most common algorithmns)
+As mentioned above, I'm learning Dutch by living in a Dutch speaking city. At the same time I need to keep practicing my Spanish and Norwegian as well. Both skills are getting worse since I haven't used those languages for a while now.
+
+Next to learning the languages, I'm working on two small steps for the project called "Tamil". This projects contains basically everything related to my dedication to my mother language Tamil.
+
+Working at home also still needs some structure, but I'm quite optimistic that I just need some more time to settle down.
+
+I am also working on my first technical talk. I actually had a topic and an idea of how I wanted to present it, but I realized that this will take way more time than expected, so now I'm stepping back and looking for a smaller topic for a talk related to PHP.
+
+There are two topics with (for now) really low priorities that I spent time on learning. The first are some basics in lingustics with the focus on understanding the concept Farming/Language Dispersal.
+
+The second is Machine Learning. Here I'm on my way mastering the basic algorithmns. One day I want to be able to use those algorithmns properly in suiting use cases.
