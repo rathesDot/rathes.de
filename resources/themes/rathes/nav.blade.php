@@ -15,6 +15,7 @@
         <nav class="w-full mt-4 js-menu md:w-auto md:mt-0">
             <a class="menu-link" href="/about">About</a>
             <a class="menu-link" href="/now">Now</a>
+            <a class="menu-link" href="/the-100">The 100</a>
             <a class="menu-link" href="/writings">Writings</a>
         </nav>
 	</div>
