@@ -31,7 +31,7 @@
   * @import "components/forms";
   */
 
-  @import '../../../node_modules/prismjs/themes/prism-okaidia.css';
+  @import '../../node_modules/prismjs/themes/prism-okaidia.css';
 
  /**
   * This injects all of Tailwind's utility classes, generated based on your
