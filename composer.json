@@ -10,12 +10,12 @@
         "aheenam/mozhi": "^0.2.0",
         "barryvdh/laravel-dompdf": "^0.8.2",
         "fideloper/proxy": "~4.0",
-        "laravel/framework": "5.6.*",
+        "laravel/framework": "5.7.*",
         "laravel/tinker": "~1.0",
         "spatie/laravel-responsecache": "^4.0",
-        "spatie/laravel-sitemap": "^4.0"
+        "spatie/laravel-sitemap": "^5.0"
     },
-    "require-dev": {        
+    "require-dev": {
         "filp/whoops": "~2.0",
         "nunomaduro/collision": "~1.1",
         "fzaninotto/faker": "~1.4",
