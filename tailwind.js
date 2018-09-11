@@ -194,6 +194,7 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Fira Sans',
       'Roboto',
       '-apple-system',
       'BlinkMacSystemFont',
@@ -220,10 +221,12 @@ module.exports = {
       'serif',
     ],
     'logo': [
+      'Fira Mono',
       'Space Mono',
       'monospace'
     ],
     'mono': [
+      'Fira Mono',
       'Menlo',
       'Monaco',
       'Consolas',
