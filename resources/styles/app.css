@@ -61,11 +61,11 @@
   */
 
 html, body {
-    @apply .bg-grey-lightest .font-sans
+    @apply .bg-grey-lightest .font-sans .font-light .text-lg
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply .font-sans .font-medium .tracking-wide .mt-8 .mb-2
+    @apply .font-sans .font-normal .mt-8 .mb-2
 }
 
 p {
@@ -77,7 +77,7 @@ a {
 }
 
 b, strong {
-    @apply .font-sans .font-medium .tracking-wide
+    @apply .font-sans .font-normal
 }
 
 pre, pre[class*="language-"] {
@@ -131,7 +131,7 @@ hr::before {
 }
 
 .home ul li {
-    @apply .my-8
+    @apply .my-8 .uppercase .tracking-wide
 }
 
 .home ul li:before {
@@ -140,7 +140,7 @@ hr::before {
 }
 
 .home ul li a {
-    @apply .block .no-underline .text-sm
+    @apply .block .no-underline .text-sm .normal-case .font-normal .tracking-normal
 }
 
 @screen sm {
