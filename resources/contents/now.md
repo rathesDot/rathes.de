@@ -4,8 +4,7 @@ title: Now
 
 This page will tell you what I am focussed on at this current point of my life. I will do my best to update it as often as my path changes. You can also use this page as some kind of replacement for the more personal "About me" page as it will reflect my hobbies and interests. If you check out the history of this content page on [GitHub](https://github.com/rathesDot/rathes.de), you can even follow how my interests change over the months.
 
-Life
----
+## Life
 
 Starting May I made a huge step by leaving Germany permanently. I left my previous place in Schleswig and moved to the beautiful city of Ghent. Moving permanently is way different than my movings within Germany. For me it does not only mean a new apartment and a new job, but also new people around me speaking a (for me) new language.
 
@@ -13,8 +12,7 @@ So currently, I am working on getting used to this new environment. Actually, I'
 
 Since I just found my apartment a few weeks ago, the place and life is still quite messy, but I'm doing my best to bring back some structure in life. Having a quite well organized daily life is crucial for me to be successful.
 
-Reading & Writing
----
+## Reading & Writing
 
 Last year I had that wonderful habit of reading. I read at least one book a month, resulting in [12 books in 12 months](https://medium.com/@rathes/12-books-in-12-months-54db49d8aaec). This year, I somehow got stuck. I just finished my first book a few days ago. But I'm doing my best in re-introducing my habit. Currently I am reading 3 books:
 
@@ -30,15 +28,13 @@ After the planning was done, it took me a while start the first sentences. And I
 
 Now I'm writing again. But this time in a structured way, with a schedule and a master plan on how to keep that schedule. The new city and the new apartment are quite helpful on that.
 
-Fitness
----
+## Fitness
 
 One of my goals in "The 100" is to run a marathon. When I moved to Ghent, I actually started practicing. And as a first step I want to run a half-marathon in the upcoming 12 months. And I want to be able to run it at a pace of 06:00/km.
 
 I'm also starting my nutritional and fitness plans. For now I will just workout with body weight, but when it gets colder my plan is to go to either a regular gym or a CrossFit box near to my workplace. Goal is to reach 65kg (from now at 59/60kg)
 
-Learn & Side-Projects
----
+## Learn & Side-Projects
 
 As mentioned above, I'm learning Dutch by living in a Dutch speaking city. At the same time I need to keep practicing my Spanish and Norwegian as well. Both skills are getting worse since I haven't used those languages for a while now.
 
@@ -54,4 +50,4 @@ The second is Machine Learning. Here I'm on my way mastering the basic algorithm
 
 ---
 
-*I found the idea of a now-page on Twitter on Joel Gascoigne's profile. The original idea can be found here: https://nownownow.com/*
+*I found the idea of a now-page on Twitter on Joel Gascoigne's profile. The original idea can be found here: [https://nownownow.com/](https://nownownow.com/)*
