@@ -6,47 +6,44 @@ This page will tell you what I am focussed on at this current point of my life. 
 
 ## Life
 
-Starting May I made a huge step by leaving Germany permanently. I left my previous place in Schleswig and moved to the beautiful city of Ghent. Moving permanently is way different than my movings within Germany. For me it does not only mean a new apartment and a new job, but also new people around me speaking a (for me) new language.
+After almost half a year now in Ghent, I'm entirely used to this city. There are still some spots to explore and visit, but all in all Ghent doesn't feel like a new place anymore. Life is now way more structured than a few weeks ago and I'm happy about how my day to day life goes. Also, when driving back to Germany a few times, I realized that I absolutely do not miss that country.
 
-So currently, I am working on getting used to this new environment. Actually, I'm already used to the life here. The only things I have to pick up are the legal stuff and the language. Instead of learning Dutch in a school my plan is to "learn-by-living" assisted by some self-teaching lessons.
-
-Since I just found my apartment a few weeks ago, the place and life is still quite messy, but I'm doing my best to bring back some structure in life. Having a quite well organized daily life is crucial for me to be successful.
+As it is always the case, I'm still in the process of making my apartment something that people could call a home. It will probably take another six months I guess. The living room is still hasn't anything except for a couch and a dining table, things are still on the floor, but I'm making progress. The kitchen (as usual for me) is ready, but I'm sure that I will be able to setup the rest in the upcoming months as well.
 
 ## Reading & Writing
 
-Last year I had that wonderful habit of reading. I read at least one book a month, resulting in [12 books in 12 months](https://medium.com/@rathes/12-books-in-12-months-54db49d8aaec). This year, I somehow got stuck. I just finished my first book a few days ago. But I'm doing my best in re-introducing my habit. Currently I am reading 3 books:
+I'm still not that far that I can read a book every single month, but I make some little progress. I finished two of three books from my previous update. And I also read another book (a technical one). So in the upcoming weeks I will keep up reading
 
-1. **A Fortune-Teller Told Me: Earth-bound Travels in the Far East** by Tiziano Terzani
-2. **Domain-Driven Design in PHP** by Carlos Buenosvinos, Christian Soronellas & Keyvan Akbary
-3. **Six of Crows** by Leigh Bardugo
+1. **[A Fortune-Teller Told Me: Earth-bound Travels in the Far East](https://amzn.to/2T3IewH)** by Tiziano Terzani
 
-Hopefully, the next time I update this page, there will be different names.
+that I already started but haven't finished yet. But I also started
 
-Next to reading a book, I also started writing. I always wanted to publish a crime novel and this year I started that project. In the beginning it went quite well, I made up a plot and as organized as I am, I planned everything that would happen in this story. Characters that act in the plot, characters that had an impact on that novels hero, the place where everything takes place and even the murder(s). But all this went too well.
+2. **[Hollow City](https://amzn.to/2PnBEmf)** by Ransom Riggs
 
-After the planning was done, it took me a while start the first sentences. And I even deleted all the stuff I wrote so far as I absolutely did not like that stuff anymore.
+Last year around this time I read the first part (Miss Peregrine’s Home for Peculiar Children) and I really loved it. So finally I'm continuing with the sequel.
 
-Now I'm writing again. But this time in a structured way, with a schedule and a master plan on how to keep that schedule. The new city and the new apartment are quite helpful on that.
+Last book that I started reading is
+
+3. **[Computational Intelligence: Probleme, Methoden und technische Anwendungen](https://amzn.to/2PQfd8F)** by Andreas Kroll
+
+My brother actually bought this, since it is written by his professor. But since he finished and I'm also interested in that topic, I'm going to give it a try as well.
+
+My writing isn't that sucessful as the reading. At least for the crime novel. It is barely making any progress and it is really frustrating. So for now I just skipped it and only write down some brainstorms that I have from time to time.
+
+But instead I started writing my Tamil Grammar book. I started writing some kind of a textbook for my Tamil app and people asked me to publish this as a book as well. I really liked the idea, so I started writing it down. The structure is done, the first chapters are as well and I also started working out the strategy how I want to publish the book.
+My goal is to publish the book on my own (by Aheenam) and give it away for as less money as possible. I still need some strategy for that, but that is something that I should worry about only as soon as I reach the final stages of writing.
 
 ## Fitness
 
-One of my goals in "The 100" is to run a marathon. When I moved to Ghent, I actually started practicing. And as a first step I want to run a half-marathon in the upcoming 12 months. And I want to be able to run it at a pace of 06:00/km.
+This part will be the saddest of this times update. I did really well when I started running. I reached a point where 10 miles (16km) were doable for me and even in an acceptable time. I was almost thinking of joining the Ghent marathon for the half marathon, but then in the middle of a run my knee started hurting. And until now it hasn't stopped.
 
-I'm also starting my nutritional and fitness plans. For now I will just workout with body weight, but when it gets colder my plan is to go to either a regular gym or a CrossFit box near to my workplace. Goal is to reach 65kg (from now at 59/60kg)
+So right now I'm pausing from any activity that makes my knee recovering slower. But I expect to join the gym during this month and slowly start again. (The outdoor season has ended for me though).
 
 ## Learn & Side-Projects
 
-As mentioned above, I'm learning Dutch by living in a Dutch speaking city. At the same time I need to keep practicing my Spanish and Norwegian as well. Both skills are getting worse since I haven't used those languages for a while now.
+I actually started learning Dutch. Not on a regular base and not in class, but still. I can already understand things that I read in Dutch and I also understand a few things when people speak. Sometimes I'm also able to answer in Dutch. But I still do not know enough grammar and my vocabulary is too small to have proper conversations in Dutch. So by learning Dutch grammar and words, I hope to fix this issue. (Which isn't actually an issue since everybody speaks acceptable English)
 
-Next to learning the languages, I'm working on two small steps for the project called "Tamil". This projects contains basically everything related to my dedication to my mother language Tamil.
-
-Working at home also still needs some structure, but I'm quite optimistic that I just need some more time to settle down.
-
-I am also working on my first technical talk. I actually had a topic and an idea of how I wanted to present it, but I realized that this will take way more time than expected, so now I'm stepping back and looking for a smaller topic for a talk related to PHP.
-
-There are two topics with (for now) really low priorities that I spent time on learning. The first are some basics in lingustics with the focus on understanding the concept Farming/Language Dispersal.
-
-The second is Machine Learning. Here I'm on my way mastering the basic algorithmns. One day I want to be able to use those algorithmns properly in suiting use cases.
+As mentioned above I'm working on a Tamil Grammar book as a first step towards the Tamil App. I'm spending most of the time in getting this done in time. All the other side projects and ideas have to wait.
 
 ---
 
