@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=K2D:300,400|Fira+Mono');
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -61,7 +61,7 @@
   */
 
 html, body {
-    @apply .bg-grey-lightest .font-sans .font-light .text-lg
+    @apply .bg-grey-lightest .font-sans .font-light
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -150,10 +150,6 @@ hr::before {
 }
 
 /** blog list **/
-.blog-list h1 {
-    @apply .text-indigo
-}
-
 .blog-list h2 {
     @apply .mt-16 .uppercase .text-sm .font-normal .tracking-wide .text-grey
 }
