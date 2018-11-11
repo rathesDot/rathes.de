@@ -5,6 +5,7 @@ date: 2018-11-11T16:55:22+02:00
 author: Rathes Sachchithananthan
 template: post
 description: Readme Driven Development (RDD) is a powerful approach in software development to write libraries that people can use and want to use
+image: /images/blog/readme-driven-development.jpg
 categories:
   - Web
 tags:
@@ -68,3 +69,7 @@ RDD is meant to be used in package development when the scope is clear and limit
 What really needs to be stressed again is the fact, that Readme Driven Development is not Documentation Driven Development. You do not have to write out the whole specification and every internal method in your package. One file, the Readme file, is the only thing you need.
 
 At the same time this doesn't hold you back from providing more information once the package is finished. The Readme has not to be the only piece of documentation, you should just start with it. It does not have to be perfect either, just make sure that it helps you writing better software.
+
+---
+
+Photo by [Steve Johnson](https://unsplash.com/@steve_j) on [Unsplash](https://unsplash.com/photos/htqCupyYlCQ)
