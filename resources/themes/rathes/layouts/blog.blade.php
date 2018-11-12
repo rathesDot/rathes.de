@@ -39,10 +39,10 @@
         <meta property="og:locale" content="{{ $meta['locale'] }}" />
     @endif
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ $meta['title'] }} &mdash; rathes.de" />
+    <meta property="og:title" content="{{ $meta['title'] }} &mdash; rathes.me" />
     <meta property="og:description" content="{{ isset($meta['description']) ? $meta['description'] : '' }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:site_name" content="rathes.de" />
+    <meta property="og:site_name" content="rathes.me" />
     <meta property="article:author" content="https://www.facebook.com/rathes.de" />
     <meta property="article:section" content="{{ $meta['categories'][0] }}" />
     <meta property="article:published_time" content="{{ $meta['date'] }}" />
@@ -56,7 +56,7 @@
     @endif
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="{{ isset($meta['description']) ? $meta['description'] : '' }}" />
-    <meta name="twitter:title" content="{{ $meta['title'] }} &mdash; rathes.de" />
+    <meta name="twitter:title" content="{{ $meta['title'] }} &mdash; rathes.me" />
     <meta name="twitter:site" content="@rswebdesginer" />
     <meta name="twitter:creator" content="@rswebdesigner" />
 
