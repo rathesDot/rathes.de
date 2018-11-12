@@ -38,7 +38,7 @@ But what does it exactly mean to write the Readme first? It is pretty straight f
 
 Start with a title and a subtitle that make it directly clear what the topic is. Then continue with a small paragraph explaining what the code you write intends to do and what it is going to solve.
 
-Then follow with some *Getting Started* information, so that the user of this piece of software will be able to set things up and configure things if needed.
+Then follow with some *Getting Started* information, so that the user of this piece of software will be able to set things up and configure them if needed.
 
 Next explain the usage of what you are writing. Describe the most important parts of the public interface of you software and how to use them.
 
