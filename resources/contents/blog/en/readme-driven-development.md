@@ -52,7 +52,7 @@ The problem about start coding immediately is that you will miss the bigger pict
 
 To make other people use your software, you have to make sure that people understand and accept the thoughts you initially have when you start. You have to make sure that you are actually understanding tbeir needs, why they actually consider using your software. By writing down the Readme, you can easily discuss ideas without spending too much time on working in the wrong direction.
 
-But it can also be helpful for yourself to verify if the idea you had actually makes sense. Writing the Readme and then re-reading it the day after is the best verification to see if you are doing exactly what you did. And if not, you haven't spent too much time to start over, right?
+But it can also be helpful for yourself to verify if the idea you had actually makes sense. Writing the Readme and then re-reading it the day after is the best verification to see if you are doing exactly what you wanted to do. And if not, you haven't spent too much time to start over, right?
 
 Once you start writing code the Readme will help you writing the tests. You already now what you want and therefore you have a path to go in order to complete the project. And you will always know how far you've gone and how much work is still left.
 
