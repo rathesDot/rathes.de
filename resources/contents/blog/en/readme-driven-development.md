@@ -42,7 +42,7 @@ Then follow with some *Getting Started* information, so that the user of this pi
 
 Next explain the usage of what you are writing. Describe the most important parts of the public interface of your software and how to use them.
 
-Now do this every single time whenever the code needs some changes. Update the Readme to the state your code will be after applying the changes before you actually change the code.
+Now do this every single time whenever the code needs some changes. Update the Readme to the state your code will be after applying those changes before you actually change the code.
 
 ## The power of Readme Driven Development
 
