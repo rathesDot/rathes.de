@@ -40,7 +40,7 @@ Start with a title and a subtitle that make it directly clear what the topic is.
 
 Then follow with some *Getting Started* information, so that the user of this piece of software will be able to set things up and configure them if needed.
 
-Next explain the usage of what you are writing. Describe the most important parts of the public interface of you software and how to use them.
+Next explain the usage of what you are writing. Describe the most important parts of the public interface of your software and how to use them.
 
 Now do this every single time whenever the code needs some changes. Update the Readme to the state your code will be after applying the changes before you actually change the code.
 
