@@ -30,7 +30,7 @@ And read it again. It says Readme. It does not say documentation, it does not sa
 
 **Write the Readme first.**
 
-That's all. This rule will help to avoid that pieces of software becomes useless once it is finished.
+That's all. This rule will help you to avoid that pieces of software become useless once it is finished.
 
 ## Implementing Readme Driven Development
 
