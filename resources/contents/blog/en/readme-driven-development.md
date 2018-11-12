@@ -20,7 +20,7 @@ What it actually means is that as a software developer you have to create softwa
 
 ## Introducing RDD
 
-There is a simple pattern to solve the latter problem of creating something that nobody can't use. It is that simple that it can be describe in one sentence, but at the same time there are a few misconceptions that it needs a whole article to clarify things:
+There is a simple pattern to solve the latter problem of creating something that nobody can't use. It is that simple that it can be described in one sentence, but at the same time there are a few misconceptions that it needs a whole article to clarify things:
 
 **Write the Readme first.**
 
