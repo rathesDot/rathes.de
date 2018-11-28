@@ -17,6 +17,6 @@
   "dependencies": {
     "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
-    "tailwindcss": "^0.5.0"
+    "tailwindcss": "^0.6.0"
   }
 }
