@@ -805,6 +805,12 @@ module.exports = {
     'current': 'currentColor',
   },
 
+  backgroundSize: {
+    'auto': 'auto',
+    'cover': 'cover',
+    'contain': 'contain',
+  },
+
 
   /*
   |-----------------------------------------------------------------------------
@@ -884,5 +890,9 @@ module.exports = {
     important: false,
     separator: ':',
   },
+
+  plugins: [
+    require('tailwindcss/plugins/container')(),
+  ],
 
 }
