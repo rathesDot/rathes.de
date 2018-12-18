@@ -41,7 +41,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoutes();
 
         Route::middleware(function ($request, \Closure $next) {
-            if ($request->getPathInfo()  !== '/' && ends_with($request->getPathInfo(), '/')) {
+            if ($request->getPathInfo() !== '/' && ends_with($request->getPathInfo(), '/')) {
                 return redirect(rtrim($request->getPathInfo(), '/'), 301);
             }
 
