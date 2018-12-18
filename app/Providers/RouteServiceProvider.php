@@ -40,7 +40,15 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        Mozhi::routes();
+        Route::middleware(function ($request, \Closure $next) {
+            if ($request->getPathInfo() !== '/' && ends_with($request->getPathInfo(), '/')) {
+                return redirect(rtrim($request->getPathInfo(), '/'), 301);
+            }
+
+            return $next($request);
+        })->group(function () {
+            Mozhi::routes();
+        });
     }
 
     /**
