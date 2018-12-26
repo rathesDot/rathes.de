@@ -14,7 +14,9 @@ locale: en_US
 ---
 
 By the end of every year, I spend some time looking back at the year that just passed and evaluating how well I did. Did I reach goals? Did I feel good throughout the year and how do I think about the year? I also take the review as an opportunity to adjust long-term goals and goals for the upcoming year.
+
 This year had some major changes and therefore this year feels like it ended too fast. When I look back at my last years' review and what I set as the main focus for this year it was more about doing less, more about investing in people and relationships than on work. I decided to drop side-projects and I set the goals to get into public speaking and open source development.
+
 I started that way. At the beginning of 2018, I got in touch with some people that I hadn't spoken to for a long time (like for years). I also started publishing some work to open source.
 
 ## From Ghent with love
