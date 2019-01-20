@@ -1,12 +1,10 @@
-My personal website rathes.de
-===
+# My personal website rathes.me
 
-This is the code base for my upcoming new website at [rathes.de](https://rathes.de). Currently the website is a simple html page. The goal is to update this page and provide some more information about myself but also add some functionality like generating ebooks.
+This is the code base for my upcoming new website at [rathes.me](https://rathes.me). Currently the website is a simple html page. The goal is to update this page and provide some more information about myself but also add some functionality like generating ebooks.
 
 ---
 
-Features
----
+## Features
 
 - This website uses [Laravel](https://laravel.com) as its framework
 - to render contents, I use [`aheenam/mozhi`](https://github.com/Aheenam/mozhi) which makes Markdown files to pages
@@ -42,23 +40,21 @@ Blade::directive('readingTime', function ($content) {
 });
 ```
 
-Deployment
----
+## Deployment
 
 The whole project is running on a [DigitalOcean](https://www.digitalocean.com/) droplet provisioned by [Laravel Forge](https://forge.laravel.com/).
 
-To-Do:
----
+## To-Do:
 
-The current site as seen on [rathes.de](https://rathes.de) is kept simple, but way too simple. So there are some steps to be done to make this website worth visiting.
+The current site as seen on [rathes.me](https://rathes.me) is kept simple, but way too simple. So there are some steps to be done to make this website worth visiting.
 
 ### Add proper `About me` information
 
 The main reason why one visits this site is to find out more about the person behind the name "Rathes Sachchithananthan", so the visitor should find enough information about me.
 
-[x] This includes a proper CV that is also downloadable as a PDF. This will show my professional career working as a PHP Developer since I'm 13.
+- [x] This includes a proper CV that is also downloadable as a PDF. This will show my professional career working as a PHP Developer since I'm 13.
 
-[] But a visitor may also be interested in learning about my personality and my personal interests. Therefore a section should be added which provides an insight into it.
+- [ ] But a visitor may also be interested in learning about my personality and my personal interests. Therefore a section should be added which provides an insight into it.
 
 ### Showcase of my current work
 
