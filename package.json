@@ -12,7 +12,8 @@
   "devDependencies": {
     "babel-plugin-prismjs": "^1.0.2",
     "cross-env": "^5.2.0",
-    "laravel-mix": "^4.0.14"
+    "laravel-mix": "^4.0.14",
+    "vue-template-compiler": "^2.5.22"
   },
   "dependencies": {
     "prism-themes": "^1.0.1",
