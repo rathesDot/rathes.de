@@ -12,7 +12,7 @@
   "devDependencies": {
     "babel-plugin-prismjs": "^1.0.2",
     "cross-env": "^5.2.0",
-    "laravel-mix": "^3.0"
+    "laravel-mix": "^4.0.14"
   },
   "dependencies": {
     "prism-themes": "^1.0.1",
