@@ -16,6 +16,7 @@
             <a class="menu-link" href="/about">About</a>
             <a class="menu-link" href="/now">Now</a>
             <a class="menu-link" href="/writings">Writings</a>
+            <a class="menu-link" href="/talks">Talks</a>
         </nav>
 	</div>
 </div>
