@@ -52,9 +52,9 @@ The current site as seen on [rathes.de](https://rathes.de) is kept simple, but w
 
 The main reason why one visits this site is to find out more about the person behind the name "Rathes Sachchithananthan", so the visitor should find enough information about me.
 
-[x] This includes a proper CV that is also downloadable as a PDF. This will show my professional career working as a PHP Developer since I'm 13.
+- [x] This includes a proper CV that is also downloadable as a PDF. This will show my professional career working as a PHP Developer since I'm 13.
 
-[] But a visitor may also be interested in learning about my personality and my personal interests. Therefore a section should be added which provides an insight into it.
+- [ ] But a visitor may also be interested in learning about my personality and my personal interests. Therefore a section should be added which provides an insight into it.
 
 ### Showcase of my current work
 
