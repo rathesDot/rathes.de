@@ -1,6 +1,6 @@
 # My personal website rathes.me
 
-This is the code base for my upcoming new website at [rathes.de](https://rathes.de). Currently the website is a simple html page. The goal is to update this page and provide some more information about myself but also add some functionality like generating ebooks.
+This is the code base for my upcoming new website at [rathes.me](https://rathes.me). Currently the website is a simple html page. The goal is to update this page and provide some more information about myself but also add some functionality like generating ebooks.
 
 ---
 
@@ -46,7 +46,7 @@ The whole project is running on a [DigitalOcean](https://www.digitalocean.com/) 
 
 ## To-Do:
 
-The current site as seen on [rathes.de](https://rathes.de) is kept simple, but way too simple. So there are some steps to be done to make this website worth visiting.
+The current site as seen on [rathes.me](https://rathes.me) is kept simple, but way too simple. So there are some steps to be done to make this website worth visiting.
 
 ### Add proper `About me` information
 
