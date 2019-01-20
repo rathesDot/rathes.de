@@ -11,4 +11,4 @@ If you want me to give a talk at your meetup, conference or even private events,
 
 ## Tech talks
 
-- [Introduction to Readme Driven Development](/talks/readme-driven-development.pdf) (January 2019 at [PHP Gent](http://php.gent/))
+- [Introduction to Readme Driven Development](/contents/readme-driven-development.pdf) (January 2019 at [PHP Gent](http://php.gent/))
