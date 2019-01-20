@@ -1,12 +1,10 @@
-My personal website rathes.de
-===
+# My personal website rathes.de
 
 This is the code base for my upcoming new website at [rathes.de](https://rathes.de). Currently the website is a simple html page. The goal is to update this page and provide some more information about myself but also add some functionality like generating ebooks.
 
 ---
 
-Features
----
+## Features
 
 - This website uses [Laravel](https://laravel.com) as its framework
 - to render contents, I use [`aheenam/mozhi`](https://github.com/Aheenam/mozhi) which makes Markdown files to pages
@@ -42,13 +40,11 @@ Blade::directive('readingTime', function ($content) {
 });
 ```
 
-Deployment
----
+## Deployment
 
 The whole project is running on a [DigitalOcean](https://www.digitalocean.com/) droplet provisioned by [Laravel Forge](https://forge.laravel.com/).
 
-To-Do:
----
+## To-Do:
 
 The current site as seen on [rathes.de](https://rathes.de) is kept simple, but way too simple. So there are some steps to be done to make this website worth visiting.
 
