@@ -1,7 +1,6 @@
 <div class="container mx-auto flex flex-wrap items-center p-6 justify-between  md:px-16 md:content-end">
     <div class="w-1/3 flex-no-shrink">
-        <a href="{{ url('/') }}" class="font-logo text-indigo font-bold no-underline inline-block
-            md:text-lg">
+        <a href="{{ url('/') }}" class="font-logo text-indigo text-lg font-bold no-underline inline-block">
             |) <br>
             |\
         </a>
