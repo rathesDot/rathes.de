@@ -114,7 +114,7 @@ hr::before {
 }
 
 .menu-link {
-    @apply .block .py-4 .text-sm .text-white .no-underline .font-light .border-0
+    @apply .block .py-4 .text-sm .text-indigo-dark .no-underline .font-light .border-0
 }
 
 @screen md {
