@@ -8,8 +8,8 @@
             </a>
         </div>
         <div class="block md:hidden">
-            <button class="js-toggle flex items-center px-2 py-2 border rounded text-indigo border-indigo">
-                <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            <button class="js-toggle flex items-center px-2 py-2 text-indigo">
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
             </button>
         </div>
         <nav class="w-full text-center bg-indigo-lightest rounded mt-4 js-menu md:bg-transparent md:w-auto md:mt-0">
