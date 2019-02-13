@@ -183,10 +183,6 @@ hr::before {
 /** single blog post **/
 @screen md {
 
-    .single-blog-post > p:first-of-type {
-        @apply .-mx-4 .my-6 .text-lg
-    }
-
     .single-blog-post pre[class*="language-"] {
         @apply .-mx-8
     }
@@ -199,9 +195,6 @@ hr::before {
 
 
 @screen md {
-    .single-blog-post > p:first-of-type {
-        @apply .-mx-12
-    }
 
     .single-blog-post pre[class*="language-"] {
         @apply .-mx-12
