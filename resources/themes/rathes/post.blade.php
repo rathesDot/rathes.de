@@ -1,12 +1,12 @@
 @extends('theme::rathes.layouts.blog')
 
 @section('content')
-    <div class="container mx-auto leading-normal md:mt-16 text-grey-darker">
-        <header class="font-sans mt-8 p-4 text-center">
+    <div class="container mx-auto leading-normal md:mt-16 text-grey-darker px-6">
+        <header class="font-sans my-4">
             <h1 class="text-3xl font-medium leading-tight">
                 {{ $meta['title'] }}
             </h1>
-            <small class="block mt-1 text-sm text-grey">
+            <small class="block text-sm text-grey">
                 @if(isset($meta['updated']))
                     updated {{ \Illuminate\Support\Carbon::createFromTimestamp($meta['updated'])->diffForHumans() }} 
                 @else
@@ -17,11 +17,11 @@
             </small>
         </header>
         @if(isset($meta['image']))
-            <div class="max-w-lg mx-auto">
+            <div class="max-w-lg my-2">
                 <img src="{{ asset($meta['image']) }}" alt="">
             </div>
         @endif
-        <div class="max-w-md mx-auto font-sans px-4 single-blog-post">
+        <div class="max-w-md font-sans single-blog-post">
             {!! $content !!}
         </div>
     </div>
