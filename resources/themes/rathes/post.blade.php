@@ -2,11 +2,6 @@
 
 @section('content')
     <div class="container mx-auto leading-normal md:mt-16 text-grey-darker">
-        @if(isset($meta['image']))
-            <div class="max-w-lg mx-auto">
-                <img src="{{ asset($meta['image']) }}" alt="">
-            </div>
-        @endif
         <header class="font-sans mt-8 p-4 text-center">
             <h1 class="text-3xl font-medium leading-tight">
                 {{ $meta['title'] }}
@@ -21,6 +16,11 @@
                 @readingTime($content) min read
             </small>
         </header>
+        @if(isset($meta['image']))
+            <div class="max-w-lg mx-auto">
+                <img src="{{ asset($meta['image']) }}" alt="">
+            </div>
+        @endif
         <div class="max-w-md mx-auto font-sans px-4 single-blog-post">
             {!! $content !!}
         </div>
