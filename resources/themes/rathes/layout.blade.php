@@ -36,9 +36,11 @@
 </head>
 
 <body>
-    @include('theme::rathes.nav')
-    @yield('content')
-	@include('theme::rathes.footer')
+	<div class="flex justify-between flex-col min-h-screen">
+		@include('theme::rathes.nav')
+		@yield('content')
+		@include('theme::rathes.footer')
+	</div>
     <script src="{{ asset('/js/app.js') }}"></script>
 	@stack('javascript')
 </body>
