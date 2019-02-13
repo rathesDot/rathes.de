@@ -1,9 +1,9 @@
 @extends('theme::rathes.layouts.blog')
 
 @section('content')
-    <div class="container mx-auto leading-normal md:mt-16 text-grey-darker px-6">
+    <div class="container mx-auto leading-normal text-grey-darker px-6">
         <header class="font-sans my-4">
-            <h1 class="text-3xl font-medium leading-tight">
+            <h1 class="text-3xl font-medium leading-tight text-purple-darkest">
                 {{ $meta['title'] }}
             </h1>
             <small class="block text-sm text-grey">
@@ -21,7 +21,7 @@
                 <img src="{{ asset($meta['image']) }}" alt="">
             </div>
         @endif
-        <div class="max-w-md font-sans single-blog-post">
+        <div class="max-w-md font-sans text-grey-darker single-blog-post">
             {!! $content !!}
         </div>
     </div>
