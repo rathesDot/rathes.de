@@ -36,7 +36,7 @@
 </head>
 
 <body>
-	<div class="flex justify-between flex-col min-h-screen">
+	<div class="flex justify-between flex-col min-h-screen md:mx-1/8">
 		@include('theme::rathes.nav')
 		@yield('content')
 		@include('theme::rathes.footer')
