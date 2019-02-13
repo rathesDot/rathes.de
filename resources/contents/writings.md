@@ -16,6 +16,10 @@ I had a blog called _Web und die Welt_ which I closed by the end of 2017. From t
 
 - [With Double CH](/with-double-ch)
 
+## 2019
+
+- [Names and User Experience](/blog/en/user-experience-names)
+
 ## 2018
 
 - [Looking back to 2018](/blog/en/review-2018)
