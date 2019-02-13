@@ -194,7 +194,7 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'K2D',
+      'Source Sans Pro',
       'Roboto',
       '-apple-system',
       'BlinkMacSystemFont',
@@ -219,11 +219,6 @@ module.exports = {
       'Liberation Serif',
       'Georgia',
       'serif',
-    ],
-    'logo': [
-      'Fira Mono',
-      'Space Mono',
-      'monospace'
     ],
     'mono': [
       'Fira Mono',
@@ -666,6 +661,7 @@ module.exports = {
     '8': '2rem',
     '16': '4rem',
     '32': '8rem',
+    '1/8': '12.5%'
   },
 
 

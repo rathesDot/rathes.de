@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=K2D:300,400|Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Source+Sans+Pro:400,500,600');
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -67,11 +67,11 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply .font-sans .font-normal .mt-8 .mb-2
+    @apply .font-sans .font-normal .mt-6 .leading-normal
 }
 
 p {
-    @apply .my-4
+    @apply .mb-4
 }
 
 a {
@@ -125,7 +125,7 @@ hr::before {
 
 /** home **/
 .home h1 {
-    @apply .text-indigo
+    @apply .text-indigo .mt-0
 }
 
 .home ul {
@@ -180,12 +180,12 @@ hr::before {
 
 }
 
+.single-blog-post h1,h2,h3 {
+   @apply .text-indigo-darkest
+}
+
 /** single blog post **/
 @screen md {
-
-    .single-blog-post > p:first-of-type {
-        @apply .-mx-4 .my-6 .text-lg
-    }
 
     .single-blog-post pre[class*="language-"] {
         @apply .-mx-8
@@ -199,9 +199,6 @@ hr::before {
 
 
 @screen md {
-    .single-blog-post > p:first-of-type {
-        @apply .-mx-12
-    }
 
     .single-blog-post pre[class*="language-"] {
         @apply .-mx-12
