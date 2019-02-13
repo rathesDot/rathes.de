@@ -1,5 +1,4 @@
-<footer class="container flex justify-between mx-auto p-6 text-xs text-grey
-    md:px-16">
+<footer class="container flex justify-between mx-auto p-6 text-xs text-grey">
     <div>
         &copy; 2017 - Rathes Sachchithananthan
     </div>
