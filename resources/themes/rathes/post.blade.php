@@ -17,7 +17,7 @@
             </small>
         </header>
         @if(isset($meta['image']))
-            <div class="max-w-lg my-2">
+            <div class="max-w-md my-2">
                 <img src="{{ asset($meta['image']) }}" alt="">
             </div>
         @endif
