@@ -19,6 +19,7 @@ I had a blog called _Web und die Welt_ which I closed by the end of 2017. From t
 ## 2019
 
 - [Names and User Experience](/blog/en/user-experience-names)
+- [Stop thinking in features. Start thinking in customer experience.](/blog/en/customer-experience-instead-of-features)
 
 ## 2018
 
