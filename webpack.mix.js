@@ -12,7 +12,7 @@ let tailwindcss = require('tailwindcss');
  |
  */
 mix
-  .postCss('resources/styles/app.css', 'public/css', [
+  .postCss('resources/styles/app.pcss', 'public/css', [
     tailwindcss('./tailwind.js'),
   ])
   .postCss('resources/styles/double-ch.pcss', 'public/css', [
