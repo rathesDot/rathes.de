@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mx-auto leading-normal text-grey-darker px-6">
-        <header class="font-sans my-4 max-w-md">
+        <header class="font-sans my-4 max-w-580px">
             <h1 class="text-3xl font-medium leading-tight text-purple-darkest">
                 {{ $meta['title'] }}
             </h1>
