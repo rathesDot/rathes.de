@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Str;
 
 /*
@@ -12,7 +13,7 @@ use Illuminate\Support\Str;
 |
 */
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/* @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
