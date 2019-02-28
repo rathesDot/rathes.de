@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c07455121baabbfa66d45c95fb77449a",
+    "content-hash": "4c79e5cfabaab014d4e15b337f276db9",
     "packages": [
         {
             "name": "aheenam/estimated-reading-time",
@@ -42,29 +42,31 @@
         },
         {
             "name": "aheenam/mozhi",
-            "version": "0.2.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Aheenam/mozhi.git",
-                "reference": "d08e6ea6af3f99ae0bd7f6819851d05c5ae95986"
+                "url": "https://github.com/aheenam/mozhi.git",
+                "reference": "b75f618cd5507e04834053ceb4fb3e9954dd6d45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aheenam/mozhi/zipball/d08e6ea6af3f99ae0bd7f6819851d05c5ae95986",
-                "reference": "d08e6ea6af3f99ae0bd7f6819851d05c5ae95986",
+                "url": "https://api.github.com/repos/aheenam/mozhi/zipball/b75f618cd5507e04834053ceb4fb3e9954dd6d45",
+                "reference": "b75f618cd5507e04834053ceb4fb3e9954dd6d45",
                 "shasum": ""
             },
             "require": {
-                "illuminate/http": "^5.5",
-                "illuminate/routing": "^5.5",
+                "illuminate/http": "^5.7|^5.8",
+                "illuminate/routing": "^5.7|^5.8",
+                "illuminate/support": "^5.7|^5.8",
                 "league/commonmark": "^0.16.0",
-                "php": "^7.0",
-                "spatie/yaml-front-matter": "^2.0"
+                "php": "^7.2",
+                "spatie/yaml-front-matter": "^2.0",
+                "webuni/commonmark-table-extension": "^0.8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.4.0|~3.5.0",
-                "phpunit/phpunit": "5.*|^6.3",
-                "spatie/phpunit-snapshot-assertions": "^1.1"
+                "orchestra/testbench": "~3.7.0|~3.8.0",
+                "phpunit/phpunit": "^7.0|^8.0",
+                "spatie/phpunit-snapshot-assertions": "^2.1"
             },
             "type": "library",
             "extra": {
@@ -87,7 +89,7 @@
                 "MIT"
             ],
             "description": "A Laravel Package",
-            "time": "2018-01-05T17:08:57+00:00"
+            "time": "2019-02-28T19:49:11+00:00"
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -3987,6 +3989,64 @@
                 "environment"
             ],
             "time": "2019-01-30T10:43:17+00:00"
+        },
+        {
+            "name": "webuni/commonmark-table-extension",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webuni/commonmark-table-extension.git",
+                "reference": "4304b1f56b26e5213a4a781b654f62ef5ed8fbe3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webuni/commonmark-table-extension/zipball/4304b1f56b26e5213a4a781b654f62ef5ed8fbe3",
+                "reference": "4304b1f56b26e5213a4a781b654f62ef5ed8fbe3",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^0.16|^0.17",
+                "php": "^5.6|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.9",
+                "phpunit/phpunit": "^5.4|^6.0",
+                "symfony/var-dumper": "^3.0|^4.0",
+                "vimeo/psalm": "~0.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webuni\\CommonMark\\TableExtension\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Hasoň",
+                    "email": "martin.hason@gmail.com"
+                },
+                {
+                    "name": "Webuni s.r.o.",
+                    "homepage": "https://www.webuni.cz"
+                }
+            ],
+            "description": "The table extension for CommonMark PHP implementation",
+            "homepage": "https://github.com/webuni/commonmark-table-extension",
+            "keywords": [
+                "commonmark",
+                "markdown",
+                "table"
+            ],
+            "time": "2018-01-24T12:30:02+00:00"
         }
     ],
     "packages-dev": [
